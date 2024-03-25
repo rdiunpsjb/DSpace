@@ -2,13 +2,15 @@
 ##
 ## See org.dspace.core.Email for information on the format of this file.
 ##
-#set($subject = "Welcome new registered ${config.get('dspace.name')} user!")
-Thank you for registering an account. Your new account can be used immediately
-to subscribe to notices of new content arriving in collections of your choice.
+#set($subject = "¡Bienvenido nuevo usuario registrado ${config.get('dspace.name')}!")
+Gracias por registrar una cuenta. Su nueva cuenta se puede utilizar inmediatamente
+para suscribirse a avisos de nuevos contenidos que lleguen a las colecciones de su elección.
 
-Your new account can also be granted privileges to submit new content, or to
-edit and/or approve submissions.
+A su nueva cuenta también se le pueden otorgar privilegios para enviar contenido nuevo o para
+editar y/o aprobar envíos.
 
-If you need assistance with your account, please email ${config.get("mail.helpdesk")}.
+Si necesita ayuda con su cuenta, envíe un correo electrónico a ${config.get("mail.helpdesk")}.
 
-The ${config.get('dspace.name')} Team
+Administrador DSpace RDI UNPSJB
+Universidad Nacional de la Patagonia San Juan Bosco
+

@@ -10,18 +10,20 @@
 ##
 ## See org.dspace.core.Email for information on the format of this file.
 ##
-#set($subject = "${config.get('dspace.name')}: Feedback Form Information")
 
-Comments:
+#set($subject = 'Formulario de información de Feedback')
+
+Comentarios:
 
 ${params[6]}
 
 
-Date: ${params[0]}
-Email: ${params[1]}
-Logged In As: ${params[2]}
+Fecha: ${params[0]}
+E-mail: ${params[1]}
+Iniciado en sesión como: ${params[2]}
 Referring Page: ${params[3]}
-User Agent: ${params[4]}
-Session: ${params[5]}
+Usuario Agente: ${params[4]}
+Sesión: ${params[5]}
 
-The ${config.get('dspace.name')} Team
+Administrador DSpace RDI UNPSJB
+Universidad Nacional de la Patagonia San Juan Bosco

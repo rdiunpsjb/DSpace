@@ -8,19 +8,21 @@
 ##  {3} name of the grantor
 ##  {4} email address of the grantor (unused)
 ##  {5} custom message sent by the grantor.
-#set($subject = 'Request for Copy of Restricted Document is Denied')
-Dear ${params[0]}:
+#set($subject = 'Se deniega la solicitud de copia de un documento restringido')
+Estimado ${params[0]}:
 
-Your request for a copy of the file(s) from the below document has been denied by ${params[3]}.
+${params[3]} ha rechazado su solicitud de una copia de los archivos del siguiente documento.
 
-    ${params[2]}
-    ${params[1]} 
+    ${parámetros[2]}
+    ${parámetros[1]}
 #if( $params[5] )
 
-An additional message from ${params[3]} follows:
+A continuación aparece un mensaje adicional de ${params[3]}:
 
-${params[5]}
+${parámetros[5]}
 #end
 
-Best regards,
-The ${config.get('dspace.name')} Team
+Atentamente.
+
+Administrador DSpace RDI UNPSJB
+Universidad Nacional de la Patagonia San Juan Bosco

@@ -15,10 +15,15 @@
     <!-- The process-map also provides the special handle "default" (which is -->
     <!-- never a collection), here mapped to "traditional". Any collection -->
     <!-- which does not appear in this map will be associated with the mapping -->
-    <!-- for handle "default". -->
+    <!-- for handle "default" -->
     <submission-map>
         <!-- Default submission process -->
         <name-map collection-handle="default" submission-name="traditional"/>
+        
+        <name-map collection-handle="123456789/3" submission-name="autoarchivo"/>
+
+        <name-map collection-handle="123456789/39" submission-name="herbario"/>
+
 
         <!-- Sample Entities Collection configuration based on the demo Entities dataset available at:
              https://github.com/DSpace-Labs/AIP-Files/releases/tag/demo-entities-data
@@ -109,6 +114,27 @@
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
+
+        <!--agrego los paso personalizado para herbario- y autoarchivo -->
+        <step-definition id="herbariopaso3" mandatory="true">
+            <heading>submit.progressbar.describe.step3</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>        
+        <!--hasta aquí-->
+        
+        <step-definition id="autoarchivopaso1" mandatory="true">
+            <heading>submit.progressbar.describe.step1</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <step-definition id="autoarchivopaso2" mandatory="true">
+            <heading>submit.progressbar.describe.step2</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition> 
+        
         <step-definition id="publicationStep" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
@@ -253,7 +279,6 @@
         <submission-process name="traditional">
             <!--Uncommment to display the SAMPLE step as your first step -->
             <!--<step id="sample"/> -->
-
             <step id="collection"/>
             <!-- To include the 'Show Identifiers' step, uncomment the line below. Make sure
                  that identifiers.cfg and identifier-service.xml are properly configured. -->
@@ -261,24 +286,37 @@
             <!--Step will be to Describe the item. -->
             <step id="traditionalpageone"/>
             <step id="traditionalpagetwo"/>
-
             <!-- Uncomment this step to allow the user to embargo or access restrict the entire item -->
             <!-- <step id="itemAccessConditions"/> -->
-
             <!-- Uncomment this step to show when appropriate publisher policies retrieved from SHERPA/RoMEO -->
             <!-- <step id="sherpaPolicies"/> -->
-
             <!--Step will be to Upload the item -->
             <step id="upload"/>
-
             <!-- <step id="extractionstep"/> -->
-
             <!-- Uncomment this step to allow the user to select a Creative Commons License -->
             <!-- <step id="cclicense"/> -->
-
             <!--Step will be to Sign off on the required DSpace License agreement -->
             <step id="license"/>
         </submission-process>
+        
+        <submission-process name="herbario">
+            <step id="collection"/>
+            <step id="traditionalpageone"/>
+            <step id="traditionalpagetwo"/>
+            <step id="herbariopaso3"/>
+            <step id="upload"/>
+            <step id="license"/>        
+        </submission-process>
+
+
+        <submission-process name="autoarchivo">
+            <step id="collection"/>
+            <step id="autoarchivopaso1"/>
+            <step id="autoarchivopaso2"/>
+            <step id="upload"/>
+            <step id="license"/>  
+        </submission-process> 
+
 
         <!--
         Submission Process for 'Publication' Entities.

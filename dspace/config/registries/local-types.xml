@@ -32,4 +32,104 @@
   </dc-type>
 -->
 
+  <!--agrego nuevos esquemas para herbario y tesis-->
+
+  <dc-schema>
+	<name>unp</name>
+	<namespace>http://dspace.org/unp</namespace>
+  </dc-schema>
+
+  <dc-schema>
+	<name>thesis</name>
+	<namespace>http://dspace.org/thesis</namespace>
+  </dc-schema>
+
+  <dc-schema>
+	<name>dwc</name>
+	<namespace>http://dspace.org/dwc</namespace>
+  </dc-schema>
+
+<!--agrego metadatos para imagenes del herbario-->
+
+  <dc-type>
+		<schema>dwc</schema>
+		<element>family</element>
+		<scope_note>Familia a la que pertenece la muestra.</scope_note>
+	</dc-type>
+  <dc-type>
+		<schema>dwc</schema>
+		<element>catalogNumber</element>
+		<scope_note>Número de Catálogo de la muestra.</scope_note>
+	</dc-type>
+  <dc-type>
+		<schema>dwc</schema>
+		<element>identifiedBy</element>
+		<scope_note>Persona que identifica la muestra.</scope_note>
+	</dc-type>
+  <dc-type>
+		<schema>dwc</schema>
+		<element>recordedBy</element>
+		<scope_note>Persona que recolecta la muestra.</scope_note>
+	</dc-type>
+
+  <!--agrego metadatos específicos-->
+  <dc-type>
+		<schema>dc</schema>
+		<element>contributor</element>
+		<qualifier>director</qualifier>
+		<scope_note>Persona que dirige la realización de la tesis o quien dirige a un investigador, personal de apoyo o becario.</scope_note>
+	</dc-type>
+  <dc-type>
+		<schema>dc</schema>
+		<element>contributor</element>
+		<qualifier>compilator</qualifier>
+		<scope_note>Persona física responsable de compilar, reunir o antologar materiales de la obra.</scope_note>
+	</dc-type>
+  <dc-type>
+		<schema>dc</schema>
+		<element>description</element>
+		<qualifier>filiation</qualifier>
+		<scope_note>Filiación de cada uno de los autores en ocurrencias separadas seguidas del prefijo calificador "Fil".</scope_note>
+	</dc-type>
+
+<!--agrego metadatos para imagenes del herbario-->
+  <dc-type>
+		<schema>thesis</schema>
+		<element>degree</element>
+		<qualifier>name</qualifier>
+		<scope_note>Nombre del grado al que aspira con el trabajo de tesis realizado.</scope_note>
+	</dc-type>
+  <dc-type>
+		<schema>thesis</schema>
+		<element>degree</element>
+		<qualifier>grantor</qualifier>
+		<scope_note>Institución que otorga el título.</scope_note>
+	</dc-type>
+  <dc-type>
+		<schema>thesis</schema>
+		<element>degree</element>
+		<qualifier>level</qualifier>
+		<scope_note>Nivel del grado al que aspira.</scope_note>
+	</dc-type>
+    <dc-type>
+		<schema>thesis</schema>
+		<element>degree</element>
+		<qualifier>discipline</qualifier>
+		<scope_note>Disciplina a la que corresponde el trabajo de tesis realizado.</scope_note>
+	</dc-type>
+ 	<dc-type>
+		<schema>unp</schema>
+		<element>facultad</element>
+		<qualifier></qualifier>
+		<scope_note></scope_note>
+	</dc-type>
+<!--
+  <dc-type>
+		<schema></schema>
+		<element></element>
+		<qualifier></qualifier>
+		<scope_note></scope_note>
+	</dc-type>
+-->
+
 </dspace-dc-types>

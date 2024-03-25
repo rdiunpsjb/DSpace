@@ -7,17 +7,19 @@
 ## {4}  Task result
 ## {5}  Workflow action taken
 ##
-#set($subject = "${config.get('dspace.name')}: Curation Task Report")
+#set($subject = 'DSpace RDI UNPSJB: Reporte de la Tarea de Curación')
 
-Title:         ${params[0]}
-Collection:    ${params[1]}
-Submitted by:  ${params[2]}
+Título:       ${params[0]}
+Colección:    ${params[1]}
+Enviado por:  ${params[2]}
 
-Curation task ${params[3]} has been performed
-with the following result:
+La tarea de curación ${params[3]} ha sido realizada
+con el siguiente resultado:
 
 ${params[4]}
 
-Action taken on the submission: ${params[5]}
+Acción tomada durante el envío(submission): ${params[5]}
 
-The ${config.get('dspace.name')} Team
+Administrador DSpace RDI UNPSJB
+Universidad Nacional de la Patagonia San Juan Bosco
+

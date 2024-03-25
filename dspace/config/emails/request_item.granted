@@ -8,19 +8,22 @@
 ##  {3} name of the grantor
 ##  {4} email address of the grantor (unused)
 ##  {5} custom message sent by the grantor.
-#set($subject = 'Request for Copy of Restricted Document is Granted')
-Dear ${params[0]}:
 
-Your request for a copy of the file(s) from the below document has been approved by ${params[3]}.  You may find the requested file(s) attached.
+#set($subject = 'Se concede la solicitud de copia del documento restringido')
+Estimado ${params[0]}:
 
-    ${params[2]}
-    ${params[1]} 
+Su solicitud de una copia de los archivos del siguiente documento ha sido aprobada por ${params[3]}. Puede encontrar los archivos solicitados adjuntos.
+
+    ${parámetros[2]}
+    ${parámetros[1]}
 #if( $params[5] )
 
-An additional message from ${params[3]} follows:
+A continuación aparece un mensaje adicional de ${params[3]}:
 
-${params[5]}
+${parámetros[5]}
 #end
 
-Best regards,
-The ${config.get('dspace.name')} Team
+Atentamente.
+
+Administrador DSpace RDI UNPSJB
+Universidad Nacional de la Patagonia San Juan Bosco
