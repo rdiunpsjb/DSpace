@@ -254,6 +254,12 @@
                             <property name="field" value="dc.title"/>
                             <property name="snippets" value="5"/>
                         </bean>
+
+                        <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
+                            <property name="field" value="dc.type"/>
+                            <property name="snippets" value="5"/>
+                        </bean>
+
                         <bean class="org.dspace.discovery.configuration.DiscoveryHitHighlightFieldConfiguration">
                             <property name="field" value="organization.legalName"/>
                             <property name="snippets" value="5"/>
@@ -2307,7 +2313,7 @@
         <property name="pageSize" value="10"/>
         <property name="exposeMinAndMaxValue" value="true"/>
     </bean>
-
+    
     <bean id="searchFilterEntityType" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
         <property name="indexFieldName" value="entityType"/>
         <property name="metadataFields">
