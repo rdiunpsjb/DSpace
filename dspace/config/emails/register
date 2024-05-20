@@ -5,13 +5,11 @@
 ## See org.dspace.core.Email for information on the format of this file.
 ##
 #set($subject = "${config.get('dspace.name')} Registro de cuenta")
-Para completar el registro de su cuenta en DSpace RDI UNPSJB, 
-haz click en el enlace infeior:
+Para completar el registro de su cuenta en DSpace RDI UNPSJB, haz click en el enlace inferior:
 
   ${params[0]}
 
-Si necesita asistencia con su cuenta, por favor envíe un correo electrónico a
-${config.get("mail.admin")} o llame al 297 4550073.
+Si necesita asistencia con su cuenta, por favor envíe un correo electrónico a ${config.get("mail.admin")}.
 
 
 Administrador DSpace RDI UNPSJB

@@ -10,7 +10,8 @@
 ##
 ## See org.dspace.core.Email for information on the format of this file.
 ##
-#set($subject = 'DSpace RDI UNPSJB: Error Interno del Servidor')
+#set($subject = '${config.get('dspace.name')}: Error Interno del Servidor')
+
 Un error interno al servidor ocurrió sobre ${params[0]}:
 
 Fecha:        ${params[1]}

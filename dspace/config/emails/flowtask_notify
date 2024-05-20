@@ -13,8 +13,7 @@ Título:       ${params[0]}
 Colección:    ${params[1]}
 Enviado por:  ${params[2]}
 
-La tarea de curación ${params[3]} ha sido realizada
-con el siguiente resultado:
+La tarea de curación ${params[3]} ha sido realizada con el siguiente resultado:
 
 ${params[4]}
 

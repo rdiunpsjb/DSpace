@@ -10,8 +10,7 @@ Enviaste: ${params[0]}
 
 A la colección: ${params[1]}
 
-Su envío ha sido aceptado y archivado en ${config.get('dspace.name')},
-y se le ha asignado el siguiente identificador:
+Su envío ha sido aceptado y archivado en ${config.get('dspace.name')}, y se le ha asignado el siguiente identificador:
 ${params[2]}
 
 Utilice este identificador al citar su envío.

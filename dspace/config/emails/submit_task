@@ -14,10 +14,9 @@ Título: ${params[0]}
 Colección: ${params[1]}
 Enviado por: ${params[2]}
 
-${params[3]}
+##${params[3]}
 
-Para reclamar esta tarea, visite su "My${config.get('dspace.shortname')}"
-página: ${params[4]}
+Para reclamar esta tarea, visite su "My${config.get('dspace.shortname')}" página: ${params[4]}
 
 ¡Muchas gracias!
 

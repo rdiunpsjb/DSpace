@@ -8,11 +8,12 @@
 ##
 ## See org.dspace.core.Email for information on the format of this file.
 ##
-#set($subject = 'DSpace RDI UNPSJB: Error de Cosechamiento')
+#set($subject = '${config.get('dspace.name')}: Error de Cosechamiento')
+
 Colección ${params[0]} falló durante la cosecha:
 
-Fecha:       	${params[1]}
-Status Flag: 	${params[2]}
+Fecha:      ${params[1]}
+Estado:     ${params[2]}
 
 ${params[3]}
 

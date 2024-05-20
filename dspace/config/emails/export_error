@@ -6,11 +6,14 @@
 ##
 ## See org.dspace.core.Email for information on the format of this file.
 ##
-#set($subject = 'DSpace - La exportación del artículo no se completó.')
+
+#set($subject = '${config.get('dspace.name')}: La exportación del artículo no se completó.')
+#set($subject = "${config.get('dspace.name')}: Solicitud Cambio de Contraseña")
+
 La exportación del artículo que solicita no se completó, debido a la siguiente razón:
  ${params[0]}
 
-Para más informacón, puede ponerse en contacto con el administrador del sistema:
+Para más información, puede ponerse en contacto con el administrador del sistema:
  ${params[1]}
 
 

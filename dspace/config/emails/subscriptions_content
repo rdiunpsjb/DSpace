@@ -3,6 +3,7 @@
 ## Parameters: {0} Collections updates
 ##             {1} Communities updates
 #set($subject = "${config.get('dspace.name')} Suscripciones")
+
 Este correo electrónico se envía desde ${config.get('dspace.name')} según las preferencias de suscripción elegidas.
 
 #if(no( "$params[0]" == "" ))

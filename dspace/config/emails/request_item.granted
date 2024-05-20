@@ -9,7 +9,8 @@
 ##  {4} email address of the grantor (unused)
 ##  {5} custom message sent by the grantor.
 
-#set($subject = 'Se concede la solicitud de copia del documento restringido')
+#set($subject = '${config.get('dspace.name')}: Se concede la solicitud de copia del documento restringido')
+
 Estimado ${params[0]}:
 
 Su solicitud de una copia de los archivos del siguiente documento ha sido aprobada por ${params[3]}. Puede encontrar los archivos solicitados adjuntos.

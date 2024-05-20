@@ -5,7 +5,8 @@
 ##
 ## See org.dspace.core.Email for information on the format of this file.
 ##
-#set($subject = 'DSpace RDI UNPSJB - Exportación del Item solicitado está lista para descargar')
+#set($subject = '${config.get('dspace.name')}: Exportación del Item solicitado está lista para descargar')
+
 La exportación del item que ha solicitado desde el repositorio está lista para descargar.
 
 Puede descargar el archivo comprimido usando el siguiente link:

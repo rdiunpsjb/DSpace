@@ -6,14 +6,14 @@
 ## {3}  Reason for the rejection
 ## {4}  Link to 'My DSpace' page
 ##
+
 #set($subject = "${config.get('dspace.name')}: Envío rechazado")
 
 Enviaste: ${params[0]}
 
 A la colección: ${params[1]}
 
-Su envío ha sido rechazado por ${params[2]}
-con la siguiente explicación:
+Su envío ha sido rechazado por ${params[2]} con la siguiente explicación:
 
 ${parámetros[3]}
 
