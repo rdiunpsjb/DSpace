@@ -182,11 +182,12 @@
                     <input-type>date</input-type>
                     <hint>Fecha de publicación, distribución pública o exposición. En
                         caso de no haber difundido nunca su obra por ningún medio, indique
-                        la fecha de hoy como fecha de publicación. Puede omitir el día y
-                        mes si no lo sabe. 
+                        la fecha de hoy como fecha de publicación. Puede omitir el día y mes si no lo sabe. 
                     </hint>
                     <required>Debe ingresar al menos el año.</required>
                 </field>
+            </row>
+            <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>date</dc-element>
@@ -216,6 +217,8 @@
                     Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química.</hint>
                     <required></required>
                 </field>
+            </row>
+            <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>publisher</dc-element>
@@ -239,7 +242,7 @@
                     <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final de grado</type-bind>
                     <input-type value-pairs-name="unp_facultades">dropdown</input-type>
                     <hint>Seleccione facultad o rectorado</hint>
-                    <required></required>
+                    <required>Debe seleccionar una opción</required>
                 </field>
             </row>
             <row>
@@ -455,7 +458,7 @@
                     <repeatable>false</repeatable>
                     <label>Cantidad de páginas</label>
                     <input-type>onebox</input-type>
-                    <type-bind>Libro, Tesis de grado, Tesis de posgrado, Trabajo final de grado, Informe científico</type-bind>
+                    <type-bind>Libro, Tesis de grado, Tesis de posgrado, Trabajo final de grado, Informe científico, Documento institucional</type-bind>
                     <hint>Indique cantidad de páginas del documento.</hint>
                     <required>Debe indicar el total de páginas.</required>
                 </field>
@@ -514,7 +517,7 @@
                     <required></required>
                 </field>
             </row>
-            <row>
+            <!--<<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
@@ -527,7 +530,7 @@
                     <required>Debe poder describir el ítem.</required>
                 </field>
             </row>
-            <row>
+           <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
@@ -539,7 +542,7 @@
                     <hint>Ingrese informacón sobre el periodo de tiempo específico para el recurso.</hint>
                     <required>Debe poder describir el ítem.</required>
                 </field>
-            </row>
+            </row> -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -547,7 +550,7 @@
                     <dc-qualifier>spatial</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura geográfica</label>
-                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final de grado, Informe científico</type-bind>
+                    <type-bind>Audio, Imagen, Video, Conjunto de datos, Tesis de grado, Tesis de posgrado, Trabajo final de grado, Informe científico</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese informacón sobre la cobertura espacial/geográfica del contenido del documento.</hint>
                     <required></required>
@@ -560,7 +563,7 @@
                     <dc-qualifier>temporal</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura temporal</label>
-                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final de grado, Informe científico</type-bind>
+                    <type-bind>Audio, Imagen, Video, Conjunto de datos, Tesis de grado, Tesis de posgrado, Trabajo final de grado, Informe científico</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese informacón sobre el periodo de tiempo específico que se referencia en el documento.</hint>
                     <required></required>
@@ -574,10 +577,8 @@
                     <repeatable>false</repeatable>
                     <label>Notas</label>
                     <input-type>textarea</input-type>
-                    <hint>Toda otra aclaración que resulte pertinente para la mejor
-                        recuperación de la obra. En este campo se puede
-                        indicar por ejemplo: - si la fecha de publicación indicada es
-                        aproximada, etc.</hint>
+                    <hint>Toda otra aclaración que resulte pertinente para la mejor recuperación de la obra. En este campo se puede indicar por ejemplo: 
+                    si la fecha de publicación indicada es aproximada, etc.</hint>
                     <required></required>
                 </field>
             </row>
@@ -668,8 +669,7 @@
                     <label>Director</label>
                     <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final de grado, Informe científico</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Persona que dirige la realización de la tesis o quien dirige
-                        a un investigador, personal de apoyo o becario. Formato: Apellido, Nombres</hint>
+                    <hint>Persona que dirige la realización de la tesis o quien dirige a un investigador, personal de apoyo o becario. Formato: Apellido, Nombres</hint>
                     <required>Debe ingresar director.</required>
                 </field>
             </row>
@@ -682,10 +682,7 @@
                     <label>Fecha de publicación</label>
                     <type-bind>Artículo, Audio, Documento institucional, Imagen, Video, Informe científico, Libro, Objeto de aprendizaje, Objeto de conferencia</type-bind>
                     <input-type>date</input-type>
-                    <hint>Fecha de publicación, distribución pública o exposición. En
-                        caso de no haber difundido nunca su obra por ningún medio, indique
-                        la fecha de hoy como fecha de publicación. Puede omitir el día y
-                        mes si no lo sabe. 
+                    <hint>Fecha de publicación, distribución pública o exposición. En caso de no haber difundido nunca su obra por ningún medio, indique la fecha de hoy como fecha de publicación. Puede omitir el día y mes si no lo sabe. 
                     </hint>
                     <required>Debe ingresar al menos el año.</required>
                 </field>
@@ -706,7 +703,7 @@
                 </field>
             </row>
             <row>                
-            <field>
+                <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>publisher</dc-element>
                     <dc-qualifier></dc-qualifier>
@@ -948,7 +945,7 @@
                     <repeatable>false</repeatable>
                     <label>Cantidad de páginas</label>
                     <input-type>onebox</input-type>
-                    <type-bind>Libro, Tesis de grado, Tesis de posgrado, Trabajo final de grado, Informe científico</type-bind>
+                    <type-bind>Libro, Tesis de grado, Tesis de posgrado, Trabajo final de grado, Informe científico, Documento institutional</type-bind>
                     <hint>Infique cantidad de páginas del documento.</hint>
                     <required>Debe indicar el total de páginas.</required>
                 </field>
@@ -1052,10 +1049,7 @@
                     <repeatable>false</repeatable>
                     <label>Notas</label>
                     <input-type>textarea</input-type>
-                    <hint>Toda otra aclaración que resulte pertinente para la mejor
-                        recuperación de la obra. En este campo se puede
-                        indicar por ejemplo: - si la fecha de publicación indicada es
-                        aproximada, etc.</hint>
+                    <hint>Toda otra aclaración que resulte pertinente para la mejor recuperación de la obra. En este campo se puede indicar por ejemplo: - si la fecha de publicación indicada es aproximada, etc.</hint>
                     <required></required>
                 </field>
             </row>
