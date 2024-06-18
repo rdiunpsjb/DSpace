@@ -149,11 +149,11 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>director</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Tutor o Docente Responsable</label>
+                    <label>Tutor o Docente responsable</label>
                     <type-bind>Trabajo final</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Tutor o docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
-                    <required></required>
+                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
+                    <required>Debe ingresar responsable.</required>
                 </field>
             </row>
             <row>
@@ -704,11 +704,11 @@
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>director</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Tutor o Docente Responsable</label>
+                    <label>Tutor o Docente responsable</label>
                     <type-bind>Trabajo final</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Tutor o docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
-                    <required></required>
+                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
+                    <required>Debe ingresar responsable.</required>
                 </field>
             </row>            
             <row>
