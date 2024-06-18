@@ -15,13 +15,13 @@ Estimado ${params[0]}:
 
 Su solicitud de una copia de los archivos del siguiente documento ha sido aprobada por ${params[3]}. Puede encontrar los archivos solicitados adjuntos.
 
-    ${parámetros[2]}
-    ${parámetros[1]}
+    ${params[2]}
+    ${params[1]}
 #if( $params[5] )
 
 A continuación aparece un mensaje adicional de ${params[3]}:
 
-${parámetros[5]}
+${params[5]}
 #end
 
 Atentamente.

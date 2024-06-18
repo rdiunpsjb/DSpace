@@ -6,7 +6,6 @@
 ## {3}  Reason for the rejection
 ## {4}  Link to 'My DSpace' page
 ##
-
 #set($subject = "${config.get('dspace.name')}: Envío rechazado")
 
 Enviaste: ${params[0]}
@@ -15,10 +14,9 @@ A la colección: ${params[1]}
 
 Su envío ha sido rechazado por ${params[2]} con la siguiente explicación:
 
-${parámetros[3]}
+${params[3]}
 
-Su envío no ha sido eliminado. Puede acceder a él desde su página "Mi${config.get('dspace.shortname')}": ${params[4]}
+Su envío no ha sido eliminado. Puede acceder a él desde su página "My${config.get('dspace.shortname')}" página: ${params[4]}
 
 Administrador DSpace RDI UNPSJB
 Universidad Nacional de la Patagonia San Juan Bosco
-
