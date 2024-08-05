@@ -58,7 +58,7 @@
                     <label>Tipo</label>
                     <input-type value-pairs-name="unp_types">dropdown</input-type>
                     <!--<input-type value-pairs-name="common_types">dropdown</input-type>-->
-                    <hint>Selecione el tipo de contenido del ítem.</hint>
+                    <hint>Seleccione el tipo de contenido del ítem.</hint>
                     <required>Debe seleccionar un tipo de contenido.</required>
                 </field>
             </row>
@@ -72,7 +72,7 @@
                     <label>Título</label>
                     <input-type>onebox</input-type>
                     <hint>Transcribir el título del original, en orden y ortografía del recurso. Utilizar mayúsculas únicamente para la primer palabra del título y los nombres propios. 
-                         Los subtítulos deben deben mencionarse con el siguiente formato: Título: Subtítulo</hint>
+                         Los subtítulos deben mencionarse con el siguiente formato: Título: Subtítulo</hint>
                     <required>Debe indicar el título del documento.</required>
                 </field>
             </row>
@@ -85,8 +85,7 @@
                     <repeatable>true</repeatable>
                     <label>Título alternativo</label>
                     <input-type>onebox</input-type>
-                    <hint>Otros títulos de la obra, o traducciones del título en
-                        cualquier idioma que no sea el nativo de la obra.</hint>
+                    <hint>Otros títulos de la obra, o traducciones del título en cualquier idioma que no sea el nativo de la obra.</hint>
                     <required></required>
                 </field>
             </row>
@@ -247,19 +246,6 @@
             <row>
                 <field>
                     <dc-schema>unp</dc-schema>
-                    <dc-element>facultad</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Facultad</label>
-                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
-                    <input-type value-pairs-name="unp_facultades">dropdown</input-type>
-                    <hint>Seleccione facultad o rectorado</hint>
-                    <required>Debe seleccionar una opción</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>unp</dc-schema>
                     <dc-element>sede</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
@@ -272,13 +258,57 @@
             </row>            
             <row>
                 <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>facultad</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Facultad o Rectorado</label>
+                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
+                    <input-type value-pairs-name="unp_facultades">dropdown</input-type>
+                    <hint>Seleccione facultad o rectorado</hint>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>carrera</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Carrera</label>
+                    <type-bind>Tesis de grado, Trabajo final</type-bind>                    
+                    <!--<input-type value-pairs-name="unp_carrerasGrado">dropdown</input-type>-->
+                    <!--<input-type>tag</input-type>-->
+                    <input-type>onebox</input-type>
+                    <vocabulary>carreras</vocabulary> 
+                    <hint>Seleccione carrera</hint>
+                    <required>Debe seleccionar una carrera</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>carrera</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Carrera</label>
+                    <type-bind>Tesis de posgrado</type-bind>
+                    <!--<input-type value-pairs-name="unp_carrerasPosgrado">dropdown</input-type>-->
+                    <input-type>onebox</input-type>
+                    <vocabulary>carreras</vocabulary> 
+                    <hint>Seleccione carrera</hint>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row>            
+            <row>
+                <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>citation</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cita</label>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese informacón de cita estándar para el documento.</hint>
+                    <hint>Ingrese información de cita estándar para el documento.</hint>
                     <required></required>
                 </field>
             </row>
@@ -446,7 +476,9 @@
                           Escriba cada término y luego presione la tecla TAB.
                          </hint>
                     <required>Debe agregar al menos 3(tres).</required>
-                    <vocabulary>srsc</vocabulary>
+                    <!--<vocabulary>srsc</vocabulary>-->
+                    <!--<vocabulary>terminos</vocabulary>-->
+                    <vocabulary>terminos_use</vocabulary>
                 </field>
             </row>
             <row>
@@ -497,7 +529,7 @@
                     <label>Formato de imagen</label>
                     <type-bind>Imagen</type-bind>
                     <input-type value-pairs-name="unp_format_image">dropdown</input-type>
-                    <hint>Selecione formato de imagen.</hint>
+                    <hint>Seleccione formato de imagen.</hint>
                     <required></required>
                 </field>
             </row>
@@ -510,7 +542,7 @@
                     <label>Formato de audio</label>
                     <type-bind>Audio</type-bind>
                     <input-type value-pairs-name="unp_format_audio">dropdown</input-type>
-                    <hint>Selecione formato de audio.</hint>
+                    <hint>Seleccione formato de audio.</hint>
                     <required></required>
                 </field>
             </row>
@@ -523,7 +555,7 @@
                     <label>Formato de video</label>
                     <type-bind>Video</type-bind>
                     <input-type value-pairs-name="unp_format_video">dropdown</input-type>
-                    <hint>Selecione formato de video.</hint>
+                    <hint>Seleccione formato de video.</hint>
                     <required></required>
                 </field>
             </row>
@@ -551,7 +583,7 @@
                     <label>Cobertura geográfica</label>
                     <type-bind>Audio, Imagen, Video, Conjunto de datos</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese informacón sobre la cobertura espacial/geográfica del contenido del recurso.</hint>
+                    <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del recurso.</hint>
                     <required>Debe poder describir el ítem.</required>
                 </field>
             </row>
@@ -564,7 +596,7 @@
                     <label>Cobertura temporal</label>
                     <type-bind>Audio, Imagen, Video, Conjunto de datos</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese informacón sobre el periodo de tiempo específico para el recurso.</hint>
+                    <hint>Ingrese información sobre el periodo de tiempo específico para el recurso.</hint>
                     <required>Debe poder describir el ítem.</required>
                 </field>
             </row> -->
@@ -577,7 +609,7 @@
                     <label>Cobertura geográfica</label>
                     <type-bind>Audio, Imagen, Video, Conjunto de datos, Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese informacón sobre la cobertura espacial/geográfica del contenido del documento.</hint>
+                    <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del documento.</hint>
                     <required></required>
                 </field>
             </row>
@@ -590,7 +622,7 @@
                     <label>Cobertura temporal</label>
                     <type-bind>Audio, Imagen, Video, Conjunto de datos, Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese informacón sobre el periodo de tiempo específico que se referencia en el documento.</hint>
+                    <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.</hint>
                     <required></required>
                 </field>
             </row>
@@ -641,7 +673,7 @@
                     <repeatable>false</repeatable>
                     <label>Tipo</label>
                     <input-type value-pairs-name="unp_types">dropdown</input-type>
-                    <hint>Selecione el tipo de contenido del ítem.</hint>
+                    <hint>Seleccione el tipo de contenido del ítem.</hint>
                     <required>Debe seleccionar un tipo de contenido.</required>
                 </field>
             </row>
@@ -655,7 +687,7 @@
                     <label>Título</label>
                     <input-type>onebox</input-type>
                     <hint>Transcribir el título del original, en orden y ortografía del recurso. Utilizar mayúsculas únicamente para la primer palabra del título y los nombres propios. 
-                         Los subtítulos deben deben mencionarse con el siguiente formato: Título: Subtítulo</hint>
+                         Los subtítulos deben mencionarse con el siguiente formato: Título: Subtítulo</hint>
                     <required>Debe indicar el título del documento.</required>
                 </field>
             </row>
@@ -774,19 +806,6 @@
             <row>
                 <field>
                     <dc-schema>unp</dc-schema>
-                    <dc-element>facultad</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Facultad</label>
-                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
-                    <input-type value-pairs-name="unp_facultades">dropdown</input-type>
-                    <hint>Seleccione facultad o rectorado</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>unp</dc-schema>
                     <dc-element>sede</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
@@ -794,7 +813,51 @@
                     <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
                     <input-type value-pairs-name="unp_sedes">dropdown</input-type>
                     <hint>Seleccione sede</hint>
-                    <required></required>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row>            
+            <row>
+                <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>facultad</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Facultad o Rectorado</label>
+                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
+                    <input-type value-pairs-name="unp_facultades">dropdown</input-type>
+                    <hint>Seleccione facultad o rectorado</hint>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>carrera</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Carrera</label>
+                    <type-bind>Tesis de grado, Trabajo final</type-bind>
+                    <!--<input-type value-pairs-name="unp_carrerasGrado">dropdown</input-type>-->
+                    <!--<input-type>tag</input-type>-->
+                    <input-type>onebox</input-type>
+                    <vocabulary>carreras</vocabulary> 
+                    <hint>Seleccione carrera</hint>
+                    <required>Debe seleccionar una carrera</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>carrera</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Carrera</label>
+                    <type-bind>Tesis de posgrado</type-bind>
+                    <!--<input-type value-pairs-name="unp_carrerasPosgrado">dropdown</input-type>-->
+                    <input-type>onebox</input-type>
+                    <vocabulary>carreras</vocabulary> 
+                    <hint>Seleccione carrera</hint>
+                    <required>Debe seleccionar una opción</required>
                 </field>
             </row>
             <row>
@@ -805,7 +868,7 @@
                     <repeatable>false</repeatable>
                     <label>Cita</label>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese informacón de cita estándar para el documento.</hint>
+                    <hint>Ingrese información de cita estándar para el documento.</hint>
                     <required></required>
                 </field>
             </row>                        
@@ -956,7 +1019,9 @@
                           Escriba cada término y luego presione la tecla TAB.
                         </hint>
                     <required>Debe agregar al menos 3(tres).</required>
-                    <vocabulary>srsc</vocabulary>
+                    <!--<vocabulary>srsc</vocabulary>-->
+                    <!--<vocabulary>terminos</vocabulary>-->
+                    <vocabulary>terminos_use</vocabulary>
                 </field>
             </row>
             <row>
@@ -1009,7 +1074,7 @@
                     <label>Cantidad de páginas</label>
                     <input-type>onebox</input-type>
                     <type-bind>Libro, Parte de libro, Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
-                    <hint>Infique cantidad de páginas del documento.</hint>
+                    <hint>Indique cantidad de páginas del documento.</hint>
                     <required>Debe indicar el total de páginas.</required>
                 </field>
             </row>
@@ -1022,7 +1087,7 @@
                     <label>Formato de imagen</label>
                     <type-bind>Imagen</type-bind>
                     <input-type value-pairs-name="unp_format_image">dropdown</input-type>
-                    <hint>Selecione formato de imagen.</hint>
+                    <hint>Seleccione formato de imagen.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1035,7 +1100,7 @@
                     <label>Formato de audio</label>
                     <type-bind>Audio</type-bind>
                     <input-type value-pairs-name="unp_format_audio">dropdown</input-type>
-                    <hint>Selecione formato de audio.</hint>
+                    <hint>Seleccione formato de audio.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1048,7 +1113,7 @@
                     <label>Formato de video</label>
                     <type-bind>Video</type-bind>
                     <input-type value-pairs-name="unp_format_video">dropdown</input-type>
-                    <hint>Selecione formato de video.</hint>
+                    <hint>Seleccione formato de video.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1061,7 +1126,7 @@
                     <label>Cobertura geográfica</label>
                     <type-bind>Audio, Imagen, Video, Conjunto de datos</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese informacón sobre la cobertura espacial/geográfica del contenido del recurso.</hint>
+                    <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del recurso.</hint>
                     <required>Debe poder describir el ítem.</required>
                 </field>
             </row>
@@ -1074,7 +1139,7 @@
                     <label>Cobertura temporal</label>
                     <type-bind>Audio, Imagen, Video, Conjunto de datos</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese informacón sobre el periodo de tiempo específico para el recurso.</hint>
+                    <hint>Ingrese información sobre el periodo de tiempo específico para el recurso.</hint>
                     <required>Debe poder describir el ítem.</required>
                 </field>
             </row>
@@ -1087,7 +1152,7 @@
                     <label>Cobertura geográfica</label>
                     <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese informacón sobre la cobertura espacial/geográfica del contenido del documento.</hint>
+                    <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del documento.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1100,7 +1165,7 @@
                     <label>Cobertura temporal</label>
                     <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese informacón sobre el periodo de tiempo específico que se referencia en el documento.</hint>
+                    <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.</hint>
                     <required></required>
                 </field>
             </row>
@@ -2597,7 +2662,151 @@
                 <stored-value>Rectorado</stored-value>
             </pair>            
         </value-pairs>
+        <value-pairs value-pairs-name="unp_carrerasGrado" dc-term="unp_carrera">
+            <pair>
+                <displayed-value>Geología</displayed-value>
+                <stored-value>Geología</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ingeniería Civil (Orientación Construcciones)</displayed-value>
+                <stored-value>Ingeniería Civil (Orientación Construcciones)</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ingeniería Civil (Orientación Hidráulica)</displayed-value>
+                <stored-value>Ingeniería Civil (Orientación Hidráulica)</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ingeniería Electrónica</displayed-value>
+                <stored-value>Ingeniería Electrónica</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ingeniería en Petróleo</displayed-value>
+                <stored-value>Ingeniería en Petróleo</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ingeniería Forestal</displayed-value>
+                <stored-value>Ingeniería Forestal</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ingeniería Industrial</displayed-value>
+                <stored-value>Ingeniería Industrial</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ingeniería Mecánica</displayed-value>
+                <stored-value>Ingeniería Mecánica</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ingeniería Química</displayed-value>
+                <stored-value>Ingeniería Química</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Administración de Empresas Turísticas</displayed-value>
+                <stored-value>Licenciatura en Administración de Empresas Turísticas</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Administración</displayed-value></pair>
+                <stored-value>Licenciatura en Administración</stored-value>
+            <pair>
+                <displayed-value>Licenciatura en Ciencia Política (modalidad a distancia)</displayed-value>
+                <stored-value>Licenciatura en Ciencia Política (modalidad a distancia)</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Ciencias Biológicas</displayed-value>
+                <stored-value>Licenciatura en Ciencias Biológicas</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Comunicación Social</displayed-value>
+                <stored-value>Licenciatura en Comunicación Social</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Economía</displayed-value>
+                <stored-value>Licenciatura en Economía</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Enfermería</displayed-value>
+                <stored-value>Licenciatura en Enfermería</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Geografía</displayed-value>
+                <stored-value>Licenciatura en Geografía</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Gestión Ambiental</displayed-value>
+                <stored-value>Licenciatura en Gestión Ambiental</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Higiene y Seguridad en el Trabajo</displayed-value>
+                <stored-value>Licenciatura en Higiene y Seguridad en el Trabajo</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Historia</displayed-value>
+                <stored-value>Licenciatura en Historia</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Informática</displayed-value>
+                <stored-value>Licenciatura en Informática</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Letras</displayed-value>
+                <stored-value>Licenciatura en Letras</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Matemática</displayed-value>
+                <stored-value>Licenciatura en Matemática</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Protección y Saneamiento Ambiental</displayed-value>
+                <stored-value>Licenciatura en Protección y Saneamiento Ambiental</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Química</displayed-value>
+                <stored-value>Licenciatura en Química</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Sistemas (Orientación Planificación, Gestión y Control de Proyectos Informáticos)</displayed-value>
+                <stored-value>Licenciatura en Sistemas</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Trabajo Social</displayed-value>
+                <stored-value>Licenciatura en Trabajo Social</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Licenciatura en Turismo</displayed-value>
+                <stored-value>Licenciatura en Turismo</stored-value>
+            </pair>
+        </value-pairs>
 
+        <!--Faltan agregar las carreras de posgrado-->
+        <value-pairs value-pairs-name="unp_carrerasPosgrado" dc-term="unp_carrera">
+            <pair>
+                <displayed-value></displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value></displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value></displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value></displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value></displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value></displayed-value>
+                <stored-value></stored-value>
+            </pair>
+            <pair>
+                <displayed-value></displayed-value>
+                <stored-value></stored-value>
+            </pair>
+        </value-pairs>
         <value-pairs value-pairs-name="unp_sedes" dc-term="unp_sede">
             <pair>
                 <displayed-value>Comodoro Rivadavia</displayed-value>

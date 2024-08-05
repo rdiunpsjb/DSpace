@@ -163,6 +163,8 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad" />
+                <ref bean="searchFilterCarrera" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterAuthor" />
                 <ref bean="searchFilterSubject" />
@@ -176,7 +178,9 @@
         <!--The search filters which can be used on the discovery search page-->
         <property name="searchFilters">
             <list>
-                <ref bean="searchFilterSede" />               
+                <ref bean="searchFilterSede" />     
+                <ref bean="searchFilterFacultad" />
+                <ref bean="searchFilterCarrera" />            
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterTitle" />
                 <ref bean="searchFilterAuthor" />
@@ -743,6 +747,8 @@
             <list>
                 <ref bean="searchFilterObjectNamedType" />
                 <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad" />
+                <ref bean="searchFilterCarrera" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterIssued" />
             </list>
@@ -751,7 +757,9 @@
         <property name="searchFilters">
             <list>
                 <ref bean="searchFilterObjectNamedType" />
-                <ref bean="searchFilterSede" />                
+                <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad" />                
+                <ref bean="searchFilterCarrera" />                
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterIssued" />
             </list>
@@ -820,7 +828,9 @@
         <property name="sidebarFacets">
             <list>
                 <ref bean="searchFilterObjectNamedType" />
-                <ref bean="searchFilterSede" />                
+                <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad"/>
+                <ref bean="searchFilterCarrera" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterIssued" />
             </list>
@@ -830,6 +840,8 @@
             <list>
                 <ref bean="searchFilterObjectNamedType" />
                 <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad" />
+                <ref bean="searchFilterCarrera" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterIssued" />
             </list>
@@ -898,6 +910,8 @@
             <list>
                 <ref bean="searchFilterObjectNamedType" />
                 <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad" />
+                <ref bean="searchFilterCarrera" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterSubmitter" />
@@ -908,6 +922,8 @@
             <list>
                 <ref bean="searchFilterObjectNamedType" />
                 <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad" />
+                <ref bean="searchFilterCarrera" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterSubmitter" />
@@ -976,6 +992,8 @@
             <list>
                 <ref bean="searchFilterObjectNamedType" />
                 <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad" />
+                <ref bean="searchFilterCarrera" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterSubmitter" />
@@ -986,6 +1004,8 @@
             <list>
                 <ref bean="searchFilterObjectNamedType" />
                 <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad" />
+                <ref bean="searchFilterCarrera" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterSubmitter" />
@@ -1051,6 +1071,8 @@
             <list>
                 <ref bean="searchFilterObjectNamedType" />
                 <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad" />
+                <ref bean="searchFilterCarrera" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterSubmitter" />
@@ -1062,6 +1084,8 @@
             <list>
                 <ref bean="searchFilterObjectNamedType" />
                 <ref bean="searchFilterSede" />
+                <ref bean="searchFilterFacultad" />
+                <ref bean="searchFilterCarrera" />
                 <ref bean="searchFilterType" />
                 <ref bean="searchFilterIssued" />
                 <ref bean="searchFilterSubmitter" />
@@ -2407,7 +2431,23 @@
             </list>
         </property>
     </bean>
-    
+
+    <bean id="searchFilterFacultad" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="itemfacultad" />
+        <property name="metadataFields">
+            <list>
+                <value>unp.facultad</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="searchFilterCarrera" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
+        <property name="indexFieldName" value="itemcarrera" />
+        <property name="metadataFields">
+            <list>
+                <value>unp.carrera</value>
+            </list>
+        </property>
+    </bean>        
     <bean id="searchFilterType" class="org.dspace.discovery.configuration.DiscoverySearchFilterFacet">
         <property name="indexFieldName" value="itemtype" />
         <property name="metadataFields">

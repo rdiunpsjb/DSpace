@@ -122,12 +122,20 @@
 		<element>facultad</element>
 		<qualifier></qualifier>
 		<scope_note></scope_note>
-	</dc-type> 	<dc-type>
+	</dc-type> 
+	<dc-type>
 		<schema>unp</schema>
 		<element>sede</element>
 		<qualifier></qualifier>
 		<scope_note></scope_note>
-	</dc-type>	
+	</dc-type>
+	<dc-type>
+		<schema>unp</schema>
+		<element>carrera</element>
+		<qualifier></qualifier>
+		<scope_note></scope_note>
+	</dc-type>
+
 <!--
   <dc-type>
 		<schema></schema>
