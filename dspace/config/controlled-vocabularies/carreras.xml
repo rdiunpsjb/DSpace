@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <node id="carreras" label="Carreras">
-    <isComposedBy>
-	    <node id="DeGrado" label="Carreras de Grado">
+   <!--<isComposedBy>
+	    <node id="DeGrado" label="Carreras de Grado"> -->
 			<isComposedBy>
 				<node id="Geologia" label="Geología"/>
 				<node id="IngenieriaCivilConstrucciones" label="Ingeniería Civil (Orientación Construcciones)"/>
@@ -31,41 +31,42 @@
 				<node id="SistemasPlanificacion" label="Licenciatura en Sistemas (Orientación Planificación, Gestión y Control de Proyectos Informáticos)"/>
 				<node id="TrabajoSocial" label="Licenciatura en Trabajo Social"/>
 				<node id="Turismo" label="Licenciatura en Turismo"/>
-			</isComposedBy>
+<!--			</isComposedBy>
 		</node>
 		<node id="DePosgrado" label="Carreras de Posgrado">
-			<isComposedBy>
-				 <node id="Diplomatura_de_Posgrado_en_Entornos_Virtuales_de_Formación_Universitaria" label="Diplomatura de Posgrado en Entornos Virtuales de Formación Universitaria"/>
-				 <node id="Diplomatura_en_Análisis_y_Gestión_de_Datos" label="Diplomatura en Análisis y Gestión de Datos"/>
-				 <node id="Diplomatura_en_Economía_Pesquera" label="Diplomatura en Economía Pesquera"/>
-				 <node id="Diplomatura_Territorial_en_Educación_Financiera" label="Diplomatura Territorial en Educación Financiera"/>
-				 <node id="Diplomatura_Universitaria_en_Estudios_sobre_la_Muerte_y_los_Cementerios" label="Diplomatura Universitaria en Estudios sobre la Muerte y los Cementerios"/>
-				 <node id="Diplomatura_Universitaria_en_Geotecnologías_aplicadas_a_la_Gestión_Ambiental_y_el_Turismo" label="Diplomatura Universitaria en Geotecnologías aplicadas a la Gestión Ambiental y el Turismo"/>
-				 <node id="Diplomatura_Universitaria_en_Neuropsicología,_Neurociencias_y_Educación" label="Diplomatura Universitaria en Neuropsicología, Neurociencias y Educación"/>
-				 <node id="Doctorado_en_Ciencias_de_la_Ingeniería" label="Doctorado en Ciencias de la Ingeniería"/>
-				 <node id="Doctorado_en_Ciencias_Sociales_y_Humanas" label="Doctorado en Ciencias Sociales y Humanas"/>
-				 <node id="Doctorado_en_Derecho" label="Doctorado en Derecho"/>
-				 <node id="Doctorado_en_Ecología_y_Gestión_de_Fuegos_de_Vegetación" label="Doctorado en Ecología y Gestión de Fuegos de Vegetación"/>
-				 <node id="Doctorado_Interinstitucional_en_Ciencias_Económicas" label="Doctorado Interinstitucional en Ciencias Económicas"/>
-				 <node id="Especialización_en_Ciencias_Químicas_con_Mención_de_Diagnóstico_Ambiental" label="Especialización en Ciencias Químicas con Mención de Diagnóstico Ambiental"/>
-				 <node id="Especialización_en_Contabilidad_Superior_y_Auditoría" label="Especialización en Contabilidad Superior y Auditoría"/>
-				 <node id="Especialización_en_Contaminación_de_Aguas_Subterranas" label="Especialización en Contaminación de Aguas Subterranas"/>
-				 <node id="Especialización_en_Contaminación_de_Aguas_Superficiales" label="Especialización en Contaminación de Aguas Superficiales"/>
-				 <node id="Especialización_en_Derecho_Administrativo" label="Especialización en Derecho Administrativo"/>
-				 <node id="Especialización_en_Docencia_Universitaria" label="Especialización en Docencia Universitaria"/>
-				 <node id="Especialización_en_Historia_Reciente_en_Perspectiva_Regional" label="Especialización en Historia Reciente en Perspectiva Regional"/>
-				 <node id="Especialización_en_Tributación" label="Especialización en Tributación"/>
-				 <node id="Maestría_en_Derecho_Administrativo" label="Maestría en Derecho Administrativo"/>
-				 <node id="Maestría_en_Didácticas_Específicas_con_Orientación_en_Lengua_y_Literatura_o_en_Ciencias_Sociales_a_distancia" label="Maestría en Didácticas Específicas con Orientación en Lengua y Literatura o en Ciencias Sociales a distancia"/>
-				 <node id="Maestría_en_Enseñanzas_Digitales" label="Maestría en Enseñanzas Digitales"/>
-				 <node id="Maestría_en_Estudios_Psicológicos_de_la_Enseñanza_y_el_Aprendizaje" label="Maestría en Estudios Psicológicos de la Enseñanza y el Aprendizaje"/>
-				 <node id="Maestría_en_Estudios_Socioterritoriales" label="Maestría en Estudios Socioterritoriales"/>
-				 <node id="Maestría_en_Eucación_Superior" label="Maestría en Eucación Superior"/>
-				 <node id="Maestría_En_Geografía_De_Los_Espacios_Litoralescon_orientaciones_en_Turismo_y_Ambiente_y_Recursos_Naturales" label="Maestría En Geografía De Los Espacios Litoralescon orientaciones en Turismo y Ambiente y Recursos Naturales"/>
-				 <node id="Maestría_en_Gestión_Sanitaria_Forestal" label="Maestría en Gestión Sanitaria Forestal"/>
-				 <node id="Maestría_en_Trabajo_Social" label="Maestría en Trabajo Social"/>
-				 <node id="Maestría_Interinstitucional_en_Comunicación,_Cultura_y_Educación" label="Maestría Interinstitucional en Comunicación, Cultura y Educación"/>		
+			<isComposedBy>  
+-->
+				 <node id="DiplomaturadePosgradoenEntornosVirtualesdeFormacionUniversitaria" label="Diplomatura de Posgrado en Entornos Virtuales de Formación Universitaria"/>
+				 <node id="DiplomaturaenAnalisisyGestiondeDatos" label="Diplomatura en Análisis y Gestión de Datos"/>
+				 <node id="DiplomaturaenEconomiaPesquera" label="Diplomatura en Economía Pesquera"/>
+				 <node id="DiplomaturaTerritorialenEducacionFinanciera" label="Diplomatura Territorial en Educación Financiera"/>
+				 <node id="DiplomaturaUniversitariaenEstudiossobrelaMuerteylosCementerios" label="Diplomatura Universitaria en Estudios sobre la Muerte y los Cementerios"/>
+				 <node id="DiplomaturaUniversitariaenGeotecnologiasaplicadasalaGestionAmbientalyelTurismo" label="Diplomatura Universitaria en Geotecnologías aplicadas a la Gestión Ambiental y el Turismo"/>
+				 <node id="DiplomaturaUniversitariaenNeuropsicologiaNeurocienciasyEducacion" label="Diplomatura Universitaria en Neuropsicología, Neurociencias y Educación"/>
+				 <node id="DoctoradoenCienciasdelaIngenieria" label="Doctorado en Ciencias de la Ingeniería"/>
+				 <node id="DoctoradoenCienciasSocialesyHumanas" label="Doctorado en Ciencias Sociales y Humanas"/>
+				 <node id="DoctoradoenDerecho" label="Doctorado en Derecho"/>
+				 <node id="DoctoradoenEcologiayGestiondeFuegosdeVegetacion" label="Doctorado en Ecología y Gestión de Fuegos de Vegetación"/>
+				 <node id="DoctoradoInterinstitucionalenCienciasEconomicas" label="Doctorado Interinstitucional en Ciencias Económicas"/>
+				 <node id="EspecializacionenCienciasQuimicasconMenciondeDiagnosticoAmbiental" label="Especialización en Ciencias Químicas con Mención de Diagnóstico Ambiental"/>
+				 <node id="EspecializacionenContabilidadSuperioryAuditoria" label="Especialización en Contabilidad Superior y Auditoría"/>
+				 <node id="EspecializacionenContaminacion_de_Aguas_Subterranas" label="Especialización en Contaminación de Aguas Subterranas"/>
+				 <node id="EspecializacionenContaminaciondeAguasSuperficiales" label="Especialización en Contaminación de Aguas Superficiales"/>
+				 <node id="EspecializacionenDerechoAdministrativo" label="Especialización en Derecho Administrativo"/>
+				 <node id="EspecializacionenDocenciaUniversitaria" label="Especialización en Docencia Universitaria"/>
+				 <node id="EspecializacionenHistoriaRecienteenPerspectivaRegional" label="Especialización en Historia Reciente en Perspectiva Regional"/>
+				 <node id="EspecializacionenTributacion" label="Especialización en Tributación"/>
+				 <node id="MaestriaenDerechoAdministrativo" label="Maestría en Derecho Administrativo"/>
+				 <node id="MaestriaenDidacticasEspecificasconOrientacionenLenguayLiteraturaoenCienciasSocialesadistancia" label="Maestría en Didácticas Específicas con Orientación en Lengua y Literatura o en Ciencias Sociales a distancia"/>
+				 <node id="MaestriaenEnsenanzasDigitales" label="Maestría en Enseñanza en Escenarios Digitales"/>
+				 <node id="MaestriaenEstudiosPsicologicosdelaEnseñanzayelAprendizaje" label="Maestría en Estudios Psicológicos de la Enseñanza y el Aprendizaje"/>
+				 <node id="MaestriaenEstudiosSocioterritoriales" label="Maestría en Estudios Socioterritoriales"/>
+				 <node id="MaestriaenEucacionSuperior" label="Maestría en Eucación Superior"/>
+				 <node id="MaestriaEnGeografiaDeLosEspaciosLitoralesconorientacionesenTurismoyAmbienteyRecursosNaturales" label="Maestría En Geografía De Los Espacios Litoralescon orientaciones en Turismo y Ambiente y Recursos Naturales"/>
+				 <node id="MaestriaenGestionSanitariaForestal" label="Maestría en Gestión Sanitaria Forestal"/>
+				 <node id="MaestriaenTrabajoSocial" label="Maestría en Trabajo Social"/>
+				 <node id="MaestriaInterinstitucionalenComunicacionCulturayEducacion" label="Maestría Interinstitucional en Comunicación, Cultura y Educación"/>		
 			</isComposedBy>		
-		</node>
-    </isComposedBy>
+<!-- 		</node>
+    </isComposedBy> -->
 </node>
