@@ -50,19 +50,21 @@
 				 <node id="DoctoradoInterinstitucionalenCienciasEconomicas" label="Doctorado Interinstitucional en Ciencias Económicas"/>
 				 <node id="EspecializacionenCienciasQuimicasconMenciondeDiagnosticoAmbiental" label="Especialización en Ciencias Químicas con Mención de Diagnóstico Ambiental"/>
 				 <node id="EspecializacionenContabilidadSuperioryAuditoria" label="Especialización en Contabilidad Superior y Auditoría"/>
-				 <node id="EspecializacionenContaminacion_de_Aguas_Subterranas" label="Especialización en Contaminación de Aguas Subterranas"/>
+				 <node id="EspecializacionenContaminaciondeAguasSubterranas" label="Especialización en Contaminación de Aguas Subterranas"/>
 				 <node id="EspecializacionenContaminaciondeAguasSuperficiales" label="Especialización en Contaminación de Aguas Superficiales"/>
 				 <node id="EspecializacionenDerechoAdministrativo" label="Especialización en Derecho Administrativo"/>
 				 <node id="EspecializacionenDocenciaUniversitaria" label="Especialización en Docencia Universitaria"/>
 				 <node id="EspecializacionenHistoriaRecienteenPerspectivaRegional" label="Especialización en Historia Reciente en Perspectiva Regional"/>
 				 <node id="EspecializacionenTributacion" label="Especialización en Tributación"/>
+				 <node id="MaestriaenCienciasConMencionenQuimicadeProductosNaturales" label="Maestría en Ciencias con Mención en Química de Productos Naturales"/>
 				 <node id="MaestriaenDerechoAdministrativo" label="Maestría en Derecho Administrativo"/>
-				 <node id="MaestriaenDidacticasEspecificasconOrientacionenLenguayLiteraturaoenCienciasSocialesadistancia" label="Maestría en Didácticas Específicas con Orientación en Lengua y Literatura o en Ciencias Sociales a distancia"/>
+				 <node id="MaestriaenDidacticasEspecificasconOrientacionenLenguayLiteraturaoenCienciasSocialesadistancia" label="Maestría en Didácticas Específicas con orientación en Lengua y Literatura o en Ciencias Sociales a distancia"/>
 				 <node id="MaestriaenEnsenanzasDigitales" label="Maestría en Enseñanza en Escenarios Digitales"/>
 				 <node id="MaestriaenEstudiosPsicologicosdelaEnseñanzayelAprendizaje" label="Maestría en Estudios Psicológicos de la Enseñanza y el Aprendizaje"/>
 				 <node id="MaestriaenEstudiosSocioterritoriales" label="Maestría en Estudios Socioterritoriales"/>
-				 <node id="MaestriaenEucacionSuperior" label="Maestría en Eucación Superior"/>
-				 <node id="MaestriaEnGeografiaDeLosEspaciosLitoralesconorientacionesenTurismoyAmbienteyRecursosNaturales" label="Maestría En Geografía De Los Espacios Litoralescon orientaciones en Turismo y Ambiente y Recursos Naturales"/>
+				 <node id="MaestriaenEucacionSuperior" label="Maestría en Educación Superior"/>
+				 <node id="MaestriaEnGeografiaDeLosEspaciosLitoralesconorientacionesenTurismoyAmbienteyRecursosNaturales" label="Maestría En Geografía De Los Espacios Litorales con orientaciones en Turismo y Ambiente y Recursos Naturales"/>
+				 <node id="MaestriaenGestionEmpresaria" label="Maestría en Gestión Empresaria"/>
 				 <node id="MaestriaenGestionSanitariaForestal" label="Maestría en Gestión Sanitaria Forestal"/>
 				 <node id="MaestriaenTrabajoSocial" label="Maestría en Trabajo Social"/>
 				 <node id="MaestriaInterinstitucionalenComunicacionCulturayEducacion" label="Maestría Interinstitucional en Comunicación, Cultura y Educación"/>		

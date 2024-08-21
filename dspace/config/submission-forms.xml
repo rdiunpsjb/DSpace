@@ -720,6 +720,19 @@
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>filiation</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Filiación</label>
+                    <type-bind>Audio, Imagen, Video, Conjunto de Datos, Tesis de grado, Tesis de posgrado</type-bind>                  
+                    <input-type>textarea</input-type>
+                    <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas seguidas del prefijo "Fil."</hint>
+                    <required></required>
+                </field>
+            </row>            
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
                     <dc-element>contributor</dc-element>
                     <dc-qualifier>director</dc-qualifier>
                     <repeatable>true</repeatable>
