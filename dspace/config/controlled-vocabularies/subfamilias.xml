@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<node id="subfamilias" label="HERBARIO: SUBFAMILIAS">
+		<isComposedBy>
+			 <node id="ANTHEMIDEAE" label="ANTHEMIDEAE"/>
+			 <node id="ARISTIDOIDEAE" label="ARISTIDOIDEAE"/>
+			 <node id="ARUNDINOIDEAE" label="ARUNDINOIDEAE"/>
+			 <node id="ASTEREAE" label="ASTEREAE"/>
+			 <node id="BAMBUSOIDEAE" label="BAMBUSOIDEAE"/>
+			 <node id="CALENDULEAE" label="CALENDULEAE"/>
+			 <node id="CARDUEAE" label="CARDUEAE"/>
+			 <node id="CESALPINOID" label="CESALPINOID"/>
+			 <node id="CESALPINOIDEAE" label="CESALPINOIDEAE"/>
+			 <node id="CHLORIDOIDEAE" label="CHLORIDOIDEAE"/>
+			 <node id="CICHORIEAE" label="CICHORIEAE"/>
+			 <node id="DANTHONIOIDEAE" label="DANTHONIOIDEAE"/>
+			 <node id="EUPATORIEAE" label="EUPATORIEAE"/>
+			 <node id="HELENIEAE" label="HELENIEAE"/>
+			 <node id="HELIANTHEAE" label="HELIANTHEAE"/>
+			 <node id="INULEAE" label="INULEAE"/>
+			 <node id="LACTUCEAE" label="LACTUCEAE"/>
+			 <node id="MIMOSOIDEAE" label="MIMOSOIDEAE"/>
+			 <node id="MIMOSOIDEAE_Prosopis_alpataco_Philippi" label="MIMOSOIDEAE Prosopis alpataco Philippi"/>
+			 <node id="MUTISIEAE" label="MUTISIEAE"/>
+			 <node id="PANICOIDEAE" label="PANICOIDEAE"/>
+			 <node id="PAPILIONOIDE" label="PAPILIONOIDE"/>
+			 <node id="PAPILIONOIDEAE" label="PAPILIONOIDEAE"/>
+			 <node id="PAPILIONOIDEAETrifolium_repens_L." label="PAPILIONOIDEAETrifolium repens L."/>
+			 <node id="POOIDEAE" label="POOIDEAE"/>
+			 <node id="SENECIONEAE" label="SENECIONEAE"/>
+		</isComposedBy>
+	</node>
