@@ -120,12 +120,13 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
                     <dc-qualifier>filiation</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Filiación</label>
                     <type-bind>Audio, Imagen, Video, Conjunto de Datos, Tesis de grado, Tesis de posgrado</type-bind>                  
                     <input-type>textarea</input-type>
-                    <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas seguidas del prefijo "Fil."</hint>
-                    <required></required>
+                    <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
+                    Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
+                    <required>Debe ingresar esta información</required>
                 </field>
             </row>
             <row>
@@ -319,6 +320,7 @@
                     <dc-qualifier>name</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Grado alcanzado</label>
+                    <style>col-sm-8</style>                    
                     <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Grado al que se aspira con el trabajo de tesis realizado. 
@@ -563,43 +565,18 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>language</dc-element>
-                    <dc-qualifier>iso</dc-qualifier>
+                    <!--<dc-qualifier>iso</dc-qualifier>-->
                     <repeatable>false</repeatable>
                     <label>Idioma</label>
-                    <input-type value-pairs-name="unp_common_iso_languages">dropdown</input-type>
+                    <!--<input-type value-pairs-name="unp_common_iso_languages">dropdown</input-type>-->
+                    <input-type value-pairs-name="unp_common_languages">dropdown</input-type>
                     <hint>Seleccione el idioma del contenido principal del artículo. Si el idioma no aparece en la
                         lista, seleccione 'Otro'. Si el contenido realmente no tiene un idioma (por ejemplo, si
                         es un conjunto de datos o una imagen), seleccione 'N/A'.
                     </hint>
-                    <required></required>
+                    <required>Debe seleccionar un idioma</required>
                 </field>
             </row>
-            <!--<<row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Cobertura geográfica</label>
-                    <type-bind>Audio, Imagen, Video, Conjunto de datos</type-bind>
-                    <input-type>onebox</input-type>
-                    <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del recurso.</hint>
-                    <required>Debe poder describir el ítem.</required>
-                </field>
-            </row>
-           <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>temporal</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Cobertura temporal</label>
-                    <type-bind>Audio, Imagen, Video, Conjunto de datos</type-bind>
-                    <input-type>onebox</input-type>
-                    <hint>Ingrese información sobre el periodo de tiempo específico para el recurso.</hint>
-                    <required>Debe poder describir el ítem.</required>
-                </field>
-            </row> -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -639,7 +616,6 @@
                     <required></required>
                 </field>
             </row>
-            <!--No habilitado para autoarchivo pero si para el workflow-->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -648,7 +624,7 @@
                     <label>Nivel de accesibilidad</label>
                     <input-type value-pairs-name="unp_access_level_types">dropdown</input-type>
                     <hint>Elija el nivel del acceso para el ítem.</hint>
-                    <required></required>
+                    <required>Debe seleccionar una opción</required>
                 </field>
             </row> 
             <row>
@@ -660,7 +636,7 @@
                     <label>Condición de uso</label>
                     <input-type value-pairs-name="unp_license_types">dropdown</input-type>
                     <hint>Elija la licencia adecuada para el ítem.</hint>
-                    <required></required>
+                    <required>Debe seleccionar una opción</required>
                 </field>
             </row>
         </form>
@@ -722,12 +698,13 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
                     <dc-qualifier>filiation</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Filiación</label>
                     <type-bind>Audio, Imagen, Video, Conjunto de Datos, Tesis de grado, Tesis de posgrado</type-bind>                  
                     <input-type>textarea</input-type>
-                    <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas seguidas del prefijo "Fil."</hint>
-                    <required></required>
+                    <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
+                    Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
+                    <required>Debe ingresar esta información</required>
                 </field>
             </row>            
             <row>
@@ -791,8 +768,8 @@
                     <dc-element>publisher</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Editorial</label>
-                    <style>col-sm-8</style>
+                    <label>Editor</label>
+                    <!--<style>col-sm-8</style>-->
                     <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final</type-bind>
                     <input-type>onebox</input-type>
                     <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
@@ -849,28 +826,11 @@
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Carrera</label>
-                    <type-bind>Tesis de grado, Trabajo final</type-bind>
-                    <!--<input-type value-pairs-name="unp_carrerasGrado">dropdown</input-type>-->
-                    <!--<input-type>tag</input-type>-->
+                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final</type-bind>
                     <input-type>onebox</input-type>
                     <vocabulary>carreras</vocabulary> 
                     <hint>Seleccione carrera</hint>
                     <required>Debe seleccionar una carrera</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>unp</dc-schema>
-                    <dc-element>carrera</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Carrera</label>
-                    <type-bind>Tesis de posgrado</type-bind>
-                    <!--<input-type value-pairs-name="unp_carrerasPosgrado">dropdown</input-type>-->
-                    <input-type>onebox</input-type>
-                    <vocabulary>carreras</vocabulary> 
-                    <hint>Seleccione carrera</hint>
-                    <required>Debe seleccionar una opción</required>
                 </field>
             </row>
             <row>
@@ -892,11 +852,12 @@
                     <dc-qualifier>name</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Grado alcanzado</label>
+                    <style>col-sm-8</style>                    
                     <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Grado al que se aspira con el trabajo de tesis realizado.
                     Por ejemplo: "Licenciado en enfermería"</hint>
-                    <required></required>
+                    <required>Campo requerido</required>
                 </field>
             </row>
             <row>
@@ -912,7 +873,7 @@
                     <hint>Institución que otorga el título.
                      Por ejemplo: Universidad Nacional de la Patagonia San Juan Bosco.</hint>
                     <default>Universidad Nacional de la Patagonia San Juan Bosco.</default>
-                    <required></required>
+                    <required>Campo requerido</required>
                 </field>
             </row>
             <row>
@@ -926,7 +887,7 @@
                     <style>col-sm-8</style>
                     <input-type value-pairs-name="unp_levelposgrado">dropdown</input-type>
                     <hint>Nivel de posgrado al que aspira.</hint>
-                    <required></required>
+                    <required>Campo requerido</required>
                 </field>
             </row>
             <row>
@@ -940,7 +901,7 @@
                     <style>col-sm-8</style>
                     <input-type value-pairs-name="unp_levelgrado">dropdown</input-type>
                     <hint>Nivel de grado al que aspira.</hint>
-                    <required></required>
+                    <required>Campo requerido</required>
                 </field>
             </row>
             <row>
@@ -955,7 +916,7 @@
                     <input-type>onebox</input-type>
                     <hint>Disciplina a la que corresponde el trabajo de tesis realizado.
                     Por ejemplo: "Enfermería"</hint>
-                    <required></required>
+                    <required>Campo requerido</required>
                 </field>
             </row>
             <!--<row>
@@ -990,9 +951,6 @@
                 </field>
             </row>
         </form>
-
-        <!-- Form which defines the second page/section of the "traditional" DSpace submission process,
-             often used when depositing normal Items. -->
         <form name="autoarchivopaso2">            
             <!--<row>
                 <field>
@@ -1054,15 +1012,16 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>language</dc-element>
-                    <dc-qualifier>iso</dc-qualifier>
+                    <!--<dc-qualifier>iso</dc-qualifier>-->
                     <repeatable>false</repeatable>
                     <label>Idioma</label>
-                    <input-type value-pairs-name="unp_common_iso_languages">dropdown</input-type>
+                    <!--<input-type value-pairs-name="unp_common_iso_languages">dropdown</input-type>-->
+                    <input-type value-pairs-name="unp_common_languages">dropdown</input-type>
                     <hint>Seleccione el idioma del contenido principal del artículo. Si el idioma no aparece en la
                         lista, seleccione 'Otro'. Si el contenido realmente no tiene un idioma (por ejemplo, si
                         es un conjunto de datos o una imagen), seleccione 'N/A'.
                     </hint>
-                    <required></required>
+                    <required>Debe seleccionar un idioma</required>
                 </field>
             </row>            
             <row>
@@ -1194,7 +1153,6 @@
                     <required></required>
                 </field>
             </row>
-            <!--No habilitado para autoarchivo pero si para el workflow-->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1203,8 +1161,8 @@
                     <label>Nivel de accesibilidad</label>
                     <input-type value-pairs-name="unp_access_level_types">dropdown</input-type>
                     <hint>Elija el nivel del acceso para el ítem.</hint>
-                    <required></required>
-                    <visibility>workflow</visibility>
+                    <required>Debe seleccionar una opción</required>
+                    <!--<visibility>workflow</visibility>-->
                 </field>
             </row> 
             <row>
@@ -1216,12 +1174,256 @@
                     <label>Condición de uso</label>
                     <input-type value-pairs-name="unp_license_types">dropdown</input-type>
                     <hint>Elija la licencia adecuada para el ítem.</hint>
-                    <required></required>
-                    <visibility>workflow</visibility>
+                    <required>Debe seleccionar una opción</required>
+                    <!--<visibility>workflow</visibility>-->
                 </field>
             </row>             
         </form>
 
+        <form name="herbariopaso1">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Tipo</label>
+                    <input-type value-pairs-name="unp_types">dropdown</input-type>
+                    <hint>Seleccione el tipo de contenido del ítem.</hint>
+                    <required>Debe seleccionar un tipo de contenido.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <language value-pairs-name="unp_common_languages">true</language>
+                    <repeatable>false</repeatable>
+                    <label>Título</label>
+                    <input-type>onebox</input-type>
+                    <hint>Ingrese el nombre científico de la muestra.</hint>
+                    <required>El campo es requerido.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Autor</label>
+                    <input-type>onebox</input-type>
+                    <hint>Ingrese todas las personas que intervienen. Para nombres personales utilizar el formato invertido: Apellido, Nombres.</hint>
+                    <required>El campo es requerido.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>filiation</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Filiación</label>
+                    <input-type>textarea</input-type>
+                    <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
+                    Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
+                    <required>El campo es requerido.</required>
+                </field>
+            </row>           
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Fecha de recolección</label>
+                    <input-type>date</input-type>
+                    <hint>Fecha de recolección de la muestra.</hint>
+                    <required>Debe ingresar al menos el año.</required>
+                </field>
+            </row>
+            <row>                
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Editor</label>
+                    <input-type>onebox</input-type>
+                    <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
+                    A su vez, el departamento o grupo de investigación después de la facultad.
+                    Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química.</hint>
+                    <default>Universidad Nacional de la Patagonia San Juan Bosco.</default>
+                    <required>El campo es requerido.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>sede</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Sede</label>
+                    <input-type value-pairs-name="unp_sedes">dropdown</input-type>
+                    <hint>Seleccione sede</hint>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row>            
+            <row>
+                <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>facultad</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Facultad o Rectorado</label>
+                    <input-type value-pairs-name="unp_facultades">dropdown</input-type>
+                    <hint>Seleccione facultad o rectorado</hint>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>carrera</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Carrera</label>
+                    <input-type>onebox</input-type>
+                    <vocabulary>carreras</vocabulary> 
+                    <hint>Seleccione carrera</hint>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>citation</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Cita</label>
+                    <input-type>onebox</input-type>
+                    <hint>Ingrese información de cita estándar para el documento.</hint>
+                    <required></required>
+                </field>
+            </row>                        
+        </form>
+        <form name="herbariopaso2">            
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Palabras claves</label>
+                    <input-type>tag</input-type>
+                    <hint>Términos que describen la muestra. 
+                          Escriba cada término y luego presione la tecla TAB.
+                    </hint>
+                    <required>El campo es requerido.</required>
+                    <vocabulary>herbario</vocabulary>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>abstract</dc-qualifier>
+                    <language value-pairs-name="unp_common_languages">true</language>
+                    <repeatable>true</repeatable>
+                    <label>Resumen</label>
+                    <input-type>textarea</input-type>
+                    <hint>Ingrese un breve resumen con más detalles de la muestra.</hint>
+                    <required>El campo es requerido.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>language</dc-element>
+                    <repeatable>false</repeatable>
+                    <label>Idioma</label>
+                    <input-type value-pairs-name="unp_common_languages">dropdown</input-type>
+                    <hint>Seleccione el idioma del contenido principal del resumen. Si el idioma no aparece en la
+                        lista, seleccione 'Otro'. Si el contenido realmente no tiene un idioma (por ejemplo, si
+                        es un conjunto de datos o una imagen), seleccione 'N/A'.
+                    </hint>
+                    <required>Debe seleccionar un idioma</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>format</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Formato de imagen</label>
+                    <type-bind>Imagen</type-bind>
+                    <input-type value-pairs-name="unp_format_image">dropdown</input-type>
+                    <hint>Seleccione formato de imagen.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>coverage</dc-element>
+                    <dc-qualifier>spatial</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Cobertura geográfica</label>
+                    <input-type>onebox</input-type>
+                    <hint>Ingrese información sobre la cobertura espacial/geográfica dónde se recolectó la muestra.</hint>
+                    <required>El campo es requerido.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>coverage</dc-element>
+                    <dc-qualifier>temporal</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Cobertura temporal</label>
+                    <input-type>onebox</input-type>
+                    <hint>Ingrese información sobre el periodo de tiempo específico para el recurso.</hint>
+                    <required>El campo es requerido.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Notas</label>
+                    <input-type>textarea</input-type>
+                    <hint>Toda otra aclaración que resulte pertinente para la mejor recuperación de la muestra. En este campo se puede indicar por ejemplo: - si la fecha de recolección indicada es aproximada, etc.</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <repeatable>false</repeatable>
+                    <label>Nivel de accesibilidad</label>
+                    <input-type value-pairs-name="unp_access_level_types">dropdown</input-type>
+                    <hint>Elija el nivel del acceso para el ítem.</hint>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row> 
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>rights</dc-element>
+                    <dc-qualifier>uri</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Condición de uso</label>
+                    <input-type value-pairs-name="unp_license_types">dropdown</input-type>
+                    <hint>Elija la licencia adecuada para el ítem.</hint>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row>             
+        </form>
         <form name="herbariopaso3">
             <row>
                 <field>
@@ -1233,12 +1435,13 @@
                     <input-type>onebox</input-type>
                     <hint>Familia a la que pertenece la muestra.</hint>
                     <required>El campo es requerido.</required>
+                    <vocabulary>familias</vocabulary>
                 </field>
             </row>
             <row>
                 <field>
                     <dc-schema>dwc</dc-schema>
-                    <dc-element>catalogNumbre</dc-element>
+                    <dc-element>catalogNumber</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Número de Catálogo</label>
@@ -2918,7 +3121,6 @@
                 <displayed-value>Inglés</displayed-value>
                 <stored-value>en</stored-value>
             </pair>
-
             <pair>
                 <displayed-value>Italiano</displayed-value>
                 <stored-value>it</stored-value>
@@ -2948,16 +3150,44 @@
         <value-pairs value-pairs-name="unp_common_languages" dc-term="language">
             <pair>
                 <displayed-value>Español</displayed-value>
-                <stored-value>es</stored-value>
+                <stored-value>spa</stored-value>
+            </pair>            
+            <pair>
+                <displayed-value>Alemán</displayed-value>
+                <stored-value>deu</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Chino</displayed-value>
+                <stored-value>zho</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Francés</displayed-value>
+                <stored-value>fra</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Inglés (Estados Unidos)</displayed-value>
+                <stored-value>en_US</stored-value>
             </pair>
             <pair>
                 <displayed-value>Inglés</displayed-value>
-                <stored-value>en</stored-value>
+                <stored-value>eng</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Italiano</displayed-value>
+                <stored-value>ita</stored-value>
             </pair>
             <pair>
                 <displayed-value>Portugués</displayed-value>
-                <stored-value>pt</stored-value>
+                <stored-value>por</stored-value>
             </pair>
+            <pair>
+                <displayed-value>(Otro)</displayed-value>
+                <stored-value>Otro</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>N/A</displayed-value>
+                <stored-value></stored-value>
+            </pair>            
         </value-pairs>
 
         <value-pairs value-pairs-name="unp_format_image" dc-term="dc_Format">

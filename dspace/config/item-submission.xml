@@ -116,25 +116,34 @@
         </step-definition>
 
         <!--agrego los paso personalizado para herbario- y autoarchivo -->
-        <step-definition id="herbariopaso3" mandatory="true">
-            <heading>submit.progressbar.describe.step3</heading>
+        <step-definition id="herbariopaso1" mandatory="true">
+            <heading>submit.progressbar.describe.step11</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>        
-        <!--hasta aquí-->
-        
+        <step-definition id="herbariopaso2" mandatory="true">
+            <heading>submit.progressbar.describe.step22</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+        <step-definition id="herbariopaso3" mandatory="true">
+            <heading>submit.progressbar.describe.step33</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+      
         <step-definition id="autoarchivopaso1" mandatory="true">
             <heading>submit.progressbar.describe.step1</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
-
         <step-definition id="autoarchivopaso2" mandatory="true">
             <heading>submit.progressbar.describe.step2</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition> 
-        
+        <!--hasta aquí-->  
+
         <step-definition id="publicationStep" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
@@ -301,8 +310,8 @@
         
         <submission-process name="herbario">
             <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="traditionalpagetwo"/>
+            <step id="herbariopaso1"/>
+            <step id="herbariopaso2"/>
             <step id="herbariopaso3"/>
             <step id="upload"/>
             <step id="license"/>        
