@@ -92,7 +92,7 @@
 		<scope_note>Filiación de cada uno de los autores en ocurrencias separadas seguidas del prefijo calificador "Fil".</scope_note>
 	</dc-type>
 
-<!--agrego metadatos para imagenes del herbario-->
+<!--agrego metadatos para tesis-->
   <dc-type>
 		<schema>thesis</schema>
 		<element>degree</element>
@@ -135,7 +135,18 @@
 		<qualifier></qualifier>
 		<scope_note></scope_note>
 	</dc-type>
-
+	<dc-type>
+		<schema>unp</schema>
+		<element>lugarDesarrollo</element>
+		<qualifier></qualifier>
+		<scope_note></scope_note>
+	</dc-type>
+	<dc-type>
+		<schema>dc</schema>
+		<element>type</element>
+		<qualifier>version</qualifier>
+		<scope_note></scope_note>
+	</dc-type>
 <!--
   <dc-type>
 		<schema></schema>

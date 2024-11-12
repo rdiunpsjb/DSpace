@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<node id="herbario" label="TERMINOS PARA HERBARIO">
+		<isComposedBy>
+			<node id="TIPO_MUESTRA" label="TIPO DE LA MUESTRA">
+				<isComposedBy>
+					<node id="EUDICOTILEDONEAS" label="EUDICOTILEDONEAS"/>
+					<node id="MONOCOTILEDONEAS" label="MONOCOTILEDONEAS"/>
+					<node id="GYMNOSPERMAS" label="GYMNOSPERMAS"/>
+					<node id="PTERIDOFITAS" label="PTERIDOFITAS"/>
+				</isComposedBy>
+			</node>
+			<node id="SEXO" label="SEXO DE LA MUESTRA">
+				<isComposedBy>
+					<node id="DESCONOCIDO" label="DESCONOCIDO"/>
+					<node id="GINANDROMORFO" label="GINANDROMORFO"/>
+					<node id="HEMAFRODITA" label="HEMAFRODITA"/>
+					<node id="HEMBRA" label="HEMBRA"/>
+					<node id="INDETERMINADO" label="INDETERMINADO"/>
+					<node id="MACHO" label="MACHO"/>
+				</isComposedBy>
+			</node>
+			<node id="FAMILIA" label="FAMILIA">
+				<isComposedBy>
+					 <node id="ACANTHACEAE" label="ACANTHACEAE"/>
+					 <node id="ACERACEAE" label="ACERACEAE"/>
+					 <node id="ADIANTACEAE" label="ADIANTACEAE"/>
+					 <node id="AEXTOXICACEAE" label="AEXTOXICACEAE"/>
+					 <node id="AIZOACEAE" label="AIZOACEAE"/>
+					 <node id="ALLIACEAE" label="ALLIACEAE"/>
+					 <node id="ALSTROEMERIACEAE" label="ALSTROEMERIACEAE"/>
+					 <node id="AMARANTHACEAE" label="AMARANTHACEAE"/>
+					 <node id="AMARILIDACEAE" label="AMARILIDACEAE"/>
+					 <node id="AMARYLLIDACEAE" label="AMARYLLIDACEAE"/>
+					 <node id="ANACARDIACEAE" label="ANACARDIACEAE"/>
+					 <node id="ANNONACEAE" label="ANNONACEAE"/>
+					 <node id="APIACEAE" label="APIACEAE"/>
+					 <node id="APOCYNACEAE" label="APOCYNACEAE"/>
+					 <node id="APODANTHACEAE" label="APODANTHACEAE"/>
+					 <node id="AQUIFOLIACEAE" label="AQUIFOLIACEAE"/>
+					 <node id="ARALIACEAE" label="ARALIACEAE"/>
+					 <node id="ARAUCARIACEAE" label="ARAUCARIACEAE"/>
+					 <node id="ARISTOLOCHIACEAE" label="ARISTOLOCHIACEAE"/>
+					 <node id="ASCLEPIADACEAE" label="ASCLEPIADACEAE"/>
+					 <node id="ASPLENIACEAE" label="ASPLENIACEAE"/>
+					 <node id="ASTERACEAE" label="ASTERACEAE"/>
+					 <node id="AZOLLACEAE" label="AZOLLACEAE"/>
+					 <node id="BERBERIDACEAE" label="BERBERIDACEAE"/>
+					 <node id="BETULACEAE" label="BETULACEAE"/>
+					 <node id="BIGNONIACEAE" label="BIGNONIACEAE"/>
+					 <node id="BLECHNACEAE" label="BLECHNACEAE"/>
+					 <node id="BOMBACACEAE" label="BOMBACACEAE"/>
+					 <node id="BORAGINACEAE" label="BORAGINACEAE"/>
+					 <node id="BRASSICACEAE" label="BRASSICACEAE"/>
+					 <node id="BROMELIACEAE" label="BROMELIACEAE"/>
+					 <node id="BUDDLEJACEAE" label="BUDDLEJACEAE"/>
+					 <node id="BUXACEAE" label="BUXACEAE"/>
+					 <node id="CACTACEAE" label="CACTACEAE"/>
+					 <node id="CALYCERACEAE" label="CALYCERACEAE"/>
+					 <node id="CAMPANULACEAE" label="CAMPANULACEAE"/>
+					 <node id="CANNABINACEAE" label="CANNABINACEAE"/>
+					 <node id="CAPPARACEAE" label="CAPPARACEAE"/>
+					 <node id="CAPRIFOLIACEAE" label="CAPRIFOLIACEAE"/>
+					 <node id="CARICACEAE" label="CARICACEAE"/>
+					 <node id="CARYOPHYLLACEAE" label="CARYOPHYLLACEAE"/>
+					 <node id="CASUARINACEAE" label="CASUARINACEAE"/>
+					 <node id="CECROPIACEAE" label="CECROPIACEAE"/>
+					 <node id="CELASTRACEAE" label="CELASTRACEAE"/>
+					 <node id="CELTIDIACEAE" label="CELTIDIACEAE"/>
+					 <node id="CEPHALOTAXACEAE" label="CEPHALOTAXACEAE"/>
+					 <node id="CERATOPHYLLACEAE" label="CERATOPHYLLACEAE"/>
+					 <node id="CHENOPODIACEAE" label="CHENOPODIACEAE"/>
+					 <node id="CLUSIACEAE" label="CLUSIACEAE"/>
+					 <node id="COMMELINACEAE" label="COMMELINACEAE"/>
+					 <node id="CONVOLVULACEAE" label="CONVOLVULACEAE"/>
+					 <node id="CORIARIACEAE" label="CORIARIACEAE"/>
+					 <node id="CORSIACEAE" label="CORSIACEAE"/>
+					 <node id="CRASSULACEAE" label="CRASSULACEAE"/>
+					 <node id="CUCURBITACEAE" label="CUCURBITACEAE"/>
+					 <node id="CUNONIACEAE" label="CUNONIACEAE"/>
+					 <node id="CUPRESSACEAE" label="CUPRESSACEAE"/>
+					 <node id="CUSCUTACEAE" label="CUSCUTACEAE"/>
+					 <node id="CYCADACEAE" label="CYCADACEAE"/>
+					 <node id="CYPERACEAE" label="CYPERACEAE"/>
+					 <node id="DIPSACACEAE" label="DIPSACACEAE"/>
+					 <node id="DRYOPTERIDACEAE" label="DRYOPTERIDACEAE"/>
+					 <node id="ELEAGNACEAE" label="ELEAGNACEAE"/>
+					 <node id="ELEOCARPACEAE" label="ELEOCARPACEAE"/>
+					 <node id="EMPETRACEAE" label="EMPETRACEAE"/>
+					 <node id="EPHEDRACEAE" label="EPHEDRACEAE"/>
+					 <node id="EQUISETACEAE" label="EQUISETACEAE"/>
+					 <node id="ERICACEAE" label="ERICACEAE"/>
+					 <node id="ESCALLONIACEAE" label="ESCALLONIACEAE"/>
+					 <node id="EUPHORBIACEAE" label="EUPHORBIACEAE"/>
+					 <node id="FABACEAE" label="FABACEAE"/>
+					 <node id="FAGACEAE" label="FAGACEAE"/>
+					 <node id="FLACOURTIACEAE" label="FLACOURTIACEAE"/>
+					 <node id="FRANKENIACEAE" label="FRANKENIACEAE"/>
+					 <node id="FRANQUENIACEAE" label="FRANQUENIACEAE"/>
+					 <node id="GENTIANACEAE" label="GENTIANACEAE"/>
+					 <node id="GERANIACEAE" label="GERANIACEAE"/>
+					 <node id="GESNERIACEAE" label="GESNERIACEAE"/>
+					 <node id="GINKGOACEAE" label="GINKGOACEAE"/>
+					 <node id="GUNNERACEAE" label="GUNNERACEAE"/>
+					 <node id="HALOGARACEAE" label="HALOGARACEAE"/>
+					 <node id="HALOPHYTACEAE" label="HALOPHYTACEAE"/>
+					 <node id="HALORAGACEAE" label="HALORAGACEAE"/>
+					 <node id="HAMAMELIDACEAE" label="HAMAMELIDACEAE"/>
+					 <node id="HIPPURIDACEAE" label="HIPPURIDACEAE"/>
+					 <node id="HYDRANGEACEAE" label="HYDRANGEACEAE"/>
+					 <node id="HYDROPHYLLACEAE" label="HYDROPHYLLACEAE"/>
+					 <node id="IRIDACEAE" label="IRIDACEAE"/>
+					 <node id="ISÖETACEAE" label="ISÖETACEAE"/>
+					 <node id="JUGLANDACEAE" label="JUGLANDACEAE"/>
+					 <node id="JUNCACEAE" label="JUNCACEAE"/>
+					 <node id="LAMIACEAE" label="LAMIACEAE"/>
+					 <node id="LARDIZABALACEAE" label="LARDIZABALACEAE"/>
+					 <node id="LAURACEAE" label="LAURACEAE"/>
+					 <node id="LEDOCARPACEAE" label="LEDOCARPACEAE"/>
+					 <node id="LILIACEAE" label="LILIACEAE"/>
+					 <node id="LINACEAE" label="LINACEAE"/>
+					 <node id="LOASACEAE" label="LOASACEAE"/>
+					 <node id="LOBELIACEAE" label="LOBELIACEAE"/>
+					 <node id="LOPHOSORIACEAE" label="LOPHOSORIACEAE"/>
+					 <node id="LORANTHACEAE" label="LORANTHACEAE"/>
+					 <node id="LYCOPODIACEAE" label="LYCOPODIACEAE"/>
+					 <node id="LYTHRACEAE" label="LYTHRACEAE"/>
+					 <node id="MAGNOLIACEAE" label="MAGNOLIACEAE"/>
+					 <node id="MALVACEAE" label="MALVACEAE"/>
+					 <node id="MELIACEAE" label="MELIACEAE"/>
+					 <node id="MISODENDRACEAE" label="MISODENDRACEAE"/>
+					 <node id="MORACEAE" label="MORACEAE"/>
+					 <node id="MYOPORACEAE" label="MYOPORACEAE"/>
+					 <node id="MYRTACEAE" label="MYRTACEAE"/>
+					 <node id="NOTHOFAGACEAE" label="NOTHOFAGACEAE"/>
+					 <node id="NYCTAGINACEAE" label="NYCTAGINACEAE"/>
+					 <node id="OLEACEAE" label="OLEACEAE"/>
+					 <node id="ONAGRACEAE" label="ONAGRACEAE"/>
+					 <node id="ORCHIDACEAE" label="ORCHIDACEAE"/>
+					 <node id="OROBANCHACEAE" label="OROBANCHACEAE"/>
+					 <node id="OXALIDACEAE" label="OXALIDACEAE"/>
+					 <node id="PAPAVERACEAE" label="PAPAVERACEAE"/>
+					 <node id="PASSIFLORACEAE" label="PASSIFLORACEAE"/>
+					 <node id="PHILESIACEAE" label="PHILESIACEAE"/>
+					 <node id="PHRYMACEAE" label="PHRYMACEAE"/>
+					 <node id="PHYTOLACCACEAE" label="PHYTOLACCACEAE"/>
+					 <node id="PINACEAE" label="PINACEAE"/>
+					 <node id="PLANTAGINACEAE" label="PLANTAGINACEAE"/>
+					 <node id="PLATANACEAE" label="PLATANACEAE"/>
+					 <node id="PLUMBAGINACEAE" label="PLUMBAGINACEAE"/>
+					 <node id="POACEAE" label="POACEAE"/>
+					 <node id="POLEMONIACEAE" label="POLEMONIACEAE"/>
+					 <node id="POLYGALACEAE" label="POLYGALACEAE"/>
+					 <node id="POLYGONACEAE" label="POLYGONACEAE"/>
+					 <node id="POLYPODIACEAE" label="POLYPODIACEAE"/>
+					 <node id="PORTULACACEAE" label="PORTULACACEAE"/>
+					 <node id="POTAMOGETONACEAE" label="POTAMOGETONACEAE"/>
+					 <node id="PRIMULACEAE" label="PRIMULACEAE"/>
+					 <node id="PROTEACEAE" label="PROTEACEAE"/>
+					 <node id="PSILOTACEAE" label="PSILOTACEAE"/>
+					 <node id="PTERIDACEAE" label="PTERIDACEAE"/>
+					 <node id="PUNICACEAE" label="PUNICACEAE"/>
+					 <node id="RAFFLESIACEAE" label="RAFFLESIACEAE"/>
+					 <node id="RANUNCULACEAE" label="RANUNCULACEAE"/>
+					 <node id="RHAMNACEAE" label="RHAMNACEAE"/>
+					 <node id="ROSACEAE" label="ROSACEAE"/>
+					 <node id="RUBIACEAE" label="RUBIACEAE"/>
+					 <node id="RUTACEAE" label="RUTACEAE"/>
+					 <node id="SALICACEAE" label="SALICACEAE"/>
+					 <node id="SANTALACEAE" label="SANTALACEAE"/>
+					 <node id="SAPINDACEAE" label="SAPINDACEAE"/>
+					 <node id="SAXIFRAGACEAE" label="SAXIFRAGACEAE"/>
+					 <node id="SCROPHULARIACEAE" label="SCROPHULARIACEAE"/>
+					 <node id="SCROPHULARIACEAE_(CALCEOLARIACEAE)" label="SCROPHULARIACEAE (CALCEOLARIACEAE)"/>
+					 <node id="SIMAROUBACEAE" label="SIMAROUBACEAE"/>
+					 <node id="SOLANACEAE" label="SOLANACEAE"/>
+					 <node id="STERCULIACEAE" label="STERCULIACEAE"/>
+					 <node id="TAMARICACEAE" label="TAMARICACEAE"/>
+					 <node id="TAXODIACEAE" label="TAXODIACEAE"/>
+					 <node id="THYMELAEACEAE" label="THYMELAEACEAE"/>
+					 <node id="TILIACEAE" label="TILIACEAE"/>
+					 <node id="TROPAEOLACEAE" label="TROPAEOLACEAE"/>
+					 <node id="TURNERACEAE" label="TURNERACEAE"/>
+					 <node id="TYPHACEAE" label="TYPHACEAE"/>
+					 <node id="ULMACEAE" label="ULMACEAE"/>
+					 <node id="URTICACEAE" label="URTICACEAE"/>
+					 <node id="VALERIANACEAE" label="VALERIANACEAE"/>
+					 <node id="VERBENACEAE" label="VERBENACEAE"/>
+					 <node id="VIOLACEAE" label="VIOLACEAE"/>
+					 <node id="VITACEAE" label="VITACEAE"/>
+					 <node id="ZYGOPHYLLACEAE" label="ZYGOPHYLLACEAE"/>
+				</isComposedBy>
+			</node>
+			<node id="SUBFAMILIA" label="SUBFAMILIA">
+				<isComposedBy>			
+					 <node id="ANTHEMIDEAE" label="ANTHEMIDEAE"/>
+					 <node id="ARISTIDOIDEAE" label="ARISTIDOIDEAE"/>
+					 <node id="ARUNDINOIDEAE" label="ARUNDINOIDEAE"/>
+					 <node id="ASTEREAE" label="ASTEREAE"/>
+					 <node id="BAMBUSOIDEAE" label="BAMBUSOIDEAE"/>
+					 <node id="CALENDULEAE" label="CALENDULEAE"/>
+					 <node id="CARDUEAE" label="CARDUEAE"/>
+					 <node id="CESALPINOID" label="CESALPINOID"/>
+					 <node id="CESALPINOIDEAE" label="CESALPINOIDEAE"/>
+					 <node id="CHLORIDOIDEAE" label="CHLORIDOIDEAE"/>
+					 <node id="CICHORIEAE" label="CICHORIEAE"/>
+					 <node id="DANTHONIOIDEAE" label="DANTHONIOIDEAE"/>
+					 <node id="EUPATORIEAE" label="EUPATORIEAE"/>
+					 <node id="HELENIEAE" label="HELENIEAE"/>
+					 <node id="HELIANTHEAE" label="HELIANTHEAE"/>
+					 <node id="INULEAE" label="INULEAE"/>
+					 <node id="LACTUCEAE" label="LACTUCEAE"/>
+					 <node id="MIMOSOIDEAE" label="MIMOSOIDEAE"/>
+					 <node id="MIMOSOIDEAE_Prosopis_alpataco_Philippi" label="MIMOSOIDEAE Prosopis alpataco Philippi"/>
+					 <node id="MUTISIEAE" label="MUTISIEAE"/>
+					 <node id="PANICOIDEAE" label="PANICOIDEAE"/>
+					 <node id="PAPILIONOIDE" label="PAPILIONOIDE"/>
+					 <node id="PAPILIONOIDEAE" label="PAPILIONOIDEAE"/>
+					 <node id="PAPILIONOIDEAETrifolium_repens_L." label="PAPILIONOIDEAETrifolium repens L."/>
+					 <node id="POOIDEAE" label="POOIDEAE"/>
+					 <node id="SENECIONEAE" label="SENECIONEAE"/>
+				</isComposedBy>
+			</node>					
+		</isComposedBy>
+	</node>
