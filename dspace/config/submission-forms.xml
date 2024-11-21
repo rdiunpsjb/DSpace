@@ -4,7 +4,7 @@
 <input-forms>
     <!-- The form-definitions map lays out the detailed definition of all the -->
     <!-- submission forms. Each separate form set has a unique name as an     -->
-    <!-- attribute. This name matches one of the names in the form-miaap. One   -->
+    <!-- attribute. This name matches one of the names in the form-map. One   -->
     <!-- named form set has the name "traditional"; as this name suggests,    -->
     <!-- it is the old style and is also the default, which gets used when    -->
     <!-- the specified collection has no correspondingly-named form set.      -->
@@ -85,7 +85,7 @@
                     <label>Título</label>
                     <input-type>onebox</input-type>
                     <hint>Transcribir el título del original, en orden y ortografía del recurso. Utilizar mayúsculas únicamente para la primer palabra del título y los nombres propios. 
-                         Los subtítulos deben separarse del título mediante dos puntos con el siguiente formato: Título: Subtítulo</hint>
+                         Los subtítulos deben mencionarse con el siguiente formato: Título: Subtítulo</hint>
                     <required>Debe indicar el título del documento.</required>
                 </field>
             </row>
@@ -112,7 +112,7 @@
                     <type-bind>Atículo, Documento institucional, Imagen, Video, Informe técnico, Libro, Parte de libro, Objeto de aprendizaje, Documento de conferencia, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Tesis de grado, Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Para nombres personales utilizar el formato invertido: Apellido, Nombres. </hint>
-                    <required>DDebe ingresar al menos un autor.</required>
+                    <required></required>
                 </field>
             </row>
             <row>
@@ -125,7 +125,7 @@
                     <type-bind>Audio</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Persona física entrevistada o entrevistadora. Utilizar el formato invertido: Apellido, Nombres. </hint>
-                    <required>Debe ingresar al menos un intérprete.</required>
+                    <required></required>
                 </field>
             </row>
             <row>
@@ -235,42 +235,12 @@
                     <repeatable>false</repeatable>
                     <label>Editor</label>
                     <!--<style>col-sm-8</style>-->
-<<<<<<< HEAD
-                    <type-bind>Tesis de posgrado, Tesis de grado, Trabajo final</type-bind>
-=======
                     <type-bind>Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Tesis de grado, Trabajo final de grado</type-bind>
->>>>>>> main
                     <input-type>onebox</input-type>
                     <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
                     A su vez, el departamento o grupo de investigación después de la facultad.
                     Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química.</hint>
                     <required>El campo es requerido.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>format</dc-element>
-                    <dc-qualifier>extent</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Tamaño o duración</label>
-                    <input-type>onebox</input-type>
-                    <type-bind>Imagen</type-bind>
-                    <hint>Según el recurso indique dimensiones de la imagen o duración del audio o video.</hint>
-                    <required></required>
-                </field>
-            </row>            
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>format</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Formato de imagen</label>
-                    <type-bind>Imagen</type-bind>
-                    <input-type value-pairs-name="unp_format_image">dropdown</input-type>
-                    <hint>Seleccione formato de imagen.</hint>
-                    <required></required>
                 </field>
             </row>
             <row>
@@ -289,18 +259,6 @@
             </row>
             <row>
                 <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>citation</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Cita</label>
-                    <input-type>onebox</input-type>
-                    <hint>Ingrese información de cita estándar para el documento.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
                     <dc-schema>unp</dc-schema>
                     <dc-element>sede</dc-element>
                     <dc-qualifier></dc-qualifier>
@@ -309,7 +267,7 @@
                     <!--<style>col-sm-4</style>-->
                     <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
                     <input-type value-pairs-name="unp_sedes">dropdown</input-type>
-                    <hint>Seleccione sede: Es el lugar dónde desarrolló su producción.</hint>
+                    <hint>Seleccione sede</hint>
                     <required>Debe seleccionar una opción</required>
                 </field>
             </row>
@@ -334,52 +292,12 @@
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Carrera</label>
-<<<<<<< HEAD
-                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>                    
-                    <!--<input-type value-pairs-name="unp_carrerasGrado">dropdown</input-type>-->
-                    <!--<input-type>tag</input-type>-->
-=======
                     <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
->>>>>>> main
                     <input-type>onebox</input-type>
                     <vocabulary>carreras</vocabulary> 
                     <hint>Seleccione carrera</hint>
                     <required>Debe seleccionar una carrera</required>
                 </field>
-<<<<<<< HEAD
-            </row>           
-            <row>
-                <field>
-                    <dc-schema>thesis</dc-schema>
-                    <dc-element>degree</dc-element>
-                    <dc-qualifier>name</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Grado alcanzado</label>
-                    <style>col-sm-8</style>                    
-                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final</type-bind>
-                    <input-type>onebox</input-type>
-                    <hint>Grado al que se aspira con el trabajo de tesis realizado. 
-                    Por ejemplo: "Licenciado en enfermería" </hint>
-                    <required></required>
-                </field>
-            </row>  
-            <row>
-                <field>
-                    <dc-schema>thesis</dc-schema>
-                    <dc-element>degree</dc-element>
-                    <dc-qualifier>grantor</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Emisor del título</label>
-                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final</type-bind>
-                    <!--<style>col-sm-8</style>-->
-                    <input-type>onebox</input-type>
-                    <hint>Institución que otorga el título. 
-                    Por ejemplo: Universidad Nacional de la Patagonia San Juan Bosco.</hint>
-                    <default>Universidad Nacional de la Patagonia San Juan Bosco</default>
-                    <required></required>
-                </field>
-=======
->>>>>>> main
             </row>
             <row>
                 <field>
@@ -388,11 +306,7 @@
                     <dc-qualifier>level</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Nivel de posgrado</label>
-<<<<<<< HEAD
-                    <type-bind>Tesis de posgrado</type-bind>
-=======
                     <type-bind>Tesis de doctorado, Tesis de maestría, Trabajo de especialización</type-bind>
->>>>>>> main
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelposgrado">dropdown</input-type>
                     <hint>Nivel de posgrado al que aspira.</hint>
@@ -405,13 +319,8 @@
                     <dc-element>degree</dc-element>
                     <dc-qualifier>level</dc-qualifier>
                     <repeatable>false</repeatable>
-<<<<<<< HEAD
-                    <label>Nivel alcanzado</label>
-                    <type-bind>Tesis de grado, Trabajo final</type-bind>
-=======
                     <label>Nivel de grado</label>
                     <type-bind>Tesis de grado, Trabajo final de grado</type-bind>
->>>>>>> main
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelgrado">dropdown</input-type>
                     <hint>Nivel de grado al que aspira.</hint>
@@ -425,11 +334,7 @@
                     <dc-qualifier>discipline</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Disciplina</label>
-<<<<<<< HEAD
-                    <type-bind>Tesis de posgrado, Tesis de grado, Trabajo final</type-bind>
-=======
                     <type-bind>Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Tesis de grado, Trabajo final de grado</type-bind>
->>>>>>> main
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Disciplina a la que corresponde el trabajo de tesis realizado.
@@ -669,7 +574,7 @@
                     <required></required>
                 </field>
             </row>
-           <!-- <row>
+            <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>language</dc-element>
@@ -785,21 +690,8 @@
                     <label>Título</label>
                     <input-type>onebox</input-type>
                     <hint>Transcribir el título del original, en orden y ortografía del recurso. Utilizar mayúsculas únicamente para la primer palabra del título y los nombres propios. 
-                         Los subtítulos deben separarse del título mediante dos puntos con el siguiente formato: Título: Subtítulo</hint>
+                         Los subtítulos deben mencionarse con el siguiente formato: Título: Subtítulo</hint>
                     <required>Debe indicar el título del documento.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>title</dc-element>
-                    <dc-qualifier>alternative</dc-qualifier>
-                    <language value-pairs-name="unp_common_languages">true</language>
-                    <repeatable>true</repeatable>
-                    <label>Título alternativo</label>
-                    <input-type>onebox</input-type>
-                    <hint>Otros títulos de la obra, o traducciones del título en cualquier idioma que no sea el nativo de la obra.</hint>
-                    <required></required>
                 </field>
             </row>
             <row>
@@ -929,18 +821,6 @@
             </row>
             <row>
                 <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>citation</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Cita</label>
-                    <input-type>onebox</input-type>
-                    <hint>Ingrese información de cita estándar para el documento.</hint>
-                    <required></required>
-                </field>
-            </row>             
-            <row>
-                <field>
                     <dc-schema>unp</dc-schema>
                     <dc-element>sede</dc-element>
                     <dc-qualifier></dc-qualifier>
@@ -949,7 +829,7 @@
                     <!--<style>col-sm-4</style>-->
                     <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
                     <input-type value-pairs-name="unp_sedes">dropdown</input-type>
-                    <hint>Seleccione sede: Es el lugar dónde desarrolló su producción.</hint>
+                    <hint>Seleccione sede</hint>
                     <required>Debe seleccionar una opción</required>
                 </field>
             </row>            
@@ -974,23 +854,12 @@
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Carrera</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final, Informe científico, Documento institutional</type-bind>
-=======
-                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final</type-bind>
->>>>>>> main
-=======
                     <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
->>>>>>> main
                     <input-type>onebox</input-type>
                     <vocabulary>carreras</vocabulary> 
                     <hint>Seleccione carrera</hint>
                     <required>Debe seleccionar una carrera</required>
                 </field>
-<<<<<<< HEAD
-            </row>                       
-=======
             </row>
             <row>
                 <field>
@@ -1005,10 +874,6 @@
                     <hint>Nivel de posgrado al que aspira.</hint>
                     <required>Campo requerido</required>
                 </field>
-<<<<<<< HEAD
-            </row>                        
->>>>>>> main
-=======
             </row>
             <row>
                 <field>
@@ -1039,7 +904,6 @@
                     <required>Campo requerido</required>
                 </field>
             </row>
->>>>>>> main
             <row>
                 <field>
                     <dc-schema>thesis</dc-schema>
@@ -1062,11 +926,7 @@
                     <dc-qualifier>grantor</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Emisor del título</label>
-<<<<<<< HEAD
-                    <type-bind>Tesis de grado, Tesis de posgrado, Trabajo final</type-bind>
-=======
                     <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
->>>>>>> main
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Institución que otorga el título.
@@ -1077,43 +937,6 @@
             </row>
             <row>
                 <field>
-<<<<<<< HEAD
-                    <dc-schema>thesis</dc-schema>
-                    <dc-element>degree</dc-element>
-                    <dc-qualifier>level</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Nivel de posgrado</label>
-                    <type-bind>Tesis de posgrado</type-bind>
-                    <!--<style>col-sm-8</style>-->
-                    <input-type value-pairs-name="unp_levelposgrado">dropdown</input-type>
-                    <hint>Nivel de posgrado al que aspira.</hint>
-                    <required>Campo requerido</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>thesis</dc-schema>
-                    <dc-element>degree</dc-element>
-                    <dc-qualifier>level</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Nivel de grado</label>
-                    <type-bind>Tesis de grado, Trabajo final</type-bind>
-                    <!--<style>col-sm-8</style>-->
-                    <input-type value-pairs-name="unp_levelgrado">dropdown</input-type>
-                    <hint>Nivel de grado al que aspira.</hint>
-                    <required>Campo requerido</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>thesis</dc-schema>
-                    <dc-element>degree</dc-element>
-                    <dc-qualifier>discipline</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Disciplina</label>
-                    <type-bind>Tesis de posgrado, Tesis de grado, Trabajo final</type-bind>
-                    <!--<style>col-sm-8</style>-->
-=======
                     <dc-schema>unp</dc-schema>
                     <dc-element>lugarDesarrollo</dc-element>
                     <dc-qualifier></dc-qualifier>
@@ -1121,7 +944,6 @@
                     <label>Lugar de desarrollo de la tesis</label>
                     <style>col-sm-8</style>                    
                     <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
->>>>>>> main
                     <input-type>onebox</input-type>
                     <hint>Institución, departamento y/o unidad en la cual se desarrolló el trabajo.</hint>
                     <required>Campo requerido</required>
@@ -1228,7 +1050,7 @@
                     <required>Debe completar el resumen de la obra</required>
                 </field>
             </row>
-          <!--<row>
+            <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>language</dc-element>
@@ -1243,21 +1065,7 @@
                     </hint>
                     <required>Debe seleccionar un idioma</required>
                 </field>
-            </row>-->
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>language</dc-element>
-                    <repeatable>false</repeatable>
-                    <label>Idioma</label>
-                    <input-type value-pairs-name="unp_common_iso639_3_languages">dropdown</input-type>
-                    <hint>Seleccione el idioma del contenido principal del artículo. Si el idioma no aparece en la
-                        lista, seleccione 'Otro'. Si el contenido realmente no tiene un idioma (por ejemplo, si
-                        es un conjunto de datos o una imagen), seleccione 'N/A'.
-                    </hint>
-                    <required>Debe seleccionar un idioma</required>
-                </field>
-            </row>                    
+            </row>            
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1388,11 +1196,7 @@
                     <hint>Toda otra aclaración que resulte pertinente para la mejor recuperación de la obra. En este campo se puede indicar por ejemplo: - si la fecha de publicación indicada es aproximada, etc.</hint>
                     <required></required>
                 </field>
-<<<<<<< HEAD
-            </row>            
-=======
             </row>
->>>>>>> main
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1401,13 +1205,8 @@
                     <label>Nivel de accesibilidad</label>
                     <input-type value-pairs-name="unp_access_level_types">dropdown</input-type>
                     <hint>Elija el nivel del acceso para el ítem.</hint>
-<<<<<<< HEAD
-                    <hint>Información acerca del nivel de acceso al recurso.</hint>
-                    <required>Debe elegir nivel del acceso para el ítem.</required>
-=======
                     <required>Debe seleccionar una opción</required>
                     <!--<visibility>workflow</visibility>-->
->>>>>>> main
                 </field>
             </row> 
             <row>
@@ -1419,148 +1218,10 @@
                     <label>Condición de uso</label>
                     <input-type value-pairs-name="unp_license_types">dropdown</input-type>
                     <hint>Elija la licencia adecuada para el ítem.</hint>
-<<<<<<< HEAD
-                    <hint>Información acerca de los derechos contenidos en y sobre el recurso.</hint>
-                    <required>Debe elegir licencia adecuada para el ítem.</required>
-=======
                     <required>Debe seleccionar una opción</required>
                     <!--<visibility>workflow</visibility>-->
->>>>>>> main
                 </field>
             </row>             
-        </form>
-        <form name="herbariopaso1">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Tipo</label>
-                    <input-type value-pairs-name="unp_types">dropdown</input-type>
-                    <hint>Seleccione el tipo de contenido del ítem.</hint>
-                    <required>Debe seleccionar un tipo de contenido.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>title</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <language value-pairs-name="unp_common_languages">true</language>
-                    <repeatable>false</repeatable>
-                    <label>Título</label>
-                    <input-type>onebox</input-type>
-                    <hint>Transcribir el nombre científico de la muestra</hint>
-                    <required>Debe indicar el nombre científico.</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>author</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Autor: (Coleccionista y/o Determinador)</label>
-                    <!--<type-bind>Imagen</type-bind>-->
-                    <input-type>onebox</input-type>
-                    <hint>Persona física que recolecta y/o identifica la muestra. Agregue todos los que considere necesario. Utilizar el formato invertido: Apellido, Nombres.</hint>
-                    <required>Debe ingresar al menos un autor</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>filiation</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Filiación</label>
-                    <input-type>textarea</input-type>
-                    <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas seguidas del prefijo calificador "Fil: "</hint>
-                    <required>Debe ingresar filiación de cada autor.</required>
-                </field>
-            </row>         
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>date</dc-element>
-                    <dc-qualifier>issued</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Fecha de recolección</label>
-                    <!--<type-bind>Imagen</type-bind>-->
-                    <input-type>date</input-type>
-                    <hint>Fecha en la que se recolectó la muestra.</hint>
-                    <required>Debe ingresar al menos el año.</required>
-                </field>
-            </row>
-            <row>   
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Editor</label>
-                    <!--<style>col-sm-8</style>-->
-                    <!--<type-bind>Imagen</type-bind>-->
-                    <input-type>onebox</input-type>
-                    <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
-                    A su vez, el departamento o grupo de investigación después de la facultad.
-                    Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Biología.</hint>
-                    <required></required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>unp</dc-schema>
-                    <dc-element>sede</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Sede</label>
-                    <!--<type-bind>Imagen</type-bind>-->
-                    <input-type value-pairs-name="unp_sedes">dropdown</input-type>
-                    <hint>Seleccione sede responsable de la muestra.</hint>
-                    <required>Debe seleccionar una opción</required>
-                </field>
-            </row>            
-            <row>
-                <field>
-                    <dc-schema>unp</dc-schema>
-                    <dc-element>facultad</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Facultad o Rectorado</label>
-                    <!--<type-bind>Imagen</type-bind>-->
-                    <input-type value-pairs-name="unp_facultades">dropdown</input-type>
-                    <hint>Seleccione facultad o rectorado</hint>
-                    <required>Debe seleccionar una opción</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>unp</dc-schema>
-                    <dc-element>carrera</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Carrera</label>
-                    <!--<type-bind>Imagen</type-bind>-->
-                    <input-type>onebox</input-type>
-                    <vocabulary>carreras</vocabulary> 
-                    <hint>Seleccione carrera</hint>
-                    <required>Debe seleccionar una carrera</required>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>citation</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Cita</label>
-                    <input-type>onebox</input-type>
-                    <hint>Ingrese información de cita estándar para el documento.</hint>
-                    <required></required>
-                </field>
-            </row>                       
         </form>
 
         <form name="herbariopaso1">
@@ -1823,7 +1484,6 @@
             </row>             
         </form>
         <form name="herbariopaso3">
-            <!-- Metadatos en Darwin Core-->
             <row>
                 <field>
                     <dc-schema>dwc</dc-schema>
@@ -2719,7 +2379,7 @@
                     <input-type>tag</input-type>
                     <hint>Enter appropriate subject keywords or phrases.</hint>
                     <required></required>
-                    <!--<vocabulary>srsc</vocabulary>-->
+                    <vocabulary>srsc</vocabulary>
                 </field>
             </row>
 
@@ -3231,17 +2891,6 @@
                 <displayed-value>Audio</displayed-value>
                 <stored-value>Audio</stored-value>
             </pair>
-<<<<<<< HEAD
-            <pair>
-                <displayed-value>Informe científico</displayed-value>
-                <stored-value>Informe científico</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Libro</displayed-value>
-                <stored-value>Libro</stored-value>
-            </pair>          
-            <pair>
-=======
             <pair><!--No en el listado del SNRD-->
                 <displayed-value>Video</displayed-value>
                 <stored-value>Video</stored-value>
@@ -3251,7 +2900,6 @@
                 <stored-value>Documento institucional</stored-value>
             </pair>       
             <pair> <!--No en el listado del SNRD-->
->>>>>>> main
                 <displayed-value>Objeto de aprendizaje</displayed-value>
                 <stored-value>Objeto de aprendizaje</stored-value>
             </pair>            
@@ -3263,25 +2911,6 @@
                 <displayed-value>Programa de contenidos</displayed-value>
                 <stored-value>Programa de contenidos</stored-value>
             </pair>
-<<<<<<< HEAD
-            <pair>
-                <displayed-value>Tesis de grado</displayed-value>
-                <stored-value>Tesis de grado</stored-value>
-            </pair>    
-            <pair>
-                <displayed-value>Tesis de posgrado</displayed-value>
-                <stored-value>Tesis de posgrado</stored-value>
-            </pair>                        
-            <pair>
-                <displayed-value>Trabajo final</displayed-value>
-                <stored-value>Trabajo final</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Video</displayed-value>
-                <stored-value>Video</stored-value>
-            </pair>            
-=======
->>>>>>> main
         </value-pairs>
 
         <value-pairs value-pairs-name="unp_levelposgrado" dc-term="thesis_degree_level">
@@ -3497,20 +3126,10 @@
             </pair>            
         </value-pairs>
 
-        <value-pairs value-pairs-name="unp_common_iso639_3_languages" dc-term="language">
-            <pair>
-                <displayed-value>Alemán</displayed-value>
-                <stored-value>deu</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Chino</displayed-value>
-                <stored-value>zho</stored-value>
-            </pair>
+        <value-pairs value-pairs-name="unp_common_languages" dc-term="language">
             <pair>
                 <displayed-value>Español</displayed-value>
                 <stored-value>spa</stored-value>
-<<<<<<< HEAD
-=======
             </pair>            
             <pair>
                 <displayed-value>Alemán</displayed-value>
@@ -3519,7 +3138,6 @@
             <pair>
                 <displayed-value>Chino</displayed-value>
                 <stored-value>zho</stored-value>
->>>>>>> main
             </pair>
             <pair>
                 <displayed-value>Francés</displayed-value>
@@ -3558,7 +3176,7 @@
             </pair>
             <pair>
                 <displayed-value>gif</displayed-value>
-                <stored-value>image/gif</stored-value>
+                <stored-value>image/gif</stored-value>6791x9776
             </pair>
             <pair>
                 <displayed-value>tiff</displayed-value>
@@ -3619,53 +3237,6 @@
                 <stored-value>video/otro</stored-value>
             </pair>            
         </value-pairs>
-
-        <value-pairs value-pairs-name="unp_sexo" dc-term="dc_Subject">
-            <pair>
-                <displayed-value>DESCONOCIDO</displayed-value>
-                <stored-value>DESCONOCIDO</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>GINANDROMORFO</displayed-value>
-                <stored-value>GINANDROMORFO</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>HEMAFRODITA</displayed-value>
-                <stored-value>HEMAFRODITA</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>HEMBRA</displayed-value>
-                <stored-value>HEMBRA</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>INDETERMINADO</displayed-value>
-                <stored-value>INDETERMINADO</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>MACHO</displayed-value>
-                <stored-value>MACHO</stored-value>
-            </pair>
-        </value-pairs>
-
-        <value-pairs value-pairs-name="unp_tipomuestra" dc-term="dc_Subject">
-            <pair>
-                <displayed-value>EUDICOTILEDONEAS</displayed-value>
-                <stored-value>EUDICOTILEDONEAS</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>MONOCOTILEDONEAS</displayed-value>
-                <stored-value>MONOCOTILEDONEAS</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>GYMNOSPERMAS</displayed-value>
-                <stored-value>GYMNOSPERMAS</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>PTERIDOFITAS</displayed-value>
-                <stored-value>PTERIDOFITAS</stored-value>
-            </pair>
-        </value-pairs>
-
         <!-- OpenAIRE specific value pairs -->
 
         <value-pairs value-pairs-name="openaire_license_types" dc-term="license">
