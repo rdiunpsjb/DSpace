@@ -37,6 +37,8 @@ nb-configuration.xml
 # Also ignore it under dspace/config
 /dspace/config/local.cfg
 
+/dspace/config/GeoLite2-City.mmdb
+
 ##Mac noise
 .DS_Store
 

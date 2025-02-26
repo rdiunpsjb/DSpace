@@ -27,10 +27,10 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Title</label>
+                    <label>Título</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the name of the file.</hint>
-                    <required>You must enter a name for this file</required>
+                    <hint>Ingrese el nombre del archivo. Ejemplo "FI_Apellido, Nombres.PDF"</hint>
+                    <required>Debe ingresar un nombre de archivo.</required>
                 </field>
             </row>
             <row>
@@ -38,9 +38,9 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
                     <repeatable>true</repeatable>
-                    <label>Description</label>
+                    <label>Descripción</label>
                     <input-type>textarea</input-type>
-                    <hint>Enter a description for the file</hint>
+                    <hint>Ingrese una descripción para el archivo.</hint>
                     <required></required>
                 </field>
             </row>
@@ -89,6 +89,7 @@
                     <required>Debe indicar el título del documento.</required>
                 </field>
             </row>
+            <!--25/02/2025-->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -100,6 +101,8 @@
                     <input-type>onebox</input-type>
                     <hint>Otros títulos de la obra, o traducciones del título en cualquier idioma que no sea el nativo de la obra.</hint>
                     <required></required>
+                    <readonly>readonly</readonly>
+                    <visibility>workflow</visibility>
                 </field>
             </row>
             <row>
@@ -109,9 +112,9 @@
                     <dc-qualifier>author</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Autor</label>
-                    <type-bind>Atículo, Documento institucional, Imagen, Video, Informe técnico, Libro, Parte de libro, Objeto de aprendizaje, Documento de conferencia, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Tesis de grado, Trabajo final de grado</type-bind>
+                    <type-bind>Atículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Para nombres personales utilizar el formato invertido: Apellido, Nombres. </hint>
+                    <hint>Para nombres personales utilizar el formato invertido: "Apellido, Nombres"</hint>
                     <required></required>
                 </field>
             </row>
@@ -124,7 +127,7 @@
                     <label>Interprete</label>
                     <type-bind>Audio</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Persona física entrevistada o entrevistadora. Utilizar el formato invertido: Apellido, Nombres. </hint>
+                    <hint>Persona física entrevistada o entrevistadora. Utilizar el formato invertido: "Apellido, Nombres"</hint>
                     <required></required>
                 </field>
             </row>
@@ -135,7 +138,7 @@
                     <dc-qualifier>filiation</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Filiación</label>
-                    <type-bind>Audio, Imagen, Video, Conjunto de Datos, Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización</type-bind>                  
+                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización</type-bind>
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
                     Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
@@ -149,10 +152,10 @@
                     <dc-qualifier>director</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Director</label>
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Informe técnico</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Informe técnico</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Persona que dirige la realización de la tesis o quien dirige
-                        a un investigador, personal de apoyo o becario. Formato: Apellido, Nombres</hint>
+                        a un investigador, personal de apoyo o becario. Formato: "Apellido, Nombres"</hint>
                     <required>Debe ingresar director.</required>
                 </field>
             </row>
@@ -165,7 +168,7 @@
                     <label>Tutor o Docente responsable</label>
                     <type-bind>Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
+                    <hint>Tutor o Docente responsable del trabajo final. Formato: "Apellido, Nombres"</hint>
                     <required>Debe ingresar responsable.</required>
                 </field>
             </row>
@@ -176,7 +179,7 @@
                     <dc-qualifier>compilator</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Compilador</label>
-                    <type-bind>Libro, Parte de libro</type-bind>
+                    <type-bind>Libro,Parte de libro</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Persona física responsable de compilar, reunir o antologar materiales de la obra.</hint>
                     <required></required>
@@ -189,7 +192,7 @@
                     <dc-qualifier>editor</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Editor</label>
-                    <type-bind>Libro, Parte de libro</type-bind>
+                    <type-bind>Libro,Parte de libro</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Persona física o institucional responsable de realizar tareas de edición sobre los contenidos de la obra.
                           No es la editorial</hint>
@@ -203,7 +206,7 @@
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Fecha de publicación</label>
-                    <type-bind>Artículo, Audio, Documento institucional, Imagen, Video, Informe técnico, Libro, Objeto de aprendizaje, Documento de conferencia</type-bind>
+                    <type-bind>Artículo,Audio,Documento institucional,Imagen,Video,Informe técnico,Libro,Objeto de aprendizaje,Documento de conferencia</type-bind>
                     <input-type>date</input-type>
                     <hint>Fecha de publicación, distribución pública o exposición. En
                         caso de no haber difundido nunca su obra por ningún medio, indique
@@ -219,7 +222,7 @@
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Fecha de presentación (Año)</label>
-                    <type-bind>Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Tesis de grado, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>date</input-type>
                     <hint>Fecha de presentación de la tesis o trabajo final de grado. 
                           Puede omitir el día y mes si no lo sabe. 
@@ -251,7 +254,7 @@
                     <repeatable>false</repeatable>
                     <label>Editorial</label>
                     <!--<style>col-sm-8</style>-->
-                    <type-bind>Artículo, Documento institucional, Imagen, Video, Informe técnico, Libro, Parte de libro, Objeto de aprendizaje, Documento de conferencia</type-bind>
+                    <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Entidad responsable de la publicación de un ítem (editorial).</hint>
                     <required>El campo es requerido.</required>                    
@@ -265,7 +268,7 @@
                     <repeatable>false</repeatable>
                     <label>Sede</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type value-pairs-name="unp_sedes">dropdown</input-type>
                     <hint>Seleccione sede</hint>
                     <required>Debe seleccionar una opción</required>
@@ -279,7 +282,7 @@
                     <repeatable>false</repeatable>
                     <label>Facultad o Rectorado</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type value-pairs-name="unp_facultades">dropdown</input-type>
                     <hint>Seleccione facultad o rectorado</hint>
                     <required>Debe seleccionar una opción</required>
@@ -292,7 +295,7 @@
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Carrera</label>
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <vocabulary>carreras</vocabulary> 
                     <hint>Seleccione carrera</hint>
@@ -306,7 +309,7 @@
                     <dc-qualifier>level</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Nivel de posgrado</label>
-                    <type-bind>Tesis de doctorado, Tesis de maestría, Trabajo de especialización</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelposgrado">dropdown</input-type>
                     <hint>Nivel de posgrado al que aspira.</hint>
@@ -320,7 +323,7 @@
                     <dc-qualifier>level</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Nivel de grado</label>
-                    <type-bind>Tesis de grado, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelgrado">dropdown</input-type>
                     <hint>Nivel de grado al que aspira.</hint>
@@ -334,7 +337,7 @@
                     <dc-qualifier>discipline</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Disciplina</label>
-                    <type-bind>Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Tesis de grado, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Disciplina a la que corresponde el trabajo de tesis realizado.
@@ -350,7 +353,7 @@
                     <repeatable>false</repeatable>
                     <label>Título obtenido</label>
                     <!--<style>col-sm-8</style>-->                  
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Grado al que se aspira con el trabajo de tesis realizado.
                     Por ejemplo: "Licenciado en enfermería"</hint>
@@ -364,7 +367,7 @@
                     <dc-qualifier>grantor</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Emisor del título</label>
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Institución que otorga el título.
@@ -381,7 +384,7 @@
                     <repeatable>true</repeatable>
                     <label>Lugar de desarrollo de la tesis</label>
                     <!--<style>col-sm-8</style>-->                  
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Indicar el lugar o lugares dónde se desarrolló la tesis o el trabajo.</hint>
                     <required>Campo requerido</required>
@@ -395,7 +398,7 @@
                     <repeatable>false</repeatable>
                     <!--<label>Serie/Reporte No.</label>-->
                     <label>Revista, evento o serie</label>
-                    <type-bind>Artículo, Documento de conferencia, Libro, Parte de libro</type-bind>
+                    <type-bind>Artículo,Documento de conferencia,Libro,Parte de libro</type-bind>
                     <!--<input-type>series</input-type>-->
                     <input-type>onebox</input-type>
                     <!--<hint>Ingrese la serie y el número asignado a este artículo por su comunidad.</hint>-->
@@ -413,7 +416,8 @@
                     <repeatable>false</repeatable>
                     <label>Cita</label>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese información de cita estándar para el documento.</hint>
+                    <hint>Ingrese información de cita estándar para el documento.
+                    Ejemplo:"Apellido, Nombre. (año de publicación). Título. Tipo de Docuemnto. Editor."</hint>
                     <required></required>
                 </field>
             </row>            
@@ -423,6 +427,21 @@
              often used when depositing normal Items. -->
         <form name="traditionalpagetwo">
             <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>other</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Otros Identificadores</label>
+                    <!--<type-bind>Artículo,Documento institucional,Informe técnico,Objeto de aprendizaje,Documento de conferencia</type-bind>-->
+                    <input-type value-pairs-name="unp_common_identifiers">qualdrop_value</input-type>
+                    <hint>Si el artículo o recurso tiene números de identificación o códigos asociados con
+                        éste, introduzca los tipos y los números o códigos reales. No es un campo obligatorio.
+                    </hint>
+                    <required></required>
+                </field>
+            </row>        
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>identifier</dc-element>
@@ -436,7 +455,7 @@
                     </hint>
                     <required></required>
                 </field>
-            </row>
+            </row>-->
             <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -444,29 +463,14 @@
                     <dc-qualifier>url</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Identificador URL</label>
-                    <type-bind>Artículo, Documento institucional, Informe técnico, Objeto de aprendizaje, Documento de conferencia</type-bind>
+                    <type-bind>Artículo,Documento institucional,Informe técnico,Objeto de aprendizaje,Documento de conferencia</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Dirección dónde se encuentra disponible el recurso (opcional).
                          Puede ser un sitio web, repositorio, revista, etc.</hint>
                     <required></required>
                 </field>
             </row>-->
-            <!--23/10 Agrego calificador other-->
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>other</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Otros Identificadores</label>
-                    <type-bind>Artículo, Documento institucional, Informe técnico, Objeto de aprendizaje, Documento de conferencia</type-bind>
-                    <input-type value-pairs-name="unp_common_identifiers">qualdrop_value</input-type>
-                    <hint>Si el artículo o recurso tiene números de identificación o códigos asociados con
-                        éste, introduzca los tipos y los números o códigos reales.
-                    </hint>
-                    <required></required>
-                </field>
-            </row>           
+            <!--23/10 Agrego calificador other-->         
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -474,7 +478,7 @@
                     <dc-qualifier>isbn</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>ISBN</label>
-                    <type-bind>Libro, Parte de libro</type-bind>
+                    <type-bind>Libro,Parte de libro</type-bind>
                     <input-type>onebox</input-type>
                     <hint>ISBN correspondiente al libro.</hint>
                 </field>
@@ -488,7 +492,7 @@
                     <label>Palabras claves</label>
                     <input-type>tag</input-type>
                     <hint>Términos libres que describen el contenido de la obra. 
-                          Escriba cada término y luego presione la tecla TAB.
+                          Escriba cada término y luego presione la tecla TAB. Los términos escríbalos en mayúsculas.
                          </hint>
                     <required>Debe agregar al menos 3(tres).</required>
                     <!--<vocabulary>srsc</vocabulary>-->
@@ -517,7 +521,7 @@
                     <repeatable>false</repeatable>
                     <label>Tamaño o duración</label>
                     <input-type>onebox</input-type>
-                    <type-bind>Audio, Imagen, Video</type-bind>
+                    <type-bind>Audio,Imagen,Video</type-bind>
                     <hint>Según el recurso indique dimensiones de la imagen o duración del audio o video.</hint>
                     <required></required>
                 </field>
@@ -530,7 +534,7 @@
                     <repeatable>false</repeatable>
                     <label>Cantidad de páginas</label>
                     <input-type>onebox</input-type>
-                    <type-bind>Libro, Parte de libro, Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institucional</type-bind>
+                    <type-bind>Libro,Parte de libro,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <hint>Indique cantidad de páginas del documento.</hint>
                     <required>Debe indicar el total de páginas.</required>
                 </field>
@@ -597,7 +601,7 @@
                     <dc-qualifier>spatial</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura geográfica</label>
-                    <type-bind>Audio, Imagen, Video, Conjunto de datos, Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del documento.</hint>
                     <required></required>
@@ -610,7 +614,7 @@
                     <dc-qualifier>temporal</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura temporal</label>
-                    <type-bind>Audio, Imagen, Video, Conjunto de datos, Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
                     Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera:"AñoComienzo-AñoFin"(Ejemplo: 2020-2022)</hint>
@@ -701,9 +705,9 @@
                     <dc-qualifier>author</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Autor</label>
-                    <type-bind>Artículo, Documento institucional, Imagen, Video, Informe técnico, Libro, Parte de libro, Objeto de aprendizaje, Documento de conferencia, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Tesis de grado, Trabajo final de grado</type-bind>
+                    <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Para nombres personales utilizar el formato invertido: Apellido, Nombres.</hint>
+                    <hint>Para nombres personales utilizar el formato invertido: "Apellido, Nombres"</hint>
                     <required>Debe ingresar al menos un autor.</required>
                 </field>
             </row>
@@ -716,7 +720,7 @@
                     <label>Interprete</label>
                     <type-bind>Audio</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Persona física entrevistada o entrevistadora. Utilizar el formato invertido: Apellido, Nombres. </hint>
+                    <hint>Persona física entrevistada o entrevistadora. Utilizar el formato invertido: "Apellido, Nombres"</hint>
                     <required>Debe ingresar al menos un intérprete.</required>
                 </field>
             </row>
@@ -727,7 +731,7 @@
                     <dc-qualifier>filiation</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Filiación</label>
-                    <type-bind>Audio, Imagen, Video, Conjunto de Datos, Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización</type-bind>                  
+                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización</type-bind>                  
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
                     Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
@@ -741,9 +745,9 @@
                     <dc-qualifier>director</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Director</label>
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Informe técnico</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Informe técnico</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Persona que dirige la realización de la tesis o quien dirige a un investigador, personal de apoyo o becario. Formato: Apellido, Nombres</hint>
+                    <hint>Persona que dirige la realización de la tesis o quien dirige a un investigador, personal de apoyo o becario. Formato: "Apellido, Nombres"</hint>
                     <required>Debe ingresar director.</required>
                 </field>
             </row>
@@ -756,7 +760,7 @@
                     <label>Tutor o Docente responsable</label>
                     <type-bind>Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
+                    <hint>Tutor o Docente responsable del trabajo final. Formato: "Apellido, Nombres"</hint>
                     <required>Debe ingresar responsable.</required>
                 </field>
             </row>
@@ -767,7 +771,7 @@
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Fecha de publicación</label>
-                    <type-bind>Artículo, Audio, Documento institucional, Imagen, Video, Informe técnico, Libro, Parte de libro, Objeto de aprendizaje, Documento de conferencia</type-bind>
+                    <type-bind>Artículo,Audio,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia</type-bind>
                     <input-type>date</input-type>
                     <hint>Fecha de publicación, distribución pública o exposición. En caso de no haber difundido nunca su obra por ningún medio, indique la fecha de hoy como fecha de publicación. Puede omitir el día y mes si no lo sabe. 
                     </hint>
@@ -781,7 +785,7 @@
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Fecha de presentación (Año)</label>
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>date</input-type>
                     <hint>Fecha de presentación de la tesis o trabajo final de grado. 
                           Puede omitir el día y mes si no lo sabe. 
@@ -797,7 +801,7 @@
                     <repeatable>false</repeatable>
                     <label>Editor</label>
                     <!--<style>col-sm-8</style>-->
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
                     A su vez, el departamento o grupo de investigación después de la facultad.
@@ -813,7 +817,7 @@
                     <repeatable>false</repeatable>
                     <label>Editorial</label>
                     <!--<style>col-sm-8</style>-->
-                    <type-bind>Artículo, Documento institucional, Imagen, Video, Informe técnico, Libro, parte de libro, Objeto de aprendizaje, Documento de conferencia</type-bind>
+                    <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Entidad responsable de la publicación de un ítem (editorial).</hint>
                     <required>El campo es requerido.</required>
@@ -827,7 +831,7 @@
                     <repeatable>false</repeatable>
                     <label>Sede</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type value-pairs-name="unp_sedes">dropdown</input-type>
                     <hint>Seleccione sede</hint>
                     <required>Debe seleccionar una opción</required>
@@ -854,7 +858,7 @@
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Carrera</label>
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <vocabulary>carreras</vocabulary> 
                     <hint>Seleccione carrera</hint>
@@ -882,7 +886,7 @@
                     <dc-qualifier>level</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Nivel de grado</label>
-                    <type-bind>Tesis de grado, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelgrado">dropdown</input-type>
                     <hint>Nivel de grado al que aspira.</hint>
@@ -896,7 +900,7 @@
                     <dc-qualifier>discipline</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Disciplina</label>
-                    <type-bind>Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Tesis de grado, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Disciplina a la que corresponde el trabajo de tesis realizado.
@@ -912,7 +916,7 @@
                     <repeatable>false</repeatable>
                     <label>Título obtenido</label>
                     <!--<style>col-sm-8</style>-->                 
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Grado al que se aspira con el trabajo de tesis realizado.
                     Por ejemplo: "Licenciado en enfermería"</hint>
@@ -926,7 +930,7 @@
                     <dc-qualifier>grantor</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Emisor del título</label>
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Institución que otorga el título.
@@ -956,7 +960,7 @@
                     <dc-qualifier>ispartofseries</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Serie/Reporte No.</label>
-                    <type-bind>Artículo, Documento de conferencia</type-bind>
+                    <type-bind>Artículo,Documento de conferencia</type-bind>
                     <input-type>series</input-type>
                     <hint>Ingrese la serie y el número asignado a este artículo por su comunidad.</hint>
                     <required></required>
@@ -970,7 +974,7 @@
                     <repeatable>false</repeatable>
                     <!--<label>Serie/Reporte No.</label>-->
                     <label>Revista, evento o serie</label>
-                    <type-bind>Artículo, Documento de conferencia, Libro, Parte de libro</type-bind>
+                    <type-bind>Artículo,Documento de conferencia,Libro,Parte de libro</type-bind>
                     <!--<input-type>series</input-type>-->
                     <input-type>onebox</input-type>
                     <!--<hint>Ingrese la serie y el número asignado a este artículo por su comunidad.</hint>-->
@@ -988,8 +992,9 @@
                     <repeatable>false</repeatable>
                     <label>Cita</label>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese información de cita estándar para el documento.</hint>
-                    <required></required>
+                    <hint>Ingrese información de cita estándar para el documento.
+                    Ejemplo:"Apellido, Nombre. (año de publicación). Título. Tipo de Docuemnto. Editor."</hint>
+                    <required></required>                    
                 </field>
             </row>         
         </form>
@@ -1015,7 +1020,7 @@
                     <dc-qualifier>isbn</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>ISBN</label>
-                    <type-bind>Libro, Parte de libro</type-bind>
+                    <type-bind>Libro,Parte de libro</type-bind>
                     <input-type>onebox</input-type>
                     <hint>ISBN correspondiente al libro.</hint>
                 </field>
@@ -1029,7 +1034,7 @@
                     <label>Palabras claves</label>
                     <input-type>tag</input-type>
                     <hint>Términos libres que describen el contenido de la obra. 
-                          Escriba cada término y luego presione la tecla TAB.
+                          Escriba cada término y luego presione la tecla TAB. Los términos escríbalos en mayúsculas.
                         </hint>
                     <required>Debe agregar al menos 3(tres).</required>
                     <!--<vocabulary>srsc</vocabulary>-->
@@ -1047,7 +1052,7 @@
                     <label>Resumen</label>
                     <input-type>textarea</input-type>
                     <hint>Ingrese resumen de la obra.</hint>
-                    <required>Debe completar el resumen de la obra</required>
+                    <required>Debe completar el resumen de la obra.</required>
                 </field>
             </row>
             <row>
@@ -1074,7 +1079,7 @@
                     <repeatable>false</repeatable>
                     <label>Tamaño o duración</label>
                     <input-type>onebox</input-type>
-                    <type-bind>Audio, Imagen, Video</type-bind>
+                    <type-bind>Audio,Imagen,Video</type-bind>
                     <hint>Según el recurso indique dimensiones de la imagen o duración del audio o video.</hint>
                     <required></required>
                 </field>
@@ -1087,7 +1092,7 @@
                     <repeatable>false</repeatable>
                     <label>Cantidad de páginas</label>
                     <input-type>onebox</input-type>
-                    <type-bind>Libro, Parte de libro, Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
+                    <type-bind>Libro,Parte de libro,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <hint>Indique cantidad de páginas del documento.</hint>
                     <required>Debe indicar el total de páginas.</required>
                 </field>
@@ -1138,7 +1143,7 @@
                     <dc-qualifier>spatial</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura geográfica</label>
-                    <type-bind>Audio, Imagen, Video, Conjunto de datos</type-bind>
+                    <type-bind>Audio,Imagen,Video,Conjunto de datos</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del recurso.</hint>
                     <required>Debe poder describir el ítem.</required>
@@ -1151,7 +1156,7 @@
                     <dc-qualifier>temporal</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura temporal</label>
-                    <type-bind>Audio, Imagen, Video, Conjunto de datos</type-bind>
+                    <type-bind>Audio,Imagen,Video,Conjunto de datos</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
                     Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera:"AñoComienzo-AñoFin"(Ejemplo: 2020-2022)</hint>
@@ -1165,7 +1170,7 @@
                     <dc-qualifier>spatial</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura geográfica</label>
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del documento.</hint>
                     <required></required>
@@ -1178,7 +1183,7 @@
                     <dc-qualifier>temporal</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura temporal</label>
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
                     Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera:"AñoComienzo-AñoFin"(Ejemplo: 2020-2022)</hint>
@@ -1206,7 +1211,6 @@
                     <input-type value-pairs-name="unp_access_level_types">dropdown</input-type>
                     <hint>Elija el nivel del acceso para el ítem.</hint>
                     <required>Debe seleccionar una opción</required>
-                    <!--<visibility>workflow</visibility>-->
                 </field>
             </row> 
             <row>
@@ -1219,9 +1223,8 @@
                     <input-type value-pairs-name="unp_license_types">dropdown</input-type>
                     <hint>Elija la licencia adecuada para el ítem.</hint>
                     <required>Debe seleccionar una opción</required>
-                    <!--<visibility>workflow</visibility>-->
                 </field>
-            </row>             
+            </row>
         </form>
 
         <form name="herbariopaso1">
@@ -1271,7 +1274,7 @@
                     <repeatable>true</repeatable>
                     <label>Autor</label>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese todas las personas que intervienen. Para nombres personales utilizar el formato invertido: Apellido, Nombres.</hint>
+                    <hint>Ingrese todas las personas que intervienen. Para nombres personales utilizar el formato invertido: "Apellido, Nombres"</hint>
                     <required>El campo es requerido.</required>
                 </field>
             </row>
@@ -1376,7 +1379,7 @@
                     <label>Palabras claves</label>
                     <input-type>tag</input-type>
                     <hint>Términos que describen la muestra. 
-                          Escriba cada término y luego presione la tecla TAB.
+                          Escriba cada término y luego presione la tecla TAB. Los términos escríbalos en mayúsculas.
                     </hint>
                     <required>El campo es requerido.</required>
                     <vocabulary>herbario</vocabulary>
@@ -2811,17 +2814,73 @@
                 <displayed-value>Artículo</displayed-value>
                 <stored-value>Artículo</stored-value>
             </pair>
+            <pair> <!--No en el listado del SNRD-->
+                <displayed-value>Audio</displayed-value>
+                <stored-value>Audio</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Conjunto de datos</displayed-value>
+                <stored-value>Conjunto de datos</stored-value>
+            </pair>            
+            <pair>
+                <displayed-value>Diapositiva de microscopio</displayed-value>
+                <stored-value>Diapositiva de microscopio</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Documento de conferencia</displayed-value>
+                <stored-value>Documento de conferencia</stored-value>
+            </pair>
+            <pair> <!--No en el listado del SNRD-->
+                <displayed-value>Documento institucional</displayed-value>
+                <stored-value>Documento institucional</stored-value>
+            </pair>  
+            <pair> <!--Imagen No está en el listado del SNRD- se mapea-->
+                <displayed-value>Imagen</displayed-value>
+                <stored-value>Imagen</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Imagen satelital</displayed-value>
+                <stored-value>Imagen satelital</stored-value>
+            </pair>            
+            <pair> <!-- informes o documeto de trabajo técnico o científico-->
+                <displayed-value>Informe técnico</displayed-value>
+                <stored-value>Informe técnico</stored-value>
+            </pair>
             <pair>
                 <displayed-value>Libro</displayed-value>
                 <stored-value>Libro</stored-value>
             </pair>
             <pair>
+                <displayed-value>Mapa</displayed-value>
+                <stored-value>Mapa</stored-value>
+            </pair>
+            <pair> <!--No en el listado del SNRD-->
+                <displayed-value>Objeto de aprendizaje</displayed-value>
+                <stored-value>Objeto de aprendizaje</stored-value>
+            </pair>   
+            <pair>
                 <displayed-value>Parte de libro</displayed-value>
                 <stored-value>Parte de libro</stored-value>
             </pair>
             <pair>
-                <displayed-value>Documento de conferencia</displayed-value>
-                <stored-value>Documento de conferencia</stored-value>
+                <displayed-value>Película documental</displayed-value>
+                <stored-value>Película documental</stored-value>
+            </pair>
+            <pair> <!--No en el listado del SNRD-->
+                <displayed-value>Plan de estudio</displayed-value>
+                <stored-value>Plan de estudio</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Plano</displayed-value>
+                <stored-value>Plano</stored-value>
+            </pair>
+            <pair> <!--No en el listado del SNRD-->
+                <displayed-value>Programa de contenidos</displayed-value>
+                <stored-value>Programa de contenidos</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Proyecto de investigación</displayed-value>
+                <stored-value>Proyecto de investigación</stored-value>
             </pair>
             <!--<pair>
                 <displayed-value>Tesis de posgrado</displayed-value>
@@ -2832,6 +2891,10 @@
                 <stored-value>Tesis de doctorado</stored-value>
             </pair>
             <pair>
+                <displayed-value>Tesis de grado</displayed-value>
+                <stored-value>Tesis de grado</stored-value>
+            </pair>
+            <pair>
                 <displayed-value>Tesis de maestría</displayed-value>
                 <stored-value>Tesis de maestría</stored-value>
             </pair>
@@ -2840,77 +2903,17 @@
                 <stored-value>Trabajo de especialización</stored-value>
             </pair>                             
             <pair>
-                <displayed-value>Tesis de grado</displayed-value>
-                <stored-value>Tesis de grado</stored-value>
-            </pair>
-            <pair>
                 <displayed-value>Trabajo final de grado</displayed-value>
                 <stored-value>Trabajo final de grado</stored-value>
-            </pair>
-            <!--<pair>
-                <displayed-value>Informe científico</displayed-value>
-                <stored-value>Informe científico</stored-value>
-            </pair>-->         
-            <pair> <!-- informes o documeto de trabajo técnico o científico-->
-                <displayed-value>Informe técnico</displayed-value>
-                <stored-value>Informe técnico</stored-value>
-            </pair>
-            <pair> <!--Imagen No está en el listado del SNRD- se mapea-->
-                <displayed-value>Imagen</displayed-value>
-                <stored-value>Imagen</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Plano</displayed-value>
-                <stored-value>Plano</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Mapa</displayed-value>
-                <stored-value>Mapa</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Imagen satelital</displayed-value>
-                <stored-value>Imagen satelital</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Diapositiva de microscopio</displayed-value>
-                <stored-value>Diapositiva de microscopio</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Película documental</displayed-value>
-                <stored-value>Película documental</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Conjunto de datos</displayed-value>
-                <stored-value>Conjunto de datos</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Proyecto de investigación</displayed-value>
-                <stored-value>Proyecto de investigación</stored-value>
-            </pair>
-            <pair> <!--No en el listado del SNRD-->
-                <displayed-value>Audio</displayed-value>
-                <stored-value>Audio</stored-value>
             </pair>
             <pair><!--No en el listado del SNRD-->
                 <displayed-value>Video</displayed-value>
                 <stored-value>Video</stored-value>
-            </pair>             
-            <pair> <!--No en el listado del SNRD-->
-                <displayed-value>Documento institucional</displayed-value>
-                <stored-value>Documento institucional</stored-value>
-            </pair>       
-            <pair> <!--No en el listado del SNRD-->
-                <displayed-value>Objeto de aprendizaje</displayed-value>
-                <stored-value>Objeto de aprendizaje</stored-value>
             </pair>            
-            <pair> <!--No en el listado del SNRD-->
-                <displayed-value>Plan de estudio</displayed-value>
-                <stored-value>Plan de estudio</stored-value>
-            </pair>
-            <pair> <!--No en el listado del SNRD-->
-                <displayed-value>Programa de contenidos</displayed-value>
-                <stored-value>Programa de contenidos</stored-value>
-            </pair>
+            <!--<pair>
+                <displayed-value>Informe científico</displayed-value>
+                <stored-value>Informe científico</stored-value>
+            </pair>--> 
         </value-pairs>
 
         <value-pairs value-pairs-name="unp_levelposgrado" dc-term="thesis_degree_level">
@@ -3301,27 +3304,27 @@
         <value-pairs value-pairs-name="unp_license_types" dc-term="license">
             <pair>
                 <displayed-value>Attribution 4.0 International (BY 4.0)</displayed-value>
-                <stored-value>http://creativecommons.org/licenses/by/4.0/</stored-value>
+                <stored-value>https://creativecommons.org/licenses/by/4.0/</stored-value>
             </pair>
             <pair>
                 <displayed-value>Attribution-ShareAlike 4.0 International (BY-SA 4.0)</displayed-value>
-                <stored-value>http://creativecommons.org/licenses/by-sa/4.0/</stored-value>
+                <stored-value>https://creativecommons.org/licenses/by-sa/4.0/</stored-value>
             </pair>
             <pair>
                 <displayed-value>Attribution-NoDerivatives 4.0 International (BY-ND 4.0)</displayed-value>
-                <stored-value>http://creativecommons.org/licenses/by-nd/4.0/</stored-value>
+                <stored-value>https://creativecommons.org/licenses/by-nd/4.0/</stored-value>
             </pair>
             <pair>
                 <displayed-value>Attribution-NonCommercial 4.0 International (BY-NC 4.0)</displayed-value>
-                <stored-value>http://creativecommons.org/licenses/by-nc/4.0/</stored-value>
+                <stored-value>https://creativecommons.org/licenses/by-nc/4.0/</stored-value>
             </pair>
             <pair>
                 <displayed-value>Attribution-NonCommercial-ShareAlike 4.0 International (BY-NC-SA 4.0)</displayed-value>
-                <stored-value>http://creativecommons.org/licenses/by-nc-sa/4.0/</stored-value>
+                <stored-value>https://creativecommons.org/licenses/by-nc-sa/4.0/</stored-value>
             </pair>
             <pair>
                 <displayed-value>Attribution-NonCommercial-NoDerivatives 4.0 International (BY-NC-ND 4.0)</displayed-value>
-                <stored-value>http://creativecommons.org/licenses/by-nc-nd/4.0/</stored-value>
+                <stored-value>https://creativecommons.org/licenses/by-nc-nd/4.0/</stored-value>
             </pair>
             <!--<pair>
                 <displayed-value>Attribution 3.0 Unported (BY 3.0)</displayed-value>
