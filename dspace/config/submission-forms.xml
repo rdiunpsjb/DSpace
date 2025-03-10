@@ -138,7 +138,7 @@
                     <dc-qualifier>filiation</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Filiación</label>
-                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización</type-bind>
+                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo final de grado</type-bind>
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
                     Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
@@ -185,6 +185,7 @@
                     <required></required>
                 </field>
             </row>  
+            
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -417,8 +418,8 @@
                     <label>Cita</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información de cita estándar para el documento.
-                    Ejemplo:"Apellido, Nombre. (año de publicación). Título. Tipo de Docuemnto. Editor."</hint>
-                    <required></required>
+                    Ejemplo:"Apellido, Nombre. (año de publicación). Título. Tipo de Documento. Nombre de la Institución."</hint>
+                    <required>El campo es requerido.</required>
                 </field>
             </row>            
         </form>
@@ -515,7 +516,7 @@
             </row>
             <row>
                 <field>
-                    <dc-schema>dc</dc-schema> marca
+                    <dc-schema>dc</dc-schema>
                     <dc-element>format</dc-element>
                     <dc-qualifier>extent</dc-qualifier>
                     <repeatable>false</repeatable>
@@ -535,7 +536,7 @@
                     <label>Cantidad de páginas</label>
                     <input-type>onebox</input-type>
                     <type-bind>Libro,Parte de libro,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
-                    <hint>Indique cantidad de páginas del documento.</hint>
+                    <hint>Indique cantidad de páginas del documento. Formato de ejemplo: 86 p. (número espacio letra p en mínuscula terminada con punto)</hint>
                     <required>Debe indicar el total de páginas.</required>
                 </field>
             </row>
@@ -731,7 +732,7 @@
                     <dc-qualifier>filiation</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Filiación</label>
-                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización</type-bind>                  
+                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo final de grado</type-bind>
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
                     Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
@@ -947,7 +948,7 @@
                     <repeatable>true</repeatable>
                     <label>Lugar de desarrollo de la tesis</label>
                     <style>col-sm-8</style>                    
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Institución, departamento y/o unidad en la cual se desarrolló el trabajo.</hint>
                     <required>Campo requerido</required>
@@ -993,8 +994,8 @@
                     <label>Cita</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información de cita estándar para el documento.
-                    Ejemplo:"Apellido, Nombre. (año de publicación). Título. Tipo de Docuemnto. Editor."</hint>
-                    <required></required>                    
+                    Ejemplo:"Apellido, Nombre. (año de publicación). Título. Tipo de Documento. Nombre de la Institución."</hint>
+                    <required>El campo es requerido.</required>                    
                 </field>
             </row>         
         </form>
@@ -1093,7 +1094,7 @@
                     <label>Cantidad de páginas</label>
                     <input-type>onebox</input-type>
                     <type-bind>Libro,Parte de libro,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
-                    <hint>Indique cantidad de páginas del documento.</hint>
+                    <hint>Indique cantidad de páginas del documento. Formato de ejemplo: 86 p. (número espacio letra p en mínuscula terminada con punto)</hint>
                     <required>Debe indicar el total de páginas.</required>
                 </field>
             </row>
@@ -1365,7 +1366,7 @@
                     <label>Cita</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información de cita estándar para el documento.</hint>
-                    <required></required>
+                    <required>El campo es requerido.</required>
                 </field>
             </row>                        
         </form>
