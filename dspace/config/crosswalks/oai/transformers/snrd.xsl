@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Following OpenAIRE Guidelines 1.1: http://www.openaire.eu/component/content/article/207 -->
+<xsl:stylesheet version="1.0" 
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+	xmlns:doc="http://www.lyncode.com/xoai">
+
+<xsl:output indent="yes" method="xml" omit-xml-declaration="yes" />
+
+<xsl:template match="/doc:metadata">
+	<doc:metadata>		
+		<xsl:apply-templates select="@*|node()" />
+		<!--<xsl:call-template name="snrdDescription"/>-->
+		<xsl:call-template name="snrdType"/>
+		<!--<xsl:call-template name="snrdRights"/>-->
+	</doc:metadata>
+</xsl:template>
+
+<xsl:template match="@*|node()">
+	<xsl:copy>
+		<xsl:apply-templates select="@*|node()" />
+	</xsl:copy>
+</xsl:template>
+
+
+	
+<!-- Completas dc.type para OpenAires -->
+<!--xsl:template match="/doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element/doc:field[@name='value']/text()">
+	<xsl:variable name="prefijoOA" select="'info:eu-repo/semantics__'"/>
+	<xsl:value-of select="concat($prefijoOA,.)" />
+</xsl:template-->
+	
+
+	<!-- SNRD: type -->
+	<xsl:template name="snrdType">
+	        <xsl:variable name="unpType" select="/doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element/doc:field[@name='value']/text()"/>
+
+	        <!--<xsl:variable name="unpTypeversion" select="/doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element[@name='version']/doc:element/doc:field[@name='value']/text()"/>-->
+
+
+        	<!-- formato openAire-->
+	        <xsl:variable name="openAireType">
+        		<xsl:choose>
+               		<xsl:when test="contains($unpType, 'Libro')">info:eu-repo/semantics/book</xsl:when>
+					<xsl:when test="contains($unpType, 'Parte de libro')">info:eu-repo/semantics/bookPart</xsl:when>
+					<xsl:when test="contains($unpType, 'Documento de conferencia')">info:eu-repo/semantics/conferenceObject</xsl:when>
+                    <xsl:when test="contains($unpType, 'Tesis de doctorado')">info:eu-repo/semantics/doctoralThesis</xsl:when>
+       		        <xsl:when test="contains($unpType, 'Tesis de maestría')">info:eu-repo/semantics/masterThesis</xsl:when>
+                    <xsl:when test="contains($unpType, 'Tesis de grado')">info:eu-repo/semantics/bachelorThesis</xsl:when>
+                    <xsl:when test="contains($unpType, 'Trabajo final de grado')">info:eu-repo/semantics/bachelorThesis</xsl:when>
+                    <xsl:when test="contains($unpType, 'Informe técnico')">info:eu-repo/semantics/report</xsl:when>
+                    <xsl:when test="contains($unpType, 'Artículo')">info:eu-repo/semantics/article</xsl:when>
+	            	<xsl:otherwise>info:eu-repo/semantics/other</xsl:otherwise>
+	            </xsl:choose>
+	        </xsl:variable>        
+
+			<!-- formato SNRD-->
+	        <xsl:variable name="snrdType">
+        		<xsl:choose>
+               		<xsl:when test="contains($unpType, 'Libro')">info:ar-repo/semantics/libro</xsl:when>
+					<xsl:when test="contains($unpType, 'Parte de libro')">info:ar-repo/semantics/parte de libro</xsl:when>
+					<xsl:when test="contains($unpType, 'Documento de conferencia')">info:ar-repo/semantics/documento de conferencia</xsl:when>
+                    <xsl:when test="contains($unpType, 'Tesis de doctorado')">info:ar-repo/semantics/tesis doctoral</xsl:when>
+       		        <xsl:when test="contains($unpType, 'Tesis de maestría')">info:ar-repo/semantics/tesis de maestría</xsl:when>
+                    <xsl:when test="contains($unpType, 'Tesis de grado')">info:ar-repo/semantics/tesis de grado</xsl:when>
+                    <xsl:when test="contains($unpType, 'Trabajo final de grado')">info:ar-repo/semantics/trabajo final de grado</xsl:when>
+                    <xsl:when test="contains($unpType, 'Conjunto de datos')">info:ar-repo/semantics/conjunto de datos</xsl:when>
+                    <xsl:when test="contains($unpType, 'Informe técnico')">info:ar-repo/semantics/informe técnico</xsl:when>
+                    <xsl:when test="contains($unpType, 'Artículo')">info:ar-repo/semantics/artículo</xsl:when>
+	            	<xsl:otherwise>info:ar-repo/semantics/otro</xsl:otherwise>
+	            </xsl:choose>
+	        </xsl:variable>        
+
+	<!-- formato Versión del Documento -->
+	        <!--<xsl:variable name="snrdversion">
+        		<xsl:choose>
+               		<xsl:when test="contains($unpTypeversion, 'Publicado')">info:eu-repo/semantics/publishedVersion</xsl:when>
+					<xsl:when test="contains($unpTypeversion, 'Aceptado')">info:eu-repo/semantics/acceptedVersion</xsl:when>
+					<xsl:when test="contains($unpTypeversion, 'Actualizado')">info:eu-repo/semantics/updatedVersion</xsl:when>
+					<xsl:otherwise>No informada</xsl:otherwise>
+	            </xsl:choose>
+	        </xsl:variable> -->       
+
+        	<!-- armo una nueva salida xoai con los dos type -->
+			<doc:element name="snrd">
+                <doc:element name="type">
+                	<doc:element name="es">
+		        		<doc:field name="value">
+		                	<xsl:value-of select="$openAireType"/>
+			            </doc:field>
+			        </doc:element>
+			     	<doc:element name="es">
+                		<doc:field name="value">
+                        	<xsl:value-of select="$snrdType"/>
+			            </doc:field>
+			        </doc:element>
+			        <!--<doc:element name="es">
+                		<doc:field name="value">
+                        	<xsl:value-of select="$snrdversion"/>
+			            </doc:field>
+			        </doc:element>-->
+				</doc:element>
+			</doc:element>
+    </xsl:template>
+
+</xsl:stylesheet>

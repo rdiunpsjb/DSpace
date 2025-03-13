@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration indented="false" maxListIdentifiersSize="100" maxListRecordsSize="100"
-    maxListSetsSize="100" stylesheet="static/style.xsl" xmlns="http://www.lyncode.com/XOAIConfiguration">
+<Configuration indented="false" 
+               maxListIdentifiersSize="100" 
+               maxListRecordsSize="100"
+               maxListSetsSize="100" 
+               stylesheet="static/style.xsl" xmlns="http://www.lyncode.com/XOAIConfiguration">
 
     <Contexts>
         <Context baseurl="request" name="Default Context">
@@ -90,6 +93,17 @@
                 This contexts complies with OpenAIRE Guidelines for Literature Repositories v4.0.
             </Description>
         </Context>
+        
+        <!-- 10/03/2025 - Contextos SNRD-UNPSJB -->
+    	<Context baseurl="snrd" name="UNPSJB-SNRD">
+        	<Transformer ref="snrdUnpTransformer"/>
+    	    <Filter ref="snrdUnpFilter"/>
+            <Set ref="snrdUnpSet"/>
+	        <Format ref="oai_dc_unp_snrd"/>
+	        <Description>
+               Contexto para UNPSJB SNRD
+            </Description>
+	    </Context>
 
     </Contexts>
 
@@ -185,6 +199,14 @@
             <Namespace>http://namespace.openaire.eu/schema/oaire/</Namespace>
             <SchemaLocation>https://www.openaire.eu/schema/repo-lit/4.0/openaire.xsd</SchemaLocation>
         </Format>
+
+        <!-- 10/03/2025 - Formato para RDI-UNPSJB -->
+	    <Format id="oai_dc_unp_snrd">
+            <Prefix>oai_dc</Prefix>
+	    <XSLT>metadataFormats/oai_dc_unp_snrd.xsl</XSLT>
+	    <Namespace>http://www.openarchives.org/OAI/2.0/oai_dc/</Namespace>
+            <SchemaLocation>http://www.openarchives.org/OAI/2.0/oai_dc.xsd</SchemaLocation>
+        </Format>
     </Formats>
 
     <Transformers>
@@ -197,8 +219,12 @@
         <Transformer id="openaire4Transformer">
             <XSLT>transformers/openaire4.xsl</XSLT>
         </Transformer>
+	    
+        <!-- 10/03/2025 Transformer para RDI-UNPSJB-->
+    	<Transformer id="snrdUnpTransformer">  
+            <XSLT>transformers/snrd.xsl</XSLT>
+        </Transformer>
     </Transformers>
-
 
     <Filters>
         <!-- DRIVER filter for records returned by OAI-PMH.
@@ -399,6 +425,27 @@
             </Definition>
         </Filter>
 
+        <Filter id="snrdUnpFilter">
+            <Definition>
+                <And>
+                    <LeftCondition>  
+                        <And>
+                            <LeftCondition>
+                                <Custom ref="titleExistsCondition" />
+                            </LeftCondition>
+                            <RightCondition>
+                                <Custom ref="dateExistsCondition" />
+                            </RightCondition>
+                        </And>
+                    </LeftCondition>
+                    <RightCondition>
+                        <Custom ref="snrdDocumentTypeFilter" />
+                    </RightCondition>
+                </And>
+            </Definition>
+        </Filter>
+
+
         <!-- This condition determines if an Item has a "dc.type" field
              which contains "Thesis". -->
         <CustomCondition id="thesisDocumentTypeCondition">
@@ -423,6 +470,18 @@
             <Class>org.dspace.xoai.filter.DSpaceMetadataExistsFilter</Class>
             <Configuration>
                 <string name="field">dc.title</string>
+            </Configuration>
+        </CustomCondition>
+
+        <!-- 11/03/2025 This condition determines if an Item has a "dc.date.issued" or a "dcterms.created -->
+        <CustomCondition id="dateExistsCondition">
+            <Class>org.dspace.xoai.filter.DSpaceMetadataExistsFilter</Class>
+            <Configuration>
+                <list name="fields">
+                    <string name="field">dc.date.issued</string>
+                    <!--<string name="field">dcterms.issued</string>
+                    <string name="field">dcterms.created</string>-->
+                </list>
             </Configuration>
         </CustomCondition>
 
@@ -516,6 +575,39 @@
             </Configuration>
         </CustomCondition>
 
+        <!--10/03/2025 - Condiciones para el RDI-UNPSJB-->
+     <CustomCondition id="snrdDocumentTypeFilter">
+            <Class>org.dspace.xoai.filter.DSpaceAtLeastOneMetadataFilter</Class>
+                <Configuration>
+                   <string name="field">dc.type</string>
+                  <string name="operator">equal</string>
+                  <list name="values">
+                    <string>Artículo</string>
+                    <string>Tesis de doctorado</string>
+                    <string>Tesis de maestría</string>
+                    <string>Tesis de grado</string>
+                    <string>Trabajo final de grado</string>
+                    <string>Libro</string>
+                    <string>Parte de libro</string>
+                    <string>Documento de conferencia</string>
+                    <string>Documento de trabajo</string>                    
+                    <string>Fotografía</string>
+                    <string>Plano</string>
+                    <string>Mapa</string>
+                    <string>Diapositiva</string>
+                    <string>Imagen satelital</string>
+                    <string>Diapositiva de microscopio</string>
+                    <string>Audio</string>
+                    <string>Video</string>
+                    <string>Imagen</string>
+                    <string>Película documental</string>
+                    <string>Proyecto de investigación</string>
+                    <string>Trabajo de especialización</string>
+                    <string>Informe técnico</string>
+                    <string>Conjunto de datos</string>
+                  </list>
+                </Configuration>
+        </CustomCondition>
     </Filters>
 
     <Sets>
@@ -529,5 +621,11 @@
             <Name>OpenAIRE</Name>
             <!-- Just an alias -->
         </Set>
+        <!-- 10/03/2025 - Set para RDI-UNPSJB -->
+	    <Set id="snrdUnpSet">
+            <Spec>snrd</Spec>
+            <Name>Sistema Nacional de Repositorios Digitales</Name>
+            <!-- Just an alias -->
+    	</Set>
     </Sets>
 </Configuration>
