@@ -101,8 +101,8 @@
                     <input-type>onebox</input-type>
                     <hint>Otros títulos de la obra, o traducciones del título en cualquier idioma que no sea el nativo de la obra.</hint>
                     <required></required>
-                    <readonly>readonly</readonly>
-                    <visibility>workflow</visibility>
+                    <!--<readonly>readonly</readonly>
+                    <visibility>workflow</visibility>-->
                 </field>
             </row>
             <row>
@@ -112,10 +112,10 @@
                     <dc-qualifier>author</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Autor</label>
-                    <type-bind>Atículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
+                    <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Para nombres personales utilizar el formato invertido: "Apellido, Nombres"</hint>
-                    <required></required>
+                    <required>Debe ingresar al menos un autor</required>
                 </field>
             </row>
             <row>
@@ -128,7 +128,7 @@
                     <type-bind>Audio</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Persona física entrevistada o entrevistadora. Utilizar el formato invertido: "Apellido, Nombres"</hint>
-                    <required></required>
+                    <required>Debe ingresar un Interprete</required>
                 </field>
             </row>
             <row>
@@ -138,11 +138,11 @@
                     <dc-qualifier>filiation</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Filiación</label>
-                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <!--<type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo final de grado</type-bind>-->
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
                     Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
-                    <required>Debe ingresar esta información</required>
+                    <required>El campo es requerido.</required>
                 </field>
             </row>
             <row>
@@ -736,7 +736,7 @@
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
                     Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
-                    <required>Debe ingresar esta información</required>
+                    <required>El campo es requerido.</required>
                 </field>
             </row>      
             <row>
@@ -1024,6 +1024,7 @@
                     <type-bind>Libro,Parte de libro</type-bind>
                     <input-type>onebox</input-type>
                     <hint>ISBN correspondiente al libro.</hint>
+                     <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -1413,7 +1414,8 @@
                     <required>Debe seleccionar un idioma</required>
                 </field>
             </row>
-            <row>
+            <!--No es necesario-->
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>format</dc-element>
@@ -1425,7 +1427,7 @@
                     <hint>Seleccione formato de imagen.</hint>
                     <required></required>
                 </field>
-            </row>
+            </row>-->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -3147,10 +3149,10 @@
                 <displayed-value>Francés</displayed-value>
                 <stored-value>fra</stored-value>
             </pair>
-            <pair>
+            <!--<pair>
                 <displayed-value>Inglés (Estados Unidos)</displayed-value>
                 <stored-value>en_US</stored-value>
-            </pair>
+            </pair>-->
             <pair>
                 <displayed-value>Inglés</displayed-value>
                 <stored-value>eng</stored-value>

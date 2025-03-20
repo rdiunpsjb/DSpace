@@ -34,22 +34,30 @@
 			</xsl:for-each>
 
 			<!-- dc.creator -->
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='creator']/doc:element/doc:field[@name='value']">
+			<!--<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='creator']/doc:element/doc:field[@name='value']">
 				<dc:creator><xsl:value-of select="." /></dc:creator>
-			</xsl:for-each>
+			</xsl:for-each>-->
 			<!-- dc.contributor.author -->
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element[@name='author']/doc:element/doc:field[@name='value']">
 				<dc:creator><xsl:value-of select="." /></dc:creator>
 			</xsl:for-each>
-			<!-- dc.contributor -->
+			<!-- dc.contributor.director (para el caso de las tesis)-->
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element[@name='director']/doc:element/doc:field[@name='value']">
+				<dc:contributor><xsl:value-of select="." /></dc:contributor>
+			</xsl:for-each>
+			<!-- dc.contributor.* -->
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element/doc:field[@name='value']">
 				<dc:contributor><xsl:value-of select="." /></dc:contributor>
 			</xsl:for-each>
-			<!-- dc.contributor.director (para el caso de las tesis)-->
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='contributor']/doc:element[@name='director']/doc:field[@name='value']">
+			<!-- dwc.identifiedBy para Herbario-->
+			<xsl:for-each select="doc:metadata/doc:element[@name='dwc']/doc:element[@name='identifiedBy']/doc:element/doc:field[@name='value']">
 				<dc:contributor><xsl:value-of select="." /></dc:contributor>
 			</xsl:for-each>
-
+			<!-- dwc.recordedBy Herbario-->
+			<xsl:for-each select="doc:metadata/doc:element[@name='dwc']/doc:element[@name='recordedBy']/doc:element/doc:field[@name='value']">
+				<dc:contributor><xsl:value-of select="." /></dc:contributor>
+			</xsl:for-each>
+			
 			<!-- dc.subject -->
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='subject']/doc:element/doc:field[@name='value']">
 				<dc:subject><xsl:value-of select="." /></dc:subject>
@@ -99,31 +107,13 @@
 			-->
 
 			<!-- dc.type -->
-			<!--<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element[@name='driver']/doc:field[@name='value']">
-				<dc:type><xsl:value-of select="concat('info:eu-repo/semantics/',.)" /></dc:type>
-			</xsl:for-each>
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element[@name='snrd']/doc:field[@name='value']">
-				<dc:type><xsl:value-of select="concat('info:ar-repo/semantics/',.)" /></dc:type>
-			</xsl:for-each>-->
-			<!-- dc.type.version -->
-			<!--<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element[@name='version']/doc:field[@name='value']">
-				<dc:type><xsl:value-of select="." /></dc:type>
-			</xsl:for-each>-->
-
-
-			<!-- dc.type 1ra instancia DRIVER -->
 			<xsl:for-each select="doc:metadata/doc:element[@name='snrd']/doc:element[@name='type']/doc:element/doc:field[@name='value']">
 				<dc:type><xsl:value-of select="." /></dc:type>
 			</xsl:for-each>
-			<!-- dc.type.* 2da instancia SNRD-->
+			<!-- dc.type.* -->
 			<xsl:for-each select="doc:metadata/doc:element[@name='snrd']/doc:element[@name='type']/doc:element/doc:element/doc:field[@name='value']">
 				<dc:type><xsl:value-of select="." /></dc:type>
 			</xsl:for-each>
-			<!-- dc.type.version 3ra instancia Versión del ítem-->
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element[@name='version']/doc:field[@name='value']">
-				<dc:type><xsl:value-of select="." /></dc:type>
-			</xsl:for-each>
-
 
 			<!-- dc.format -->
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='format']/doc:element/doc:field[@name='value']">
@@ -153,11 +143,9 @@
 			</xsl:for-each>			
 			-->
 			<!-- dc.identifier.* -->
-			<!--
-			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element/doc:element/doc:field[@name='value']">
+			<!--<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element/doc:element/doc:field[@name='value']">
 				<dc:identifier><xsl:value-of select="." /></dc:identifier>
-			</xsl:for-each>
-			-->
+			</xsl:for-each>-->
 
 			<!-- dc.source (dc.identifier.citation)-->
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='citation']/doc:element/doc:field[@name='value']">
@@ -181,18 +169,25 @@
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='relation']/doc:element[@name='ispartofseries']/doc:element/doc:field[@name='value']">
 				<dc:relation><xsl:value-of select="." /></dc:relation>
 			</xsl:for-each>
+			<!-- dc.relation -->
+			<!--<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='relation']/doc:element/doc:field[@name='value']">
+				<dc:relation><xsl:value-of select="." /></dc:relation>
+			</xsl:for-each>-->
 			<!-- dc.relation.* -->
 			<!--<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='relation']/doc:element/doc:element/doc:field[@name='value']">
 				<dc:relation><xsl:value-of select="." /></dc:relation>
 			</xsl:for-each>-->
+			
 			<!-- dc.relation.* (DOI) -->
 			<!--<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='doi']/doc:element/doc:field[@name='value']">
 				<dc:relation><xsl:value-of select="concat('info:eu-repo/semantics/altIdentifier/doi/', substring-after(., 'doi.org/'))"/></dc:relation>
-			</xsl:for-each>-->			
-			<!-- dc.relation.* (ISBN) -->
-			<!--<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='isbn']/doc:element/doc:field[@name='value']">
-				<dc:relation><xsl:value-of select="concat('info:eu-repo/semantics/altIdentifier/isbn/', .,'')"/></dc:relation>
 			</xsl:for-each>-->
+			
+			<!-- dc.relation.* (ISBN) -->
+			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='isbn']/doc:element/doc:field[@name='value']">
+				<dc:relation><xsl:value-of select="concat('info:eu-repo/semantics/altIdentifier/isbn/', .,'')"/></dc:relation>
+			</xsl:for-each>
+
 			<!-- dc.relation.* (ISSN impreso) -->
 			<!--<xsl:for-each select="doc:metadata/doc:element[@name='unaj']/doc:element[@name='issn']/doc:element[@name='impreso']/doc:element/doc:field[@name='value']">
 				<dc:relation><xsl:value-of select="concat('info:eu-repo/semantics/altIdentifier/pissn/', .,'')"/></dc:relation>
@@ -201,8 +196,7 @@
 			<!--<xsl:for-each select="doc:metadata/doc:element[@name='unaj']/doc:element[@name='issn']/doc:element[@name='digital']/doc:element/doc:field[@name='value']">
 				<dc:relation><xsl:value-of select="concat('info:eu-repo/semantics/altIdentifier/eissn/', .,'')"/></dc:relation>
 			</xsl:for-each>-->
-		
-			<!-- dc.relation.* (URL) otro. comento por ahora 12/03/2025 -->
+			<!-- dc.relation.* (URL) -->
 			<!--<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element[@name='other']/doc:element/doc:field[@name='value']">
 				<dc:relation><xsl:value-of select="concat('info:eu-repo/semantics/altIdentifier/url/', substring-after(., '//'))"/></dc:relation>
 			</xsl:for-each>-->
