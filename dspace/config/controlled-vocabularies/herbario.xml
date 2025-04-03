@@ -22,6 +22,9 @@
 			<node id="AMARILIDACEAE" label="AMARILIDACEAE"/>
 			<node id="AMARYLLIDACEAE" label="AMARYLLIDACEAE"/>
 			<node id="ANACARDIACEAE" label="ANACARDIACEAE"/>
+
+			<node id="ANEMIACEAE" label="ANEMIACEAE"/>
+
 			<node id="ANNONACEAE" label="ANNONACEAE"/>
 			<node id="APIACEAE" label="APIACEAE"/>
 			<node id="APOCYNACEAE" label="APOCYNACEAE"/>
@@ -32,8 +35,15 @@
 			<node id="ARISTOLOCHIACEAE" label="ARISTOLOCHIACEAE"/>
 			<node id="ASCLEPIADACEAE" label="ASCLEPIADACEAE"/>
 			<node id="ASPLENIACEAE" label="ASPLENIACEAE"/>
+
+			<node id="ASPIDIACEAE" label="ASPLENIACEAE"/>
+
+			<node id="ASPLENIACEAE" label="ASPLENIACEAE"/>
 			<node id="ASTERACEAE" label="ASTERACEAE"/>
 			<node id="AZOLLACEAE" label="AZOLLACEAE"/>
+
+			<node id="BEGONIACEAE" label="BEGONIACEAE"/>
+
 			<node id="BERBERIDACEAE" label="BERBERIDACEAE"/>
 			<node id="BETULACEAE" label="BETULACEAE"/>
 			<node id="BIGNONIACEAE" label="BIGNONIACEAE"/>
@@ -45,7 +55,12 @@
 			<node id="BUDDLEJACEAE" label="BUDDLEJACEAE"/>
 			<node id="BUXACEAE" label="BUXACEAE"/>
 			<node id="CACTACEAE" label="CACTACEAE"/>
+
+			<node id="CAESALPINACEAE" label="CAESALPINACEAE"/>
+			<node id="CALCEOLARIACEAE" label="CALCEOLARIACEAE"/>
+
 			<node id="CALYCERACEAE" label="CALYCERACEAE"/>
+
 			<node id="CAMPANULACEAE" label="CAMPANULACEAE"/>
 			<node id="CANNABINACEAE" label="CANNABINACEAE"/>
 			<node id="CAPPARACEAE" label="CAPPARACEAE"/>
@@ -61,6 +76,9 @@
 			<node id="CHENOPODIACEAE" label="CHENOPODIACEAE"/>
 			<node id="CLUSIACEAE" label="CLUSIACEAE"/>
 			<node id="COMMELINACEAE" label="COMMELINACEAE"/>
+
+			<node id="COMPOSITAE" label="COMPOSITAE"/>
+
 			<node id="CONVOLVULACEAE" label="CONVOLVULACEAE"/>
 			<node id="CORIARIACEAE" label="CORIARIACEAE"/>
 			<node id="CORSIACEAE" label="CORSIACEAE"/>
@@ -84,24 +102,40 @@
 			<node id="FABACEAE" label="FABACEAE"/>
 			<node id="FAGACEAE" label="FAGACEAE"/>
 			<node id="FLACOURTIACEAE" label="FLACOURTIACEAE"/>
+
+			<node id="FRANCOACEAE" label="FRANCOACEAE"/>
+
 			<node id="FRANKENIACEAE" label="FRANKENIACEAE"/>
 			<node id="FRANQUENIACEAE" label="FRANQUENIACEAE"/>
+
 			<node id="GENTIANACEAE" label="GENTIANACEAE"/>
 			<node id="GERANIACEAE" label="GERANIACEAE"/>
 			<node id="GESNERIACEAE" label="GESNERIACEAE"/>
 			<node id="GINKGOACEAE" label="GINKGOACEAE"/>
+			
+			<node id="GLEICHENIACEAE" label="GLEICHENIACEAE"/>
+			<node id="GRAMINEA" label="GRAMINEA"/>
+			<node id="GROSSULARIACEAE" label="GROSSULARIACEAE"/>
+
 			<node id="GUNNERACEAE" label="GUNNERACEAE"/>
 			<node id="HALOGARACEAE" label="HALOGARACEAE"/>
 			<node id="HALOPHYTACEAE" label="HALOPHYTACEAE"/>
 			<node id="HALORAGACEAE" label="HALORAGACEAE"/>
 			<node id="HAMAMELIDACEAE" label="HAMAMELIDACEAE"/>
 			<node id="HIPPURIDACEAE" label="HIPPURIDACEAE"/>
-			<node id="HYDRANGEACEAE" label="HYDRANGEACEAE"/>
+			<node id="HYDRANGEACEAE" label="HYDRANGEACEAE"/>			
+		
 			<node id="HYDROPHYLLACEAE" label="HYDROPHYLLACEAE"/>
+
+			<node id="HYMENOPHYLLACEAE" label="HYMENOPHYLLACEAE"/>
+
 			<node id="IRIDACEAE" label="IRIDACEAE"/>
 			<node id="ISÖETACEAE" label="ISÖETACEAE"/>
 			<node id="JUGLANDACEAE" label="JUGLANDACEAE"/>
 			<node id="JUNCACEAE" label="JUNCACEAE"/>
+
+			<node id="LABIACEAE" label="LABIACEAE"/>
+			
 			<node id="LAMIACEAE" label="LAMIACEAE"/>
 			<node id="LARDIZABALACEAE" label="LARDIZABALACEAE"/>
 			<node id="LAURACEAE" label="LAURACEAE"/>
@@ -116,8 +150,17 @@
 			<node id="LYTHRACEAE" label="LYTHRACEAE"/>
 			<node id="MAGNOLIACEAE" label="MAGNOLIACEAE"/>
 			<node id="MALVACEAE" label="MALVACEAE"/>
+
+			<node id="MARCHANTIACEAE" label="MARCHANTIACEAE"/>
+
 			<node id="MELIACEAE" label="MELIACEAE"/>
 			<node id="MISODENDRACEAE" label="MISODENDRACEAE"/>
+
+			<node id="MIRTACEAE" label="MIRTACEAE"/>
+			<node id="MYRTACEAE" label="MYRTACEAE"/>
+
+			<node id="MONTIACEAE" label="MONTIACEAE"/>
+
 			<node id="MORACEAE" label="MORACEAE"/>
 			<node id="MYOPORACEAE" label="MYOPORACEAE"/>
 			<node id="MYRTACEAE" label="MYRTACEAE"/>
@@ -125,6 +168,9 @@
 			<node id="NYCTAGINACEAE" label="NYCTAGINACEAE"/>
 			<node id="OLEACEAE" label="OLEACEAE"/>
 			<node id="ONAGRACEAE" label="ONAGRACEAE"/>
+
+			<node id="OPHYOGLOSACEAE" label="OPHYOGLOSACEAE"/>
+			
 			<node id="ORCHIDACEAE" label="ORCHIDACEAE"/>
 			<node id="OROBANCHACEAE" label="OROBANCHACEAE"/>
 			<node id="OXALIDACEAE" label="OXALIDACEAE"/>
@@ -204,5 +250,65 @@
 			<node id="PAPILIONOIDEAETrifolium_repens_L." label="PAPILIONOIDEAETrifolium repens L."/>
 			<node id="POOIDEAE" label="POOIDEAE"/>
 			<node id="SENECIONEAE" label="SENECIONEAE"/>
+
+<!--Otros términos de herbario de Comodoro-->
+			<node id="PLANTAE" label="PLANTAE"/>
+			
+			<node id="BRIOPHYTA" label="BRIOPHYTA"/>
+			<node id="GNOTOPHYTA" label="GNOTOPHYTA"/>
+			<node id="MAGNOLIOPHYTA" label="MAGNOLIOPHYTA"/>
+			<node id="MARCHANTIOPHYTA" label="MARCHANTIOPHYTA"/>
+			<node id="MONILOPHYTAS" label="MONILOPHYTAS"/>
+
+			<node id="EQUISETOPSIDA" label="EQUISETOPSIDA"/>
+			<node id="GNETOPSIDA" label="GNETOPSIDA"/>
+			<node id="LILIOPSIDA" label="LILIOPSIDA"/>
+			<node id="MAGNOLIOPSIDA" label="MAGNOLIOPSIDA"/>
+			<node id="MARCHANTIOPSIDA" label="MARCHANTIOPSIDA"/>
+			<node id="MYRTALES" label="MYRTALES"/>
+			<node id="POLYPODIOPSIDA" label="POLYPODIOPSIDA"/>
+			<node id="PTERIDOPSIDA" label="PTERIDOPSIDA"/>
+
+			<node id="APIALES" label="APIALES"/>
+			<node id="ASPARAGALES" label="ASPARAGALES"/>
+			<node id="ASTERALES" label="ASTERALES"/>
+			<node id="BLECHNALES" label="BLECHNALES"/>
+			<node id="BORAGINALES" label="BORAGINALES"/>
+			<node id="BRASSICALES" label="BRASSICALES"/>
+			<node id="CARYOPHYLLALES" label="CARYOPHYLLALES"/>
+			<node id="CELASTRALES" label="CELASTRALES"/>
+			<node id="CERATOPHYLLALES" label="CERATOPHYLLALES"/>
+			<node id="CORNALES" label="CORNALES"/>
+			<node id="DIPSACALES" label="DIPSACALES"/>
+			<node id="EPHEDRALES" label="EPHEDRALES"/>
+			<node id="EQUISETALES" label="EQUISETALES"/>
+			<node id="ERICALES" label="ERICALES"/>
+			<node id="ESCALLONIALES" label="ESCALLONIALES"/>
+			<node id="FABALES" label="FABALES"/>
+			<node id="FAGALES" label="FAGALES"/>
+			<node id="GENTIANALES" label="GENTIANALES"/>
+			<node id="GERANIALES" label="GERANIALES"/>
+			<node id="GLEICHENIALES" label="GLEICHENIALES"/>
+			<node id="HYMENOPHYLLALES" label="HYMENOPHYLLALES"/>
+			<node id="LAMIALES" label="LAMIALES"/>
+			<node id="LAURALES" label="LAURALES"/>
+			<node id="LYTHRACEAE" label="LYTHRACEAE"/>
+			<node id="MALPIGHIALES" label="MALPIGHIALES"/>
+			<node id="MALVALES" label="MALVALES"/>
+			<node id="MARCHANTIALES" label="MARCHANTIALES"/>
+			<node id="MYRTALES" label="MYRTALES"/>
+			<node id="OXALIDALES" label="OXALIDALES"/>
+			<node id="POALES" label="POALES"/>
+			<node id="POLYGONALES" label="POLYGONALES"/>
+			<node id="POLYPODIALES" label="POLYPODIALES"/>
+			<node id="PROTEALES" label="PROTEALES"/>
+			<node id="RANUNCULALES" label="RANUNCULALES"/>
+			<node id="ROSALES" label="ROSALES"/>
+			<node id="SANTALALES" label="SANTALALES"/>
+			<node id="SAPINDALES" label="SAPINDALES"/>
+			<node id="SAXIFRAGALES" label="SAXIFRAGALES"/>
+			<node id="SCHIZAEALES" label="SCHIZAEALES"/>
+			<node id="SOLANALES" label="SOLANALES"/>
+			<node id="ZYGOPHYLLALES" label="ZYGOPHYLLALES"/>
 		</isComposedBy>
 	</node>

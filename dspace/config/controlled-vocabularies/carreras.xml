@@ -48,15 +48,16 @@
 				 <node id="DiplomaturaUniversitariaenGeotecnologiasaplicadasalaGestionAmbientalyelTurismo" label="Diplomatura Universitaria en Geotecnologías aplicadas a la Gestión Ambiental y el Turismo"/>
 				 <node id="DiplomaturaUniversitariaenNeuropsicologiaNeurocienciasyEducacion" label="Diplomatura Universitaria en Neuropsicología, Neurociencias y Educación"/>
 				 
-				 <node id="DoctoradoenDerecho" label="Doctorado en Derecho"/>
- 				 <node id="DoctoradoenFarmacia" label="Doctorado en Farmacia"/>
- 				 <node id="DoctoradoenGeologia" label="Doctorado en Geología"/>
 				 <node id="DoctoradoenBioquimica" label="Doctorado en Bioquímica"/>
-				 <node id="DoctoradoenQuimica" label="Doctorado en Química"/>
 				 <node id="DoctoradoenCienciasdelaIngenieria" label="Doctorado en Ciencias de la Ingeniería"/>
 				 <node id="DoctoradoenCienciasSocialesyHumanas" label="Doctorado en Ciencias Sociales y Humanas"/>
 				 <node id="DoctoradoenCienciasBiologicas" label="Doctorado en Ciencias Biológicas"/>				
+				 <node id="DoctoradoenDerecho" label="Doctorado en Derecho"/>
 				 <node id="DoctoradoenEcologiayGestiondeFuegosdeVegetacion" label="Doctorado en Ecología y Gestión de Fuegos de Vegetación"/>
+ 				 <node id="DoctoradoenFarmacia" label="Doctorado en Farmacia"/>
+ 				 <node id="DoctoradoenGeologia" label="Doctorado en Geología"/>
+				 <node id="DoctoradoenQuimica" label="Doctorado en Química"/>
+				 <node id="DoctoradoenSociologia" label="Doctorado en Sociología"/>
 				 <node id="DoctoradoInterinstitucionalenCienciasEconomicas" label="Doctorado Interinstitucional en Ciencias Económicas"/>
 				 
 				 <node id="EspecializacionenCienciasQuimicasconMenciondeDiagnosticoAmbiental" label="Especialización en Ciencias Químicas con Mención de Diagnóstico Ambiental"/>
@@ -69,7 +70,7 @@
 				 <node id="EspecializacionenHistoriaRecienteenPerspectivaRegional" label="Especialización en Historia Reciente en Perspectiva Regional"/>
 				 <node id="EspecializacionenTributacion" label="Especialización en Tributación"/>
 				 <node id="EspecializacionenDerechoPenal" label="Especialización en Derecho Penal"/>
-				 <node id="EspecializacionenEstudiosPsicológicosdelaEnseñanzayelAprendizaje" label="Especialización en Estudios Psicológicos de la Enseñanza y el Aprendizaje en Contextos Escolares"/>
+				 <node id="EspecializacionenEstudiosPsicologicosdelaEnseñanzayelAprendizaje" label="Especialización en Estudios Psicológicos de la Enseñanza y el Aprendizaje en Contextos Escolares"/>
 				 <node id="EspecializacionenEvaluacionGeologicadeFormacionesPetroliferasyGasiferas" label="Especialización en Evaluación Geológica de Formaciones Petrolíferas y Gasíferas"/>
 
 				 <node id="MaestriaenCienciasConMencionenQuimicadeProductosNaturales" label="Maestría en Ciencias con Mención en Química de Productos Naturales"/>

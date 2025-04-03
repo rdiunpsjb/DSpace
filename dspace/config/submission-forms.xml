@@ -540,6 +540,8 @@
                     <required>Debe indicar el total de páginas.</required>
                 </field>
             </row>
+            <!--Recupera de los Tipo MIME-->
+            <!--
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -579,6 +581,7 @@
                     <required></required>
                 </field>
             </row>
+            -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -600,7 +603,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
                     <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Cobertura geográfica</label>
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
@@ -917,7 +920,7 @@
                     <repeatable>false</repeatable>
                     <label>Título obtenido</label>
                     <!--<style>col-sm-8</style>-->                 
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Grado al que se aspira con el trabajo de tesis realizado.
                     Por ejemplo: "Licenciado en enfermería"</hint>
@@ -931,7 +934,7 @@
                     <dc-qualifier>grantor</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Emisor del título</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Institución que otorga el título.
@@ -948,7 +951,7 @@
                     <repeatable>true</repeatable>
                     <label>Lugar de desarrollo de la tesis</label>
                     <style>col-sm-8</style>                    
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Institución, departamento y/o unidad en la cual se desarrolló el trabajo.</hint>
                     <required>Campo requerido</required>
@@ -1099,6 +1102,8 @@
                     <required>Debe indicar el total de páginas.</required>
                 </field>
             </row>
+            <!--No necesario - Tipo Mimme-->
+            <!--
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1138,12 +1143,13 @@
                     <required></required>
                 </field>
             </row>
+            -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
                     <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Cobertura geográfica</label>
                     <type-bind>Audio,Imagen,Video,Conjunto de datos</type-bind>
                     <input-type>onebox</input-type>
@@ -1170,7 +1176,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
                     <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Cobertura geográfica</label>
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
@@ -1414,7 +1420,7 @@
                     <required>Debe seleccionar un idioma</required>
                 </field>
             </row>
-            <!--No es necesario-->
+            <!--No es necesaario-->
             <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -3178,7 +3184,7 @@
         <value-pairs value-pairs-name="unp_format_image" dc-term="dc_Format">
             <pair>
                 <displayed-value>jpeg</displayed-value>
-                <stored-value>image/jpg</stored-value>
+                <stored-value>image/jpeg</stored-value>
             </pair>
             <pair>
                 <displayed-value>gif</displayed-value>
