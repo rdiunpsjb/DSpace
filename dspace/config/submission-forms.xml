@@ -29,7 +29,7 @@
                     <repeatable>false</repeatable>
                     <label>Título</label>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese el nombre del archivo. Ejemplo "FI_Apellido, Nombres.PDF"</hint>
+                    <hint>Ingrese el nombre del archivo. Ejemplo: FI_Apellido, Nombres.pdf</hint>
                     <required>Debe ingresar un nombre de archivo.</required>
                 </field>
             </row>
@@ -114,7 +114,7 @@
                     <label>Autor</label>
                     <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Para nombres personales utilizar el formato invertido: "Apellido, Nombres"</hint>
+                    <hint>Para nombres personales utilizar el formato invertido: Apellido, Nombres</hint>
                     <required>Debe ingresar al menos un autor</required>
                 </field>
             </row>
@@ -127,7 +127,7 @@
                     <label>Interprete</label>
                     <type-bind>Audio</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Persona física entrevistada o entrevistadora. Utilizar el formato invertido: "Apellido, Nombres"</hint>
+                    <hint>Persona física entrevistada o entrevistadora. Utilizar el formato invertido: Apellido, Nombres</hint>
                     <required>Debe ingresar un Interprete</required>
                 </field>
             </row>
@@ -141,7 +141,7 @@
                     <!--<type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo final de grado</type-bind>-->
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
-                    Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
+                    Deberá utilizarse la siguiente forma de sintaxis: Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País.</hint>
                     <required>El campo es requerido.</required>
                 </field>
             </row>
@@ -155,11 +155,11 @@
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Informe técnico</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Persona que dirige la realización de la tesis o quien dirige
-                        a un investigador, personal de apoyo o becario. Formato: "Apellido, Nombres"</hint>
+                        a un investigador, personal de apoyo o becario. Formato: Apellido, Nombres</hint>
                     <required>Debe ingresar director.</required>
                 </field>
             </row>
-            <row>
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>contributor</dc-element>
@@ -168,10 +168,23 @@
                     <label>Tutor o Docente responsable</label>
                     <type-bind>Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Tutor o Docente responsable del trabajo final. Formato: "Apellido, Nombres"</hint>
+                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
                     <required>Debe ingresar responsable.</required>
                 </field>
-            </row>
+            </row>-->
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <!--<dc-qualifier>director</dc-qualifier>-->
+                    <repeatable>true</repeatable>
+                    <label>Tutor o Docente responsable</label>
+                    <type-bind>Trabajo final de grado</type-bind>
+                    <input-type>onebox</input-type>
+                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
+                    <!--<required>Debe ingresar responsable.</required>-->
+                </field>
+            </row>            
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -342,7 +355,7 @@
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Disciplina a la que corresponde el trabajo de tesis realizado.
-                    Por ejemplo: "Enfermería"</hint>
+                    Por ejemplo: Enfermería</hint>
                     <required>Campo requerido</required>
                 </field>
             </row>
@@ -357,7 +370,7 @@
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Grado al que se aspira con el trabajo de tesis realizado.
-                    Por ejemplo: "Licenciado en enfermería"</hint>
+                    Por ejemplo: Licenciado en enfermería</hint>
                     <required>Campo requerido</required>
                 </field>
             </row>
@@ -418,7 +431,7 @@
                     <label>Cita</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información de cita estándar para el documento.
-                    Ejemplo:"Apellido, Nombre. (año de publicación). Título. Tipo de Documento. Nombre de la Institución."</hint>
+                    Ejemplo: Apellido, Nombre. (año de publicación). Título. Tipo de Documento. Nombre de la Institución.</hint>
                     <required>El campo es requerido.</required>
                 </field>
             </row>            
@@ -621,7 +634,7 @@
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
-                    Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera:"AñoComienzo-AñoFin"(Ejemplo: 2020-2022)</hint>
+                    Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera: Año Comienzo-Año Fin.Ejemplo: 2020-2022</hint>
                     <required></required>
                 </field>
             </row>
@@ -711,7 +724,7 @@
                     <label>Autor</label>
                     <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Para nombres personales utilizar el formato invertido: "Apellido, Nombres"</hint>
+                    <hint>Para nombres personales utilizar el formato invertido: Apellido, Nombres</hint>
                     <required>Debe ingresar al menos un autor.</required>
                 </field>
             </row>
@@ -724,7 +737,7 @@
                     <label>Interprete</label>
                     <type-bind>Audio</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Persona física entrevistada o entrevistadora. Utilizar el formato invertido: "Apellido, Nombres"</hint>
+                    <hint>Persona física entrevistada o entrevistadora. Utilizar el formato invertido: Apellido, Nombres</hint>
                     <required>Debe ingresar al menos un intérprete.</required>
                 </field>
             </row>
@@ -738,7 +751,7 @@
                     <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo final de grado</type-bind>
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
-                    Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
+                    Deberá utilizarse la siguiente forma de sintaxis:Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País.</hint>
                     <required>El campo es requerido.</required>
                 </field>
             </row>      
@@ -751,11 +764,11 @@
                     <label>Director</label>
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Informe técnico</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Persona que dirige la realización de la tesis o quien dirige a un investigador, personal de apoyo o becario. Formato: "Apellido, Nombres"</hint>
+                    <hint>Persona que dirige la realización de la tesis o quien dirige a un investigador, personal de apoyo o becario. Formato: Apellido, Nombres</hint>
                     <required>Debe ingresar director.</required>
                 </field>
             </row>
-            <row>
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>contributor</dc-element>
@@ -764,10 +777,23 @@
                     <label>Tutor o Docente responsable</label>
                     <type-bind>Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Tutor o Docente responsable del trabajo final. Formato: "Apellido, Nombres"</hint>
+                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
                     <required>Debe ingresar responsable.</required>
                 </field>
-            </row>
+            </row>-->
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <!--<dc-qualifier>director</dc-qualifier>-->
+                    <repeatable>true</repeatable>
+                    <label>Tutor o Docente responsable</label>
+                    <type-bind>Trabajo final de grado</type-bind>
+                    <input-type>onebox</input-type>
+                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
+                    <!--<required>Debe ingresar responsable.</required>-->
+                </field>
+            </row>              
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -908,7 +934,7 @@
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Disciplina a la que corresponde el trabajo de tesis realizado.
-                    Por ejemplo: "Enfermería"</hint>
+                    Por ejemplo: Enfermería</hint>
                     <required>Campo requerido</required>
                 </field>
             </row>
@@ -923,7 +949,7 @@
                     <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Grado al que se aspira con el trabajo de tesis realizado.
-                    Por ejemplo: "Licenciado en enfermería"</hint>
+                    Por ejemplo: Licenciado en enfermería</hint>
                     <required>Campo requerido</required>
                 </field>
             </row>
@@ -997,7 +1023,7 @@
                     <label>Cita</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información de cita estándar para el documento.
-                    Ejemplo:"Apellido, Nombre. (año de publicación). Título. Tipo de Documento. Nombre de la Institución."</hint>
+                    Ejemplo: Apellido, Nombre. (año de publicación). Título. Tipo de Documento. Nombre de la Institución.</hint>
                     <required>El campo es requerido.</required>                    
                 </field>
             </row>         
@@ -1167,7 +1193,7 @@
                     <type-bind>Audio,Imagen,Video,Conjunto de datos</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
-                    Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera:"AñoComienzo-AñoFin"(Ejemplo: 2020-2022)</hint>
+                    Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera:Año Comienzo-Año Fin. Ejemplo: 2020-2022</hint>
                     <required>Debe poder describir el ítem.</required>
                 </field>
             </row>
@@ -1194,7 +1220,7 @@
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
-                    Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera:"AñoComienzo-AñoFin"(Ejemplo: 2020-2022)</hint>
+                    Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera: Año Comienzo-Año Fin. Ejemplo: 2020-2022</hint>
                     <required></required>
                 </field>
             </row>
@@ -1282,7 +1308,7 @@
                     <repeatable>true</repeatable>
                     <label>Autor</label>
                     <input-type>onebox</input-type>
-                    <hint>Ingrese todas las personas que intervienen. Para nombres personales utilizar el formato invertido: "Apellido, Nombres"</hint>
+                    <hint>Ingrese todas las personas que intervienen. Para nombres personales utilizar el formato invertido: Apellido, Nombres</hint>
                     <required>El campo es requerido.</required>
                 </field>
             </row>
@@ -1295,7 +1321,7 @@
                     <label>Filiación</label>
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
-                    Deberá utilizarse la siguiente forma de sintaxis:"Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País."</hint>
+                    Deberá utilizarse la siguiente forma de sintaxis:Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País.</hint>
                     <required>El campo es requerido.</required>
                 </field>
             </row>           
@@ -1455,7 +1481,7 @@
                     <label>Cobertura temporal</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
-                    Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera:"AñoComienzo-AñoFin"(Ejemplo: 2020-2022)</hint>
+                    Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera: Año Comienzo-Año Fin. Ejemplo: 2020-2022</hint>
                     <required>El campo es requerido.</required>
                 </field>
             </row>

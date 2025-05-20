@@ -31,7 +31,7 @@
 				<node id="SistemasPlanificacion" label="Licenciatura en Sistemas (Orientación Planificación, Gestión y Control de Proyectos Informáticos)"/>
 				<node id="TrabajoSocial" label="Licenciatura en Trabajo Social"/>
 				<node id="TurismoLic" label="Licenciatura en Turismo"/>
-				<node id="ProfyLicCsEduc" label="Profesorado y Licenciado en Ciencias de la Educación"/>
+				<node id="ProfyLicCsEduc" label="Profesorado y Licenciatura en Ciencias de la Educación"/>
 				<node id="TurismoTec" label="Tecnicatura en Turismo"/>
 
 
