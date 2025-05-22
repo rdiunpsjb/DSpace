@@ -33,8 +33,6 @@
 				<node id="TurismoLic" label="Licenciatura en Turismo"/>
 				<node id="ProfyLicCsEduc" label="Profesorado y Licenciatura en Ciencias de la Educación"/>
 				<node id="TurismoTec" label="Tecnicatura en Turismo"/>
-
-
 <!--			</isComposedBy>
 		</node>
 		<node id="DePosgrado" label="Carreras de Posgrado">
