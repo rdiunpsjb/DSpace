@@ -425,6 +425,7 @@
             </Definition>
         </Filter>
 
+        <!--
         <Filter id="snrdUnpFilter">
             <Definition>
                 <And>
@@ -440,6 +441,60 @@
                     </LeftCondition>
                     <RightCondition>
                         <Custom ref="snrdDocumentTypeFilter" />
+                    </RightCondition>
+                </And>
+            </Definition>
+        </Filter> -->
+
+        <Filter id="snrdUnpFilter">
+            <Definition>
+                <And>
+                    <LeftCondition>  
+                        <And>                    
+                            <LeftCondition>  
+                                <And>
+                                    <LeftCondition>
+                                        <Custom ref="titleExistsCondition" />
+                                    </LeftCondition>
+                                    <RightCondition>
+                                        <Custom ref="authorExistsCondition" />
+                                    </RightCondition>
+                                </And>
+                            </LeftCondition>                                        
+                            <RightCondition>
+                                <Custom ref="dateExistsCondition" />
+                            </RightCondition>
+                        </And>
+                    </LeftCondition>  
+                    <RightCondition>
+                        <And>
+                            <LeftCondition>  
+                                <And>
+                                    <LeftCondition>
+                                        <Custom ref="snrdDocumentTypeFilter" />
+                                    </LeftCondition>  
+                                    <RightCondition>
+                                        <Custom ref="itemAccessCondition" />                                
+                                    </RightCondition>
+                                </And>
+                            </LeftCondition>  
+                            <RightCondition>
+                                <!--problema con la lógica negada: Incluyo los que no tienen ese campo-->
+                                <!--<Not> 
+                                    <Condition>
+                                        <Custom ref="unpoaisnrdExistsCondition" />
+                                    </Condition>
+                                </Not>-->
+                                <And> 
+                                    <LeftCondition>
+                                        <Custom ref="unpoaisnrdExistsCondition" />
+                                    </LeftCondition>  
+                                    <RightCondition>
+                                      <Custom ref="unpoaisnrdContieneSI" />                           
+                                    </RightCondition>
+                                </And>
+                            </RightCondition>
+                        </And>
                     </RightCondition>
                 </And>
             </Definition>
@@ -608,6 +663,48 @@
                   </list>
                 </Configuration>
         </CustomCondition>
+
+        <!--06/08/2025-Verdadero si existe campo unp.oai.snrd-->
+        <CustomCondition id="unpoaisnrdExistsCondition">
+            <Class>org.dspace.xoai.filter.DSpaceMetadataExistsFilter</Class>
+            <Configuration>
+                <string name="field">dc.title</string>
+            </Configuration>
+        </CustomCondition>
+
+        <!--31/07/2025-Nueva condición excluir a los que tienen campo unp.oai.snrd en NO-->
+        <CustomCondition id="unpoaisnrdContieneNO">
+            <Class>org.dspace.xoai.filter.DSpaceAtLeastOneMetadataFilter</Class>
+                <Configuration>
+                    <string name="field">unp.oai.snrd</string>
+                    <string name="operator">contains</string>
+                    <list name="values">
+                        <string>NO</string>
+                        <string>no</string>
+                        <string>N</string>
+                        <string>n</string>
+                        <string>O</string>
+                        <string>o</string>
+                    </list>
+                </Configuration>
+        </CustomCondition>
+
+        <CustomCondition id="unpoaisnrdContieneSI">
+            <Class>org.dspace.xoai.filter.DSpaceAtLeastOneMetadataFilter</Class>
+                <Configuration>
+                    <string name="field">unp.oai.snrd</string>
+                    <string name="operator">contains</string>
+                    <list name="values">
+                        <string>SI</string>
+                        <string>si</string>
+                        <string>S</string>
+                        <string>s</string>
+                        <string>I</string>
+                        <string>i</string>
+                    </list>
+                 </Configuration>
+        </CustomCondition>
+
     </Filters>
 
     <Sets>
