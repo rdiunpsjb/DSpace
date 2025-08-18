@@ -20,8 +20,6 @@
 		<xsl:apply-templates select="@*|node()" />
 	</xsl:copy>
 </xsl:template>
-
-
 	
 <!-- Completas dc.type para OpenAires -->
 <!--xsl:template match="/doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element/doc:field[@name='value']/text()">
@@ -29,19 +27,21 @@
 	<xsl:value-of select="concat($prefijoOA,.)" />
 </xsl:template-->
 	
-
 	<!-- SNRD: type -->
 	<xsl:template name="snrdType">
-	        <xsl:variable name="unpType" select="/doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element/doc:field[@name='value']/text()"/>
+	        <!--<xsl:variable name="unpType" select="/doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element/doc:field[@name='value']/text()"/>-->
+			<xsl:variable name="unpType" select="//doc:element[@name='dc']/doc:element[@name='type']//doc:field[@name='value']/text()" />
 
-	        <xsl:variable name="unpTypeversion" select="/doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element[@name='version']/doc:element/doc:field[@name='value']/text()"/>
-
+	        <!--<xsl:variable name="unpTypeversion" select="/doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element[@name='version']/doc:element/doc:field[@name='value']/text()"/>-->
+			<xsl:variable name="unpTypeversion" select="normalize-space(string(//doc:element[@name='dc']/doc:element[@name='type']/doc:element[@name='version']//doc:field[@name='value']))"/>
 
         	<!-- formato openAire-->
 	        <xsl:variable name="openAireType">
         		<xsl:choose>
-               		<xsl:when test="contains($unpType, 'Libro')">info:eu-repo/semantics/book</xsl:when>
-					<xsl:when test="contains($unpType, 'Parte de libro')">info:eu-repo/semantics/bookPart</xsl:when>
+               		<!--<xsl:when test="contains($unpType, 'Libro')">info:eu-repo/semantics/book</xsl:when>-->
+					<xsl:when test="normalize-space($unpType) = 'Libro'">info:eu-repo/semantics/book</xsl:when>
+					<!--<xsl:when test="contains($unpType, 'Parte de libro')">info:eu-repo/semantics/bookPart</xsl:when>-->
+					<xsl:when test="normalize-space($unpType) = 'Parte de libro'">info:eu-repo/semantics/bookPart</xsl:when>
 					<xsl:when test="contains($unpType, 'Documento de conferencia')">info:eu-repo/semantics/conferenceObject</xsl:when>
                     <xsl:when test="contains($unpType, 'Tesis de doctorado')">info:eu-repo/semantics/doctoralThesis</xsl:when>
        		        <xsl:when test="contains($unpType, 'Tesis de maestría')">info:eu-repo/semantics/masterThesis</xsl:when>
@@ -57,8 +57,10 @@
 			<!-- formato SNRD-->
 	        <xsl:variable name="snrdType">
         		<xsl:choose>
-               		<xsl:when test="contains($unpType, 'Libro')">info:ar-repo/semantics/libro</xsl:when>
-					<xsl:when test="contains($unpType, 'Parte de libro')">info:ar-repo/semantics/parte de libro</xsl:when>
+               		<!--<xsl:when test="contains($unpType, 'Libro')">info:ar-repo/semantics/libro</xsl:when>-->
+					<xsl:when test="normalize-space($unpType) = 'Libro'">info:ar-repo/semantics/libro</xsl:when>
+					<!--<xsl:when test="contains($unpType, 'Parte de libro')">info:ar-repo/semantics/parte de libro</xsl:when>-->
+					<xsl:when test="normalize-space($unpType) = 'Parte de libro'">info:ar-repo/semantics/parte de libro</xsl:when>
 					<xsl:when test="contains($unpType, 'Documento de conferencia')">info:ar-repo/semantics/documento de conferencia</xsl:when>
                     <xsl:when test="contains($unpType, 'Tesis de doctorado')">info:ar-repo/semantics/tesis doctoral</xsl:when>
        		        <xsl:when test="contains($unpType, 'Tesis de maestría')">info:ar-repo/semantics/tesis de maestría</xsl:when>
@@ -95,17 +97,17 @@
         	<!-- armo una nueva salida xoai con los dos type -->
 			<doc:element name="snrd">
                 <doc:element name="type">
-                	<doc:element name="es">
+                	<doc:element name="es-openAireType">
 		        		<doc:field name="value">
 		                	<xsl:value-of select="$openAireType"/>
 			            </doc:field>
 			        </doc:element>
-			     	<doc:element name="es">
+			     	<doc:element name="es-snrdType">
                 		<doc:field name="value">
                         	<xsl:value-of select="$snrdType"/>
 			            </doc:field>
 			        </doc:element>
-			        <doc:element name="es">
+			        <doc:element name="es-snrdversion">
                 		<doc:field name="value">
                         	<xsl:value-of select="$snrdversion"/>
 			            </doc:field>

@@ -132,8 +132,7 @@
             <Prefix>didl</Prefix>
             <XSLT>metadataFormats/didl.xsl</XSLT>
             <Namespace>urn:mpeg:mpeg21:2002:02-DIDL-NS</Namespace>
-            <SchemaLocation>http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-21_schema_files/did/didl.xsd
-            </SchemaLocation>
+            <SchemaLocation>http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-21_schema_files/did/didl.xsd</SchemaLocation>
         </Format>
         <Format id="dim">
             <Prefix>dim</Prefix>
@@ -480,19 +479,19 @@
                             </LeftCondition>  
                             <RightCondition>
                                 <!--problema con la lógica negada: Incluyo los que no tienen ese campo-->
-                                <!--<Not> 
+                                <Not> 
                                     <Condition>
                                         <Custom ref="unpoaisnrdExistsCondition" />
                                     </Condition>
-                                </Not>-->
-                                <And> 
+                                </Not>
+                                <!--<And> 
                                     <LeftCondition>
                                         <Custom ref="unpoaisnrdExistsCondition" />
                                     </LeftCondition>  
                                     <RightCondition>
                                       <Custom ref="unpoaisnrdContieneSI" />                           
                                     </RightCondition>
-                                </And>
+                                </And>-->
                             </RightCondition>
                         </And>
                     </RightCondition>
@@ -668,7 +667,7 @@
         <CustomCondition id="unpoaisnrdExistsCondition">
             <Class>org.dspace.xoai.filter.DSpaceMetadataExistsFilter</Class>
             <Configuration>
-                <string name="field">dc.title</string>
+                <string name="field">unp.oai.snrd</string>
             </Configuration>
         </CustomCondition>
 
