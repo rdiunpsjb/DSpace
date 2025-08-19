@@ -190,8 +190,7 @@
             <SchemaLocation>http://irdb.nii.ac.jp/oai/junii2-3-1.xsd</SchemaLocation>
         </Format>
         <!-- Metadata format based on the OpenAIRE 4.0 guidelines
-             https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/v4.0.0/use_of_oai_pmh.html
-        -->
+             https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/v4.0.0/use_of_oai_pmh.html-->
         <Format id="oaiopenaire">
             <Prefix>oai_openaire</Prefix>
             <XSLT>metadataFormats/oai_openaire.xsl</XSLT>
@@ -478,20 +477,20 @@
                                 </And>
                             </LeftCondition>  
                             <RightCondition>
-                                <!--problema con la lógica negada: Incluyo los que no tienen ese campo-->
+                                <!--problema con la logica negada- Incluyo los que no tienen ese campo-->
                                 <Not> 
                                     <Condition>
                                         <Custom ref="unpoaisnrdExistsCondition" />
                                     </Condition>
                                 </Not>
-                                <!--<And> 
+                                <!-- <And> 
                                     <LeftCondition>
                                         <Custom ref="unpoaisnrdExistsCondition" />
                                     </LeftCondition>  
                                     <RightCondition>
                                       <Custom ref="unpoaisnrdContieneSI" />                           
                                     </RightCondition>
-                                </And>-->
+                                </And> -->
                             </RightCondition>
                         </And>
                     </RightCondition>
@@ -533,8 +532,8 @@
             <Configuration>
                 <list name="fields">
                     <string name="field">dc.date.issued</string>
-                    <!--<string name="field">dcterms.issued</string>
-                    <string name="field">dcterms.created</string>-->
+                    <!--<string name="field">dcterms.issued</string>-->
+                    <!--<string name="field">dcterms.created</string>-->
                 </list>
             </Configuration>
         </CustomCondition>

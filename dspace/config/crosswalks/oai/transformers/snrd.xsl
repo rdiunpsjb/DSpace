@@ -25,7 +25,7 @@
 <!--xsl:template match="/doc:metadata/doc:element[@name='dc']/doc:element[@name='type']/doc:element/doc:field[@name='value']/text()">
 	<xsl:variable name="prefijoOA" select="'info:eu-repo/semantics__'"/>
 	<xsl:value-of select="concat($prefijoOA,.)" />
-</xsl:template-->
+</xsl:template> -->
 	
 	<!-- SNRD: type -->
 	<xsl:template name="snrdType">
@@ -115,5 +115,4 @@
 				</doc:element>
 			</doc:element>
     </xsl:template>
-
 </xsl:stylesheet>

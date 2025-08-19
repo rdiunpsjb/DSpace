@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- 
-
-
+<!--
     The contents of this file are subject to the license and copyright
     detailed in the LICENSE and NOTICE files at the root of the source
     tree and available online at
@@ -9,7 +7,7 @@
     http://www.dspace.org/license/
 	Developed by DSpace @ Lyncode <dspace@lyncode.com>
 	
-	> http://www.openarchives.org/OAI/2.0/oai_dc.xsd
+	http://www.openarchives.org/OAI/2.0/oai_dc.xsd
 
  -->
 <xsl:stylesheet 
@@ -67,11 +65,11 @@
 				<dc:subject><xsl:value-of select="." /></dc:subject>
 			</xsl:for-each>
 		
-			<!-- dc.description(1ra instancia) -> dc.description.abstract -->
+			<!-- dc.description(1ra instancia) - dc.description.abstract -->
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='description']/doc:element[@name='abstract']/doc:element/doc:field[@name='value']">
     			<dc:description><xsl:value-of select="." /></dc:description>
 			</xsl:for-each>
-			<!--dc.description(2da instancia) -> dc.description.filiation -->
+			<!--dc.description(2da instancia) - dc.description.filiation -->
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='description']/doc:element[@name='filiation']/doc:element/doc:field[@name='value']">
     			<!--<dc:description><xsl:value-of select="concat('Fil: ', .,'')" /></dc:description>-->
     			<dc:description><xsl:value-of select="." /></dc:description>
@@ -90,7 +88,7 @@
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='date']/doc:element[@name='issued']/doc:element/doc:field[@name='value']">
 				<dc:date><xsl:value-of select="." /></dc:date>
 			</xsl:for-each>			
-			<!-- dc.date -> unp.embargoDate (Por ahora no)-->
+			<!-- dc.date - unp.embargoDate (Por ahora no)-->
 			<!--<xsl:for-each select="doc:metadata/doc:element[@name='unp']/doc:element[@name='embargoDate']/doc:element/doc:field[@name='value']">
 				<dc:date><xsl:value-of select="." /></dc:date>
 			</xsl:for-each>-->
