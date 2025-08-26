@@ -255,8 +255,8 @@
                     <type-bind>Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Tesis de grado, Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
-                    A su vez, el departamento o grupo de investigación después de la facultad.
-                    Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química.</hint>
+                    A su vez, el departamento o grupo de investigación después de la facultad
+                    Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química</hint>
                     <required>El campo es requerido.</required>
                 </field>
             </row>
@@ -834,8 +834,8 @@
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
-                    A su vez, el departamento o grupo de investigación después de la facultad.
-                    Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química.</hint>
+                    A su vez, el departamento o grupo de investigación después de la facultad
+                    Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química</hint>
                     <required>El campo es requerido.</required>
                 </field>
             </row>
@@ -1346,8 +1346,8 @@
                     <label>Editor</label>
                     <input-type>onebox</input-type>
                     <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
-                    A su vez, el departamento o grupo de investigación después de la facultad.
-                    Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química.</hint>
+                    A su vez, el departamento o grupo de investigación después de la facultad
+                    Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química</hint>
                     <required>El campo es requerido.</required>
                 </field>
             </row>
