@@ -30,7 +30,7 @@
                     <label>Título</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese el nombre del archivo. Ejemplo: FI_Apellido, Nombres.pdf</hint>
-                    <required>Debe ingresar un nombre de archivo.</required>
+                    <required>Debe ingresar un nombre de archivo</required>
                 </field>
             </row>
             <row>
@@ -40,7 +40,7 @@
                     <repeatable>true</repeatable>
                     <label>Descripción</label>
                     <input-type>textarea</input-type>
-                    <hint>Ingrese una descripción para el archivo.</hint>
+                    <hint>Ingrese una descripción para el archivo</hint>
                     <required></required>
                 </field>
             </row>
@@ -58,8 +58,8 @@
                     <label>Tipo</label>
                     <input-type value-pairs-name="unp_types">dropdown</input-type>
                     <!--<input-type value-pairs-name="common_types">dropdown</input-type>-->
-                    <hint>Seleccione el tipo de contenido del ítem.</hint>
-                    <required>Debe seleccionar un tipo de contenido.</required>
+                    <hint>Seleccione el tipo de contenido del ítem</hint>
+                    <required>Debe seleccionar un tipo de contenido</required>
                 </field>
             </row>
             <row>
@@ -72,7 +72,7 @@
                     <input-type value-pairs-name="unp_version">dropdown</input-type>                    
                     <hint>Versión del ítem en función del último estadío sufrido (Aceptada, Enviada, Publicada) 
                     Para el caso de tesis, trabajos e informes técnicos, la versión es Aceptada para su publicación </hint>
-                    <required>Debe seleccionar una opción.</required>
+                    <required>Debe seleccionar una opción</required>
                 </field>
             </row>
             <row>
@@ -86,7 +86,7 @@
                     <input-type>onebox</input-type>
                     <hint>Transcribir el título del original, en orden y ortografía del recurso. Utilizar mayúsculas únicamente para la primer palabra del título y los nombres propios. 
                          Los subtítulos deben mencionarse con el siguiente formato: Título : subtítulo</hint>
-                    <required>Debe indicar el título del documento.</required>
+                    <required>Debe indicar el título del documento</required>
                 </field>
             </row>
             <!--25/02/2025-->
@@ -99,7 +99,7 @@
                     <repeatable>true</repeatable>
                     <label>Título alternativo</label>
                     <input-type>onebox</input-type>
-                    <hint>Otros títulos de la obra, o traducciones del título en cualquier idioma que no sea el nativo de la obra.</hint>
+                    <hint>Otros títulos de la obra, o traducciones del título en cualquier idioma que no sea el nativo de la obra</hint>
                     <required></required>
                     <!--<readonly>readonly</readonly>
                     <visibility>workflow</visibility>-->
@@ -112,7 +112,7 @@
                     <dc-qualifier>author</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Autor</label>
-                    <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
+                    <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo integrador final, Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Para nombres personales utilizar el formato invertido: Apellido, Nombres</hint>
                     <required>Debe ingresar al menos un autor</required>
@@ -138,11 +138,11 @@
                     <dc-qualifier>filiation</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Filiación</label>
-                    <!--<type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo final de grado</type-bind>-->
+                    <!--<type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo integrador final, Trabajo final de grado</type-bind>-->
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
                     Deberá utilizarse la siguiente forma de sintaxis: Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -152,11 +152,11 @@
                     <dc-qualifier>director</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Director</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Informe técnico</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo integrador final, Informe técnico</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Persona que dirige la realización de la tesis o quien dirige
                         a un investigador, personal de apoyo o becario. Formato: Apellido, Nombres</hint>
-                    <required>Debe ingresar director.</required>
+                    <required>Debe ingresar director</required>
                 </field>
             </row>
             <!--<row>
@@ -209,7 +209,7 @@
                     <type-bind>Libro,Parte de libro</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Persona física o institucional responsable de realizar tareas de edición sobre los contenidos de la obra.
-                          No es la editorial</hint>
+                          No es la editorial.</hint>
                     <required></required>
                 </field>
             </row>            
@@ -222,11 +222,9 @@
                     <label>Fecha de publicación</label>
                     <type-bind>Artículo,Audio,Documento institucional,Imagen,Video,Informe técnico,Libro,Objeto de aprendizaje,Documento de conferencia</type-bind>
                     <input-type>date</input-type>
-                    <hint>Fecha de publicación, distribución pública o exposición. En
-                        caso de no haber difundido nunca su obra por ningún medio, indique
-                        la fecha de hoy como fecha de publicación. Puede omitir el día y mes si no lo sabe. 
+                    <hint>Fecha de publicación, distribución pública o exposición. En caso de no haber difundido nunca su obra por ningún medio, indique la fecha de hoy como fecha de publicación. Puede omitir el día y mes si no lo sabe.
                     </hint>
-                    <required>Debe ingresar al menos el año.</required>
+                    <required>Debe ingresar al menos el año</required>
                 </field>
             </row>
             <row>
@@ -236,12 +234,12 @@
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Fecha de presentación (Año)</label>
-                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>date</input-type>
                     <hint>Fecha de presentación de la tesis o trabajo final de grado. 
                           Omitir el día y mes. 
                     </hint>
-                    <required>Debe ingresar al menos el año.</required>
+                    <required>Debe ingresar al menos el año</required>
                 </field>                
             </row>
             <row>
@@ -252,12 +250,12 @@
                     <repeatable>false</repeatable>
                     <label>Editor</label>
                     <!--<style>col-sm-8</style>-->
-                    <type-bind>Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Tesis de grado, Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo integrador final, Tesis de grado, Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
                     A su vez, el departamento o grupo de investigación después de la facultad
                     Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -270,8 +268,8 @@
                     <!--<style>col-sm-8</style>-->
                     <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Entidad responsable de la publicación de un ítem (editorial).</hint>
-                    <required>El campo es requerido.</required>                    
+                    <hint>Entidad responsable de la publicación de un ítem (editorial)</hint>
+                    <required>El campo es requerido</required>                    
                 </field>
             </row>
             <row>
@@ -282,7 +280,7 @@
                     <repeatable>false</repeatable>
                     <label>Sede</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type value-pairs-name="unp_sedes">dropdown</input-type>
                     <hint>Seleccione sede</hint>
                     <required>Debe seleccionar una opción</required>
@@ -296,7 +294,7 @@
                     <repeatable>false</repeatable>
                     <label>Facultad o Rectorado</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type value-pairs-name="unp_facultades">dropdown</input-type>
                     <hint>Seleccione facultad o rectorado</hint>
                     <required>Debe seleccionar una opción</required>
@@ -309,7 +307,7 @@
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Carrera</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <vocabulary>carreras</vocabulary> 
                     <hint>Seleccione carrera</hint>
@@ -323,11 +321,11 @@
                     <dc-qualifier>level</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Nivel de posgrado</label>
-                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo integrador final</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelposgrado">dropdown</input-type>
-                    <hint>Nivel de posgrado al que aspira.</hint>
-                    <required>Campo requerido</required>
+                    <hint>Nivel de posgrado al que aspira</hint>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -340,8 +338,8 @@
                     <type-bind>Tesis de grado,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelgrado">dropdown</input-type>
-                    <hint>Nivel de grado al que aspira.</hint>
-                    <required>Campo requerido</required>
+                    <hint>Nivel de grado al que aspira</hint>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -351,12 +349,12 @@
                     <dc-qualifier>discipline</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Disciplina</label>
-                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Tesis de grado,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Disciplina a la que corresponde el trabajo de tesis realizado.
                     Por ejemplo: Enfermería</hint>
-                    <required>Campo requerido</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -367,11 +365,11 @@
                     <repeatable>false</repeatable>
                     <label>Título obtenido</label>
                     <!--<style>col-sm-8</style>-->                  
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Grado al que se aspira con el trabajo de tesis realizado.
                     Por ejemplo: Licenciado en enfermería</hint>
-                    <required>Campo requerido</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -387,7 +385,7 @@
                     <hint>Institución que otorga el título.
                      Por ejemplo: Universidad Nacional de la Patagonia San Juan Bosco.</hint>
                     <default>Universidad Nacional de la Patagonia San Juan Bosco.</default>
-                    <required>Campo requerido</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -398,10 +396,10 @@
                     <repeatable>true</repeatable>
                     <label>Lugar de desarrollo de la tesis</label>
                     <!--<style>col-sm-8</style>-->                  
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Indicar el lugar o lugares dónde se desarrolló la tesis o el trabajo.</hint>
-                    <required>Campo requerido</required>
+                    <hint>Indicar el lugar o lugares dónde se desarrolló la tesis o el trabajo</hint>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -432,7 +430,7 @@
                     <input-type>onebox</input-type>
                     <hint>Ingrese información de cita estándar para el documento.
                     Ejemplo: Apellido, Nombre. (año de publicación). Título. Tipo de documento. Nombre de la Institución.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>            
         </form>
@@ -494,7 +492,7 @@
                     <label>ISBN</label>
                     <type-bind>Libro,Parte de libro</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>ISBN correspondiente al libro.</hint>
+                    <hint>ISBN correspondiente al libro</hint>
                 </field>
             </row>
             <row>
@@ -508,7 +506,7 @@
                     <hint>Términos libres que describen el contenido de la obra. 
                           Escriba cada término y luego presione la tecla TAB. Los términos escríbalos en mayúsculas.
                          </hint>
-                    <required>Debe agregar al menos 3(tres).</required>
+                    <required>Debe agregar al menos 3(tres)</required>
                     <!--<vocabulary>srsc</vocabulary>-->
                     <!--<vocabulary>terminos</vocabulary>-->
                     <vocabulary>terminos_use</vocabulary>
@@ -523,7 +521,7 @@
                     <repeatable>true</repeatable>
                     <label>Resumen</label>
                     <input-type>textarea</input-type>
-                    <hint>Ingrese resumen de la obra.</hint>
+                    <hint>Ingrese resumen de la obra</hint>
                     <required>Debe completar el resumen de la obra</required>
                 </field>
             </row>
@@ -536,7 +534,7 @@
                     <label>Tamaño o duración</label>
                     <input-type>onebox</input-type>
                     <type-bind>Audio,Imagen,Video</type-bind>
-                    <hint>Según el recurso indique dimensiones de la imagen o duración del audio o video.</hint>
+                    <hint>Según el recurso indique dimensiones de la imagen o duración del audio o video</hint>
                     <required></required>
                 </field>
             </row>
@@ -548,9 +546,9 @@
                     <repeatable>false</repeatable>
                     <label>Cantidad de páginas</label>
                     <input-type>onebox</input-type>
-                    <type-bind>Libro,Parte de libro,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
+                    <type-bind>Libro,Parte de libro,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <hint>Indique cantidad de páginas del documento. Formato de ejemplo: 86 p. (número espacio letra p en mínuscula terminada con punto)</hint>
-                    <required>Debe indicar el total de páginas.</required>
+                    <required>Debe indicar el total de páginas</required>
                 </field>
             </row>
             <!--Recupera de los Tipo MIME-->
@@ -618,7 +616,7 @@
                     <dc-qualifier>spatial</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Cobertura geográfica</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del documento.</hint>
                     <required></required>
@@ -631,7 +629,7 @@
                     <dc-qualifier>temporal</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura temporal</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
                     Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera: Año Comienzo-Año Fin.Ejemplo: 2020-2022</hint>
@@ -722,7 +720,7 @@
                     <dc-qualifier>author</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Autor</label>
-                    <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
+                    <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Para nombres personales utilizar el formato invertido: Apellido, Nombres</hint>
                     <required>Debe ingresar al menos un autor.</required>
@@ -748,11 +746,11 @@
                     <dc-qualifier>filiation</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Filiación</label>
-                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo final de grado</type-bind>
+                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
                     Deberá utilizarse la siguiente forma de sintaxis:Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>      
             <row>
@@ -815,7 +813,7 @@
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Fecha de presentación (Año)</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado</type-bind>
                     <input-type>date</input-type>
                     <hint>Fecha de presentación de la tesis o trabajo final de grado. 
                           Omitir el día y mes. 
@@ -831,12 +829,12 @@
                     <repeatable>false</repeatable>
                     <label>Editor</label>
                     <!--<style>col-sm-8</style>-->
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final, Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
                     A su vez, el departamento o grupo de investigación después de la facultad
                     Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -850,7 +848,7 @@
                     <type-bind>Artículo,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Entidad responsable de la publicación de un ítem (editorial).</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -861,7 +859,7 @@
                     <repeatable>false</repeatable>
                     <label>Sede</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type value-pairs-name="unp_sedes">dropdown</input-type>
                     <hint>Seleccione sede</hint>
                     <required>Debe seleccionar una opción</required>
@@ -875,7 +873,7 @@
                     <repeatable>false</repeatable>
                     <label>Facultad o Rectorado</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización, Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
+                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización,Trabajo integrador final,Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
                     <input-type value-pairs-name="unp_facultades">dropdown</input-type>
                     <hint>Seleccione facultad o rectorado</hint>
                     <required>Debe seleccionar una opción</required>
@@ -888,7 +886,7 @@
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Carrera</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <vocabulary>carreras</vocabulary> 
                     <hint>Seleccione carrera</hint>
@@ -906,7 +904,7 @@
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelposgrado">dropdown</input-type>
                     <hint>Nivel de posgrado al que aspira.</hint>
-                    <required>Campo requerido</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -920,7 +918,7 @@
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelgrado">dropdown</input-type>
                     <hint>Nivel de grado al que aspira.</hint>
-                    <required>Campo requerido</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -935,7 +933,7 @@
                     <input-type>onebox</input-type>
                     <hint>Disciplina a la que corresponde el trabajo de tesis realizado.
                     Por ejemplo: Enfermería</hint>
-                    <required>Campo requerido</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -950,7 +948,7 @@
                     <input-type>onebox</input-type>
                     <hint>Grado al que se aspira con el trabajo de tesis realizado.
                     Por ejemplo: Licenciado en enfermería</hint>
-                    <required>Campo requerido</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -966,7 +964,7 @@
                     <hint>Institución que otorga el título.
                      Por ejemplo: Universidad Nacional de la Patagonia San Juan Bosco.</hint>
                     <default>Universidad Nacional de la Patagonia San Juan Bosco.</default>
-                    <required>Campo requerido</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -977,10 +975,10 @@
                     <repeatable>true</repeatable>
                     <label>Lugar de desarrollo de la tesis</label>
                     <style>col-sm-8</style>                    
-                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Institución, departamento y/o unidad en la cual se desarrolló el trabajo.</hint>
-                    <required>Campo requerido</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <!--<row>
@@ -1024,7 +1022,7 @@
                     <input-type>onebox</input-type>
                     <hint>Ingrese información de cita estándar para el documento.
                     Ejemplo: Apellido, Nombre. (año de publicación). Título. Tipo de documento. Nombre de la Institución.</hint>
-                    <required>El campo es requerido.</required>                    
+                    <required>El campo es requerido</required>                    
                 </field>
             </row>         
         </form>
@@ -1067,7 +1065,7 @@
                     <hint>Términos libres que describen el contenido de la obra. 
                           Escriba cada término y luego presione la tecla TAB. Los términos escríbalos en mayúsculas.
                         </hint>
-                    <required>Debe agregar al menos 3(tres).</required>
+                    <required>Debe agregar al menos 3(tres)</required>
                     <!--<vocabulary>srsc</vocabulary>-->
                     <!--<vocabulary>terminos</vocabulary>-->
                     <vocabulary>terminos_use</vocabulary>
@@ -1204,7 +1202,7 @@
                     <dc-qualifier>spatial</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Cobertura geográfica</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del documento.</hint>
                     <required></required>
@@ -1217,7 +1215,7 @@
                     <dc-qualifier>temporal</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura temporal</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
                     Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera: Año Comienzo-Año Fin. Ejemplo: 2020-2022</hint>
@@ -1297,7 +1295,7 @@
                     <label>Título</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese el nombre científico de la muestra.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -1309,7 +1307,7 @@
                     <label>Autor</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese todas las personas que intervienen. Para nombres personales utilizar el formato invertido: Apellido, Nombres</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -1322,7 +1320,7 @@
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
                     Deberá utilizarse la siguiente forma de sintaxis:Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>           
             <row>
@@ -1333,8 +1331,8 @@
                     <repeatable>false</repeatable>
                     <label>Fecha de recolección</label>
                     <input-type>date</input-type>
-                    <hint>Fecha de recolección de la muestra.</hint>
-                    <required>Debe ingresar al menos el año.</required>
+                    <hint>Fecha de recolección de la muestra</hint>
+                    <required>Debe ingresar al menos el año</required>
                 </field>
             </row>
             <row>                
@@ -1348,7 +1346,7 @@
                     <hint>En caso de publicaciones universitarias, colocar el nombre de la facultad después del nombre de la universidad.
                     A su vez, el departamento o grupo de investigación después de la facultad
                     Ejemplo: Universidad Nacional de la Patagonia San Juan Bosco. Facultad de Ciencias Naturales y Ciencias de la Salud. Departamento de Química</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -1399,7 +1397,7 @@
                     <label>Cita</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información de cita estándar para el documento.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>                        
         </form>
@@ -1415,7 +1413,7 @@
                     <hint>Términos que describen la muestra. 
                           Escriba cada término y luego presione la tecla TAB. Los términos escríbalos en mayúsculas.
                     </hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                     <vocabulary>herbario</vocabulary>
                 </field>
             </row>
@@ -1429,7 +1427,7 @@
                     <label>Resumen</label>
                     <input-type>textarea</input-type>
                     <hint>Ingrese un breve resumen con más detalles de la muestra.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -1469,7 +1467,7 @@
                     <label>Cobertura geográfica</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre la cobertura espacial/geográfica dónde se recolectó la muestra.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -1482,7 +1480,7 @@
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
                     Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera: Año Comienzo-Año Fin. Ejemplo: 2020-2022</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -1531,7 +1529,7 @@
                     <label>Familia</label>
                     <input-type>onebox</input-type>
                     <hint>Familia a la que pertenece la muestra.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                     <vocabulary>familias</vocabulary>
                 </field>
             </row>
@@ -1544,7 +1542,7 @@
                     <label>Número de Catálogo</label>
                     <input-type>onebox</input-type>
                     <hint>Número de catálogo de la muestra.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -1556,7 +1554,7 @@
                     <label>Identificado Por</label>
                     <input-type>onebox</input-type>
                     <hint>Persona que identifica la muestra.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
             <row>
@@ -1568,7 +1566,7 @@
                     <label>Recolectado Por</label>
                     <input-type>onebox</input-type>
                     <hint>Persona que recolecta la muestra.</hint>
-                    <required>El campo es requerido.</required>
+                    <required>El campo es requerido</required>
                 </field>
             </row>
         </form>
@@ -2940,6 +2938,10 @@
             <pair>
                 <displayed-value>Trabajo final de grado</displayed-value>
                 <stored-value>Trabajo final de grado</stored-value>
+            </pair>
+            <pair> <!--No en el listado del SNRD-->
+                <displayed-value>Trabajo integrador final</displayed-value>
+                <stored-value>Trabajo integrador final</stored-value>
             </pair>
             <pair><!--No en el listado del SNRD-->
                 <displayed-value>Video</displayed-value>

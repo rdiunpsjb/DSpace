@@ -655,7 +655,7 @@
                     <string>Imagen</string>
                     <string>Película documental</string>
                     <string>Proyecto de investigación</string>
-                    <string>Trabajo de especialización</string>
+                    <!--<string>Trabajo de especialización</string>-->
                     <string>Informe técnico</string>
                     <string>Conjunto de datos</string>
                   </list>
