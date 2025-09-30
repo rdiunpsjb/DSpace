@@ -152,39 +152,26 @@
                     <dc-qualifier>director</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Director</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo integrador final, Informe técnico</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Informe técnico</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Persona que dirige la realización de la tesis o quien dirige
                         a un investigador, personal de apoyo o becario. Formato: Apellido, Nombres</hint>
                     <required>Debe ingresar director</required>
                 </field>
             </row>
-            <!--<row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>director</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Tutor o Docente responsable</label>
-                    <type-bind>Trabajo final de grado</type-bind>
-                    <input-type>onebox</input-type>
-                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
-                    <required>Debe ingresar responsable.</required>
-                </field>
-            </row>-->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>contributor</dc-element>
                     <!--<dc-qualifier>director</dc-qualifier>-->
                     <repeatable>true</repeatable>
-                    <label>Tutor o Docente responsable</label>
-                    <type-bind>Trabajo final de grado</type-bind>
+                    <label>Tutor, Asesor o Docente responsable</label>
+                    <type-bind>Trabajo final de grado, Trabajo integrador final</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
-                    <!--<required>Debe ingresar responsable.</required>-->
+                    <hint>Tutor, Asesor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
+                    <required></required>
                 </field>
-            </row>            
+            </row> 
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -197,8 +184,7 @@
                     <hint>Persona física responsable de compilar, reunir o antologar materiales de la obra.</hint>
                     <required></required>
                 </field>
-            </row>  
-            
+            </row>              
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -280,7 +266,7 @@
                     <repeatable>false</repeatable>
                     <label>Sede</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <input-type value-pairs-name="unp_sedes">dropdown</input-type>
                     <hint>Seleccione sede</hint>
                     <required>Debe seleccionar una opción</required>
@@ -294,7 +280,7 @@
                     <repeatable>false</repeatable>
                     <label>Facultad o Rectorado</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <input-type value-pairs-name="unp_facultades">dropdown</input-type>
                     <hint>Seleccione facultad o rectorado</hint>
                     <required>Debe seleccionar una opción</required>
@@ -321,7 +307,7 @@
                     <dc-qualifier>level</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Nivel de posgrado</label>
-                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Trabajo integrador final</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelposgrado">dropdown</input-type>
                     <hint>Nivel de posgrado al que aspira</hint>
@@ -334,11 +320,11 @@
                     <dc-element>degree</dc-element>
                     <dc-qualifier>level</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Nivel de grado</label>
-                    <type-bind>Tesis de grado,Trabajo final de grado</type-bind>
+                    <label>Nivel de grado o pregrado</label>
+                    <type-bind>Tesis de grado,Trabajo final de grado,Trabajo integrador final</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelgrado">dropdown</input-type>
-                    <hint>Nivel de grado al que aspira</hint>
+                    <hint>Nivel de grado o pregrado al que aspira</hint>
                     <required>El campo es requerido</required>
                 </field>
             </row>
@@ -379,7 +365,7 @@
                     <dc-qualifier>grantor</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Emisor del título</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Institución que otorga el título.
@@ -504,9 +490,9 @@
                     <label>Palabras claves</label>
                     <input-type>tag</input-type>
                     <hint>Términos libres que describen el contenido de la obra. 
-                          Escriba cada término y luego presione la tecla TAB. Los términos escríbalos en mayúsculas.
+                          Escriba cada término y luego presione la tecla TAB. Use sólo mayúsculas.
                          </hint>
-                    <required>Debe agregar al menos 3(tres)</required>
+                    <required>Se sugiere agregar al menos 3(tres)</required>
                     <!--<vocabulary>srsc</vocabulary>-->
                     <!--<vocabulary>terminos</vocabulary>-->
                     <vocabulary>terminos_use</vocabulary>
@@ -616,7 +602,7 @@
                     <dc-qualifier>spatial</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Cobertura geográfica</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del documento.</hint>
                     <required></required>
@@ -629,7 +615,7 @@
                     <dc-qualifier>temporal</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura temporal</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
                     Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera: Año Comienzo-Año Fin.Ejemplo: 2020-2022</hint>
@@ -673,6 +659,7 @@
                 </field>
             </row>
         </form>
+
         <form name="autoarchivopaso1">
             <row>
                 <field>
@@ -766,30 +753,17 @@
                     <required>Debe ingresar director.</required>
                 </field>
             </row>
-            <!--<row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>director</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Tutor o Docente responsable</label>
-                    <type-bind>Trabajo final de grado</type-bind>
-                    <input-type>onebox</input-type>
-                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
-                    <required>Debe ingresar responsable.</required>
-                </field>
-            </row>-->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>contributor</dc-element>
                     <!--<dc-qualifier>director</dc-qualifier>-->
                     <repeatable>true</repeatable>
-                    <label>Tutor o Docente responsable</label>
-                    <type-bind>Trabajo final de grado</type-bind>
+                    <label>Tutor, Asesor o Docente responsable</label>
+                    <type-bind>Trabajo final de grado,Trabajo integrador final</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Tutor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
-                    <!--<required>Debe ingresar responsable.</required>-->
+                    <hint>Tutor, Asesor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
+                    <required></required>
                 </field>
             </row>              
             <row>
@@ -859,7 +833,7 @@
                     <repeatable>false</repeatable>
                     <label>Sede</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <input-type value-pairs-name="unp_sedes">dropdown</input-type>
                     <hint>Seleccione sede</hint>
                     <required>Debe seleccionar una opción</required>
@@ -873,7 +847,7 @@
                     <repeatable>false</repeatable>
                     <label>Facultad o Rectorado</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización,Trabajo integrador final,Trabajo final de grado, Informe técnico, Documento institutional</type-bind>
+                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización,Trabajo integrador final,Trabajo final de grado, Informe técnico, Documento institucional</type-bind>
                     <input-type value-pairs-name="unp_facultades">dropdown</input-type>
                     <hint>Seleccione facultad o rectorado</hint>
                     <required>Debe seleccionar una opción</required>
@@ -913,11 +887,11 @@
                     <dc-element>degree</dc-element>
                     <dc-qualifier>level</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Nivel de grado</label>
-                    <type-bind>Tesis de grado,Trabajo final de grado</type-bind>
+                    <label>Nivel de grado o pregrado</label>
+                    <type-bind>Tesis de grado,Trabajo final de grado,Trabajo integrador final</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type value-pairs-name="unp_levelgrado">dropdown</input-type>
-                    <hint>Nivel de grado al que aspira.</hint>
+                    <hint>Nivel de grado o pregrado al que aspira.</hint>
                     <required>El campo es requerido</required>
                 </field>
             </row>
@@ -928,7 +902,7 @@
                     <dc-qualifier>discipline</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Disciplina</label>
-                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Tesis de grado,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Disciplina a la que corresponde el trabajo de tesis realizado.
@@ -944,7 +918,7 @@
                     <repeatable>false</repeatable>
                     <label>Título obtenido</label>
                     <!--<style>col-sm-8</style>-->                 
-                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Tesis de grado,Trabajo final de grado</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Grado al que se aspira con el trabajo de tesis realizado.
                     Por ejemplo: Licenciado en enfermería</hint>
@@ -958,7 +932,7 @@
                     <dc-qualifier>grantor</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Emisor del título</label>
-                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Tesis de grado,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Tesis de grado,Trabajo final de grado</type-bind>
                     <!--<style>col-sm-8</style>-->
                     <input-type>onebox</input-type>
                     <hint>Institución que otorga el título.
@@ -1026,7 +1000,7 @@
                 </field>
             </row>         
         </form>
-        <form name="autoarchivopaso2">            
+        <form name="autoarchivopaso2">
             <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1063,9 +1037,9 @@
                     <label>Palabras claves</label>
                     <input-type>tag</input-type>
                     <hint>Términos libres que describen el contenido de la obra. 
-                          Escriba cada término y luego presione la tecla TAB. Los términos escríbalos en mayúsculas.
+                          Escriba cada término y luego presione la tecla TAB. Use sólo mayúsculas.
                         </hint>
-                    <required>Debe agregar al menos 3(tres)</required>
+                    <required>Se sugiere agregar al menos 3(tres)</required>
                     <!--<vocabulary>srsc</vocabulary>-->
                     <!--<vocabulary>terminos</vocabulary>-->
                     <vocabulary>terminos_use</vocabulary>
@@ -1121,7 +1095,7 @@
                     <repeatable>false</repeatable>
                     <label>Cantidad de páginas</label>
                     <input-type>onebox</input-type>
-                    <type-bind>Libro,Parte de libro,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Libro,Parte de libro,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <hint>Indique cantidad de páginas del documento. Formato de ejemplo: 86 p. (número espacio letra p en mínuscula terminada con punto)</hint>
                     <required>Debe indicar el total de páginas.</required>
                 </field>
@@ -1140,8 +1114,8 @@
                     <hint>Seleccione formato de imagen.</hint>
                     <required></required>
                 </field>
-            </row>
-            <row>
+            </row>-->
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>format</dc-element>
@@ -1153,8 +1127,8 @@
                     <hint>Seleccione formato de audio.</hint>
                     <required></required>
                 </field>
-            </row>
-            <row>
+            </row> -->
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>format</dc-element>
@@ -1166,8 +1140,7 @@
                     <hint>Seleccione formato de video.</hint>
                     <required></required>
                 </field>
-            </row>
-            -->
+            </row> -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1202,7 +1175,7 @@
                     <dc-qualifier>spatial</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Cobertura geográfica</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre la cobertura espacial/geográfica del contenido del documento.</hint>
                     <required></required>
@@ -1215,7 +1188,7 @@
                     <dc-qualifier>temporal</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Cobertura temporal</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institutional</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
                     Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera: Año Comienzo-Año Fin. Ejemplo: 2020-2022</hint>
@@ -1411,7 +1384,7 @@
                     <label>Palabras claves</label>
                     <input-type>tag</input-type>
                     <hint>Términos que describen la muestra. 
-                          Escriba cada término y luego presione la tecla TAB. Los términos escríbalos en mayúsculas.
+                          Escriba cada término y luego presione la tecla TAB. Use sólo mayúsculas.
                     </hint>
                     <required>El campo es requerido</required>
                     <vocabulary>herbario</vocabulary>
