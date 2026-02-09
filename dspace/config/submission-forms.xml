@@ -89,8 +89,8 @@
                     <required>Debe indicar el título del documento</required>
                 </field>
             </row>
-            <!--25/02/2025-->
-            <row>
+            <!--05/02/2026-->
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
@@ -101,10 +101,10 @@
                     <input-type>onebox</input-type>
                     <hint>Otros títulos de la obra, o traducciones del título en cualquier idioma que no sea el nativo de la obra</hint>
                     <required></required>
-                    <!--<readonly>readonly</readonly>
-                    <visibility>workflow</visibility>-->
+                    <readonly>readonly</readonly>
+                    <visibility>workflow</visibility>
                 </field>
-            </row>
+            </row>-->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -614,7 +614,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
                     <dc-qualifier>temporal</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Cobertura temporal</label>
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <input-type>onebox</input-type>
@@ -1160,7 +1160,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
                     <dc-qualifier>temporal</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Cobertura temporal</label>
                     <type-bind>Audio,Imagen,Video,Conjunto de datos</type-bind>
                     <input-type>onebox</input-type>
@@ -1187,7 +1187,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
                     <dc-qualifier>temporal</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Cobertura temporal</label>
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
                     <input-type>onebox</input-type>
@@ -1246,7 +1246,8 @@
                     <required>Debe seleccionar un tipo de contenido.</required>
                 </field>
             </row>
-            <row>
+            <!-- 05/02/26 - No para el herbario-->
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>type</dc-element>
@@ -1258,7 +1259,7 @@
                     Para el caso de tesis, trabajos e informes técnicos, la versión es Aceptada para su publicación </hint>
                     <required>Debe seleccionar una opción.</required>
                 </field>
-            </row>
+            </row>-->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1310,7 +1311,7 @@
                     <required>Debe ingresar al menos el año</required>
                 </field>
             </row>
-            <row>                
+            <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>publisher</dc-element>
@@ -1350,6 +1351,8 @@
                     <required>Debe seleccionar una opción</required>
                 </field>
             </row>
+            <!-- 05/02/26 - No para el herbario-->
+            <!--            
             <row>
                 <field>
                     <dc-schema>unp</dc-schema>
@@ -1362,7 +1365,9 @@
                     <hint>Seleccione carrera</hint>
                     <required>Debe seleccionar una opción</required>
                 </field>
-            </row>
+            </row>-->
+            <!-- 05/02/26 - No para el herbario-->
+            <!--
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1374,7 +1379,7 @@
                     <hint>Ingrese información de cita estándar para el documento.</hint>
                     <required>El campo es requerido</required>
                 </field>
-            </row>                        
+            </row>-->
         </form>
         <form name="herbariopaso2">            
             <row>
@@ -1405,7 +1410,8 @@
                     <required>El campo es requerido</required>
                 </field>
             </row>
-            <row>
+            <!-- 05/02/26 - No para el herbario-->
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>language</dc-element>
@@ -1418,7 +1424,7 @@
                     </hint>
                     <required>Debe seleccionar un idioma</required>
                 </field>
-            </row>
+            </row>-->            
             <!--No es necesaario-->
             <!--<row>
                 <field>
@@ -1432,7 +1438,7 @@
                     <hint>Seleccione formato de imagen.</hint>
                     <required></required>
                 </field>
-            </row>-->
+            </row>-->            
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1445,19 +1451,20 @@
                     <required>El campo es requerido</required>
                 </field>
             </row>
-            <row>
+            <!-- 05/02/26 - No para el herbario-->            
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
                     <dc-qualifier>temporal</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Cobertura temporal</label>
                     <input-type>onebox</input-type>
                     <hint>Ingrese información sobre el periodo de tiempo específico que se referencia en el documento.
                     Si es posible, se debe indicar el comienzo y el fin del intervalo de tiempo, de la siguiente manera: Año Comienzo-Año Fin. Ejemplo: 2020-2022</hint>
                     <required>El campo es requerido</required>
                 </field>
-            </row>
+            </row>-->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1470,7 +1477,8 @@
                     <required></required>
                 </field>
             </row>
-            <row>
+            <!-- 05/02/26 - No para el herbario-->            
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>rights</dc-element>
@@ -1480,8 +1488,9 @@
                     <hint>Elija el nivel del acceso para el ítem.</hint>
                     <required>Debe seleccionar una opción</required>
                 </field>
-            </row> 
-            <row>
+            </row>-->
+            <!-- 05/02/26 - No para el herbario-->            
+            <!--<row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>rights</dc-element>
@@ -1492,7 +1501,7 @@
                     <hint>Elija la licencia adecuada para el ítem.</hint>
                     <required>Debe seleccionar una opción</required>
                 </field>
-            </row>             
+            </row>-->          
         </form>
         <form name="herbariopaso3">
             <row>
