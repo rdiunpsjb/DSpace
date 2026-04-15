@@ -6,13 +6,13 @@
 
 Este correo electrónico se envía desde ${config.get('dspace.name')} según las preferencias de suscripción elegidas.
 
-#if(no( "$params[0]" == "" ))
+#if(not( "$params[0]" == "" ))
 Suscripciones de comunidades:
 ------------------------
 Lista de elementos modificados: ${params[0]}
 
 #end
-#if(no( "$params[1]" == "" ))
+#if(not( "$params[1]" == "" ))
 Suscripciones de colecciones:
 -------------------------
 Lista de elementos modificados: ${params[1]}
