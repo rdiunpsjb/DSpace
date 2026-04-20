@@ -736,6 +736,20 @@
                     <required>Debe ingresar al menos un intérprete.</required>
                 </field>
             </row>
+            <!--Informe técnico-->
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Unidad Ejecutora</label>
+                    <type-bind>Informe técnico</type-bind>
+                    <input-type>onebox</input-type>
+                    <hint>Para nombres personales utilizar el formato invertido: Apellido, Nombres</hint>
+                    <required>Debe ingresar al menos un integrante</required>
+                </field>
+            </row>            
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -743,7 +757,7 @@
                     <dc-qualifier>filiation</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Filiación</label>
-                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado</type-bind>
+                    <type-bind>Audio,Imagen,Video,Conjunto de Datos,Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado, Informe técnico</type-bind>
                     <input-type>textarea</input-type>
                     <hint>Registre cada una de las afiliaciones de cada uno de los autores en ocurrencias separadas.
                     Deberá utilizarse la siguiente forma de sintaxis:Fil: Apellido, Nombre. Nombre de la institución mayor (con sus dependencias separadas por punto seguido de espacio); País.</hint>
@@ -783,7 +797,7 @@
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Fecha de publicación</label>
-                    <type-bind>Artículo,Audio,Documento institucional,Imagen,Video,Informe técnico,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia</type-bind>
+                    <type-bind>Artículo,Audio,Documento institucional,Imagen,Video,Libro,Parte de libro,Objeto de aprendizaje,Documento de conferencia</type-bind>
                     <input-type>date</input-type>
                     <hint>Fecha de publicación, distribución pública o exposición. En caso de no haber difundido nunca su obra por ningún medio, indique la fecha de hoy como fecha de publicación. Puede omitir el día y mes si no lo sabe. 
                     </hint>
@@ -797,10 +811,9 @@
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Fecha de presentación (Año)</label>
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado</type-bind>
+                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico</type-bind>
                     <input-type>date</input-type>
-                    <hint>Fecha de presentación de la tesis o trabajo final de grado. 
-                          Omitir el día y mes. 
+                    <hint>Fecha de presentación de la tesis o trabajo final de grado. Omitir el día y mes. 
                     </hint>
                     <required>Debe ingresar al menos el año.</required>
                 </field>
@@ -1357,7 +1370,7 @@
                     <label>Facultad o Rectorado</label>
                     <!--<style>col-sm-4</style>-->
                     <input-type value-pairs-name="unp_facultades">dropdown</input-type>
-                    <hint>Seleccione facultad o rectorado</hint>
+                    <hint>Seleccione una facultad, rectorado o Ciencia y Técnica</hint>
                     <required>Debe seleccionar una opción</required>
                 </field>
             </row>
@@ -3011,6 +3024,10 @@
                 <stored-value>Rectorado</stored-value>
             </pair>
             <pair>
+                <displayed-value>Ciencia y Técnica</displayed-value>
+                <stored-value>Ciencia y Técnica</stored-value>
+            </pair>            
+            <pair>
                 <displayed-value>Otro</displayed-value>
                 <stored-value>Otro</stored-value>
             </pair>           
@@ -3199,7 +3216,7 @@
             </pair>
             <pair>
                 <displayed-value>N/A</displayed-value>
-                <stored-value></stored-value>
+                <stored-value>N/A</stored-value>
             </pair>            
         </value-pairs>
 
