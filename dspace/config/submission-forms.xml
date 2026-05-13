@@ -293,12 +293,25 @@
                     <repeatable>false</repeatable>
                     <label>Facultad o Rectorado</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Trabajo integrador final,Trabajo final de grado,Informe técnico,Documento institucional</type-bind>
+                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización,Trabajo integrador final,Trabajo final de grado, Documento institucional</type-bind>
                     <input-type value-pairs-name="unp_facultades">dropdown</input-type>
                     <hint>Seleccione facultad o rectorado</hint>
                     <required>Debe seleccionar una opción</required>
                 </field>
             </row>
+            <row>
+                <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>facultad</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Unidades académicas</label>
+                    <type-bind>Informe técnico</type-bind>
+                    <input-type value-pairs-name="unp_facultades">dropdown</input-type>
+                    <hint>Seleccione facultad o rectorado</hint>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row> 
             <row>
                 <field>
                     <dc-schema>unp</dc-schema>
@@ -870,12 +883,25 @@
                     <repeatable>false</repeatable>
                     <label>Facultad o Rectorado</label>
                     <!--<style>col-sm-4</style>-->
-                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización,Trabajo integrador final,Trabajo final de grado, Informe técnico, Documento institucional</type-bind>
+                    <type-bind>Tesis de grado, Tesis de doctorado, Tesis de maestría, Trabajo de especialización,Trabajo integrador final,Trabajo final de grado, Documento institucional</type-bind>
                     <input-type value-pairs-name="unp_facultades">dropdown</input-type>
                     <hint>Seleccione facultad o rectorado</hint>
                     <required>Debe seleccionar una opción</required>
                 </field>
             </row>
+            <row>
+                <field>
+                    <dc-schema>unp</dc-schema>
+                    <dc-element>facultad</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Unidades académicas</label>
+                    <type-bind>Informe técnico</type-bind>
+                    <input-type value-pairs-name="unp_facultades">dropdown</input-type>
+                    <hint>Seleccione facultad o rectorado</hint>
+                    <required>Debe seleccionar una opción</required>
+                </field>
+            </row>            
             <row>
                 <field>
                     <dc-schema>unp</dc-schema>
