@@ -14,7 +14,7 @@
 				<node id="IngenieriaQuimica" label="Ingeniería Química"/>
 				<node id="AdministracionEmpresasTuristicas" label="Licenciatura en Administración de Empresas Turísticas"/>
 				<node id="Administracion" label="Licenciatura en Administración"/>
-				<node id="CienciaPoliticaDistancia" label="Licenciatura en Ciencia Política (modalidad a distancia)"/>
+				<node id="CienciaPoliticaDistancia" label="Licenciatura en Ciencia Política"/>
 				<node id="CienciasBiologicas" label="Licenciatura en Ciencias Biológicas"/>
 				<node id="ComunicacionSocial" label="Licenciatura en Comunicación Social"/>
 				<node id="Economia" label="Licenciatura en Economía"/>
@@ -73,7 +73,7 @@
 
 				 <node id="MaestriaenCienciasConMencionenQuimicadeProductosNaturales" label="Maestría en Ciencias con Mención en Química de Productos Naturales"/>
 				 <node id="MaestriaenDerechoAdministrativo" label="Maestría en Derecho Administrativo"/>
-				 <node id="MaestriaenDidacticasEspecificasconOrientacionenLenguayLiteraturaoenCienciasSocialesadistancia" label="Maestría en Didácticas Específicas con orientación en Lengua y Literatura o en Ciencias Sociales a distancia"/>
+				 <node id="MaestriaenDidacticasEspecificasconOrientacionenLenguayLiteraturaoenCienciasSocialesa" label="Maestría en Didácticas Específicas con orientación en Lengua y Literatura o en Ciencias Sociales"/>
 				 <node id="MaestriaenEnsenanzasDigitales" label="Maestría en Enseñanza en Escenarios Digitales"/>
 				 <node id="MaestriaenEstudiosPsicologicosdelaEnseñanzayelAprendizaje" label="Maestría en Estudios Psicológicos de la Enseñanza y el Aprendizaje"/>
 				 <node id="MaestriaenEstudiosSocioterritoriales" label="Maestría en Estudios Socioterritoriales"/>

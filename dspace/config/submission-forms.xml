@@ -84,7 +84,7 @@
                     <repeatable>false</repeatable>
                     <label>Título</label>
                     <input-type>onebox</input-type>
-                    <hint>Transcribir el título del original, en orden y ortografía del recurso. Utilizar mayúsculas únicamente para la primer palabra del título y los nombres propios. 
+                    <hint>Transcribir el título del original, en orden y ortografía del recurso. Utilizar mayúsculas únicamente para la primer palabra del título y los nombres propios. No utilizar comillas.
                          Los subtítulos deben mencionarse con el siguiente formato: Título : subtítulo</hint>
                     <required>Debe indicar el título del documento</required>
                 </field>
@@ -168,7 +168,7 @@
                     <label>Director</label>
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización, Informe técnico</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Persona que dirige la realización de la tesis o quien dirige a un investigador, personal de apoyo o becario. Formato: Apellido, Nombres</hint>
+                    <hint>Persona que dirige la realización de la tesis o quien dirige a un investigador, personal de apoyo o becario. NO cargar título por ejemplo Mg, Dr, etc. Formato: Apellido, Nombres</hint>
                     <required>Debe ingresar director</required>
                 </field>
             </row>
@@ -181,8 +181,8 @@
                     <label>Tutor, Asesor o Docente responsable</label>
                     <type-bind>Trabajo final de grado, Trabajo integrador final</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Tutor, Asesor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
-                    <required></required>
+                    <hint>Tutor, Asesor o Docente responsable del trabajo final. No cargar título por ejemplo Mg, Dr, etc. Formato: Apellido, Nombres</hint>
+                    <required>Debe ingresar tutor, asesor o docente responsable</required>
                 </field>
             </row> 
             <row>
@@ -718,7 +718,7 @@
                     <repeatable>false</repeatable>
                     <label>Título</label>
                     <input-type>onebox</input-type>
-                    <hint>Transcribir el título del original, en orden y ortografía del recurso. Utilizar mayúsculas únicamente para la primer palabra del título y los nombres propios. 
+                    <hint>Transcribir el título del original, en orden y ortografía del recurso. Utilizar mayúsculas únicamente para la primer palabra del título y los nombres propios. No utilizar comillas.
                          Los subtítulos deben mencionarse con el siguiente formato: Título : subtítulo</hint>
                     <required>Debe indicar el título del documento.</required>
                 </field>
@@ -786,7 +786,7 @@
                     <label>Director</label>
                     <type-bind>Tesis de grado,Tesis de doctorado,Tesis de maestría,Trabajo de especialización,Informe técnico</type-bind>
                     <input-type>onebox</input-type>
-                    <hint>Persona que dirige la realización de la tesis o quien dirige a un investigador, personal de apoyo o becario. Formato: Apellido, Nombres</hint>
+                    <hint>Persona que dirige la realización de la tesis o quien dirige a un investigador, personal de apoyo o becario. NO cargar título por ejemplo Mg, Dr, etc. Formato: Apellido, Nombres</hint>
                     <required>Debe ingresar director.</required>
                 </field>
             </row>
@@ -800,7 +800,7 @@
                     <type-bind>Trabajo final de grado,Trabajo integrador final</type-bind>
                     <input-type>onebox</input-type>
                     <hint>Tutor, Asesor o Docente responsable del trabajo final. Formato: Apellido, Nombres</hint>
-                    <required></required>
+                    <required>Debe ingresar tutor, asesor o docente responsable</required>
                 </field>
             </row>              
             <row>
